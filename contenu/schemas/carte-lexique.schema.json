@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Identifiant unique dans tout le dossier contenu/"
+    },
+    "titre": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Titre affiché de la série"
+    },
+    "domaine": {
+      "type": "string",
+      "enum": [
+        "acces-lexical",
+        "vitesse",
+        "memoire-travail",
+        "memoire-episodique",
+        "attention",
+        "flexibilite"
+      ],
+      "description": "Domaine cognitif principal sollicité"
+    },
+    "version": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991,
+      "description": "Incrémentez-la quand vous modifiez une série existante"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "carte-lexique"
+    },
+    "theme": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Ex. « Droit administratif »"
+    },
+    "items": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "description": "Identifiant unique dans tout le dossier contenu/"
+          },
+          "question": {
+            "type": "string",
+            "minLength": 3,
+            "description": "Définition ou contexte présenté"
+          },
+          "reponse": {
+            "type": "string",
+            "minLength": 1
+          },
+          "variantes": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "explication": {
+            "description": "Précision affichée après la réponse",
+            "type": "string"
+          },
+          "difficulte": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "1 = très facile, 5 = très difficile"
+          }
+        },
+        "required": [
+          "id",
+          "question",
+          "reponse",
+          "difficulte"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "titre",
+    "domaine",
+    "version",
+    "type",
+    "theme",
+    "items"
+  ]
+}

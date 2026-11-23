@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/definition-mot.schema.json",
+  "id": "def-s01",
+  "type": "definition-mot",
+  "titre": "Série 1 : vocabulaire de l'action publique",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "description": "Série d'exemple du socle ; le contenu des 30 premiers jours sera ajouté avec le moteur d'exercices.",
+  "items": [
+    {
+      "id": "def-s01-001",
+      "definition": "Acte par lequel une autorité transfère une partie de ses compétences à une autorité qui lui est subordonnée.",
+      "reponse": "délégation",
+      "variantes": ["délégation de pouvoir", "délégation de compétence"],
+      "indices": { "trait": "Nom féminin, terme de droit administratif relatif à la répartition des compétences.", "syllabe": "dé" },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s01-002",
+      "definition": "Mode d'organisation qui confie des pouvoirs de décision à des agents de l'État placés dans les circonscriptions territoriales, sous l'autorité hiérarchique du pouvoir central.",
+      "reponse": "déconcentration",
+      "variantes": [],
+      "indices": { "trait": "Nom féminin ; à ne pas confondre avec la décentralisation.", "syllabe": "dé" },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s01-003",
+      "definition": "Principe selon lequel une compétence doit être exercée par l'échelon le plus proche des citoyens capable de la mettre en œuvre efficacement.",
+      "reponse": "subsidiarité",
+      "variantes": ["principe de subsidiarité"],
+      "indices": { "trait": "Nom féminin ; principe invoqué en droit européen et dans les débats sur la décentralisation.", "syllabe": "sub" },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s01-004",
+      "definition": "Rapport entre les résultats obtenus par une politique et les moyens qui y ont été consacrés.",
+      "reponse": "efficience",
+      "variantes": [],
+      "indices": { "trait": "Nom féminin ; critère classique de l'évaluation des politiques publiques, distinct de l'efficacité.", "syllabe": "ef" },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s01-005",
+      "definition": "Qui s'exprime avec une abondance excessive de mots, au détriment de la clarté.",
+      "reponse": "prolixe",
+      "variantes": ["verbeux"],
+      "indices": { "trait": "Adjectif ; qualifie un style ou un orateur, contraire de concis.", "syllabe": "pro" },
+      "difficulte": 3
+    }
+  ]
+}
