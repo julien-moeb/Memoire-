@@ -1,0 +1,44 @@
+{
+  "$schema": "../schemas/carte-lexique.schema.json",
+  "id": "pro-da01",
+  "type": "carte-lexique",
+  "titre": "Droit administratif : notions de base (exemple)",
+  "domaine": "acces-lexical",
+  "theme": "Droit administratif",
+  "version": 1,
+  "items": [
+    {
+      "id": "pro-da01-001",
+      "question": "Acte administratif unilatéral de portée générale et impersonnelle.",
+      "reponse": "règlement",
+      "variantes": ["acte réglementaire"],
+      "explication": "S'oppose à la décision individuelle, qui vise une ou plusieurs personnes nommément désignées.",
+      "difficulte": 2
+    },
+    {
+      "id": "pro-da01-002",
+      "question": "Recours adressé à l'auteur même d'une décision pour lui demander de la reconsidérer.",
+      "reponse": "recours gracieux",
+      "difficulte": 1
+    },
+    {
+      "id": "pro-da01-003",
+      "question": "Recours adressé au supérieur de l'auteur d'une décision.",
+      "reponse": "recours hiérarchique",
+      "difficulte": 1
+    },
+    {
+      "id": "pro-da01-004",
+      "question": "Contrôle exercé par le représentant de l'État sur les actes des collectivités territoriales, substitué à la tutelle par la loi du 2 mars 1982.",
+      "reponse": "contrôle de légalité",
+      "difficulte": 2
+    },
+    {
+      "id": "pro-da01-005",
+      "question": "Principe selon lequel l'administration doit agir conformément aux règles de droit en vigueur.",
+      "reponse": "principe de légalité",
+      "variantes": ["légalité"],
+      "difficulte": 2
+    }
+  ]
+}

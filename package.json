@@ -1,0 +1,39 @@
+{
+  "name": "lexique",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Entraînement cognitif centré sur l'accès lexical et la vitesse de traitement. Usage personnel, données locales.",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run valider && tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "valider": "tsx scripts/valider-contenu.ts",
+    "schemas": "tsx scripts/generer-schemas.ts",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "framer-motion": "^14.14.0",
+    "idb": "^8.0.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.11.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "fake-indexeddb": "^6.2.8",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.1"
+  }
+}

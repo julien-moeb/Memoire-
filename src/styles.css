@@ -1,0 +1,135 @@
+@import 'tailwindcss';
+
+/* Jetons de couleur : une seule couleur d'accent, teintes sémantiques pour les domaines.
+   Contrastes vérifiés au niveau AA pour le texte (accent et texte secondaire inclus). */
+:root {
+  --c-fond: #f2f2f7;
+  --c-surface: #ffffff;
+  --c-surface-2: #f7f7fa;
+  --c-texte: #1c1c1e;
+  --c-texte-2: #5e5e63;
+  --c-separateur: rgb(60 60 67 / 0.16);
+  --c-accent: #0a5fcf;
+  --c-accent-doux: rgb(10 95 207 / 0.1);
+  --c-sur-accent: #ffffff;
+  --c-barre: rgb(249 249 251 / 0.78);
+  --c-ombre: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 16px rgb(0 0 0 / 0.04);
+  --c-anneau-1: #e0245e;
+  --c-anneau-2: #22a45d;
+  --c-anneau-3: #1a7ff0;
+  --c-acces-lexical: #5856d6;
+  --c-vitesse: #e07800;
+  --c-memoire-travail: #0f9aa8;
+  --c-memoire-episodique: #a24bd1;
+  --c-attention: #2e9d48;
+  --c-flexibilite: #d63c78;
+  --echelle: 1;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='clair']) {
+    --c-fond: #1c1c1e;
+    --c-surface: #2c2c2e;
+    --c-surface-2: #3a3a3c;
+    --c-texte: #f2f2f7;
+    --c-texte-2: #aeaeb2;
+    --c-separateur: rgb(235 235 245 / 0.14);
+    --c-accent: #5aa2ff;
+    --c-accent-doux: rgb(90 162 255 / 0.16);
+    --c-sur-accent: #0b1a2e;
+    --c-barre: rgb(30 30 32 / 0.76);
+    --c-ombre: 0 1px 2px rgb(0 0 0 / 0.3);
+    --c-anneau-1: #ff375f;
+    --c-anneau-2: #30d158;
+    --c-anneau-3: #3a9bff;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='sombre'] {
+  --c-fond: #1c1c1e;
+  --c-surface: #2c2c2e;
+  --c-surface-2: #3a3a3c;
+  --c-texte: #f2f2f7;
+  --c-texte-2: #aeaeb2;
+  --c-separateur: rgb(235 235 245 / 0.14);
+  --c-accent: #5aa2ff;
+  --c-accent-doux: rgb(90 162 255 / 0.16);
+  --c-sur-accent: #0b1a2e;
+  --c-barre: rgb(30 30 32 / 0.76);
+  --c-ombre: 0 1px 2px rgb(0 0 0 / 0.3);
+  --c-anneau-1: #ff375f;
+  --c-anneau-2: #30d158;
+  --c-anneau-3: #3a9bff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-fond: var(--c-fond);
+  --color-surface: var(--c-surface);
+  --color-surface-2: var(--c-surface-2);
+  --color-texte: var(--c-texte);
+  --color-texte-2: var(--c-texte-2);
+  --color-separateur: var(--c-separateur);
+  --color-accent: var(--c-accent);
+  --color-accent-doux: var(--c-accent-doux);
+  --color-sur-accent: var(--c-sur-accent);
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', Inter, 'Segoe UI', Roboto, system-ui, sans-serif;
+  --radius-carte: 16px;
+}
+
+html {
+  font-size: calc(100% * var(--echelle));
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--c-fond);
+  color: var(--c-texte);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+:focus-visible:not([tabindex='-1']) {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.ombre-carte {
+  box-shadow: var(--c-ombre);
+}
+
+.barre-translucide {
+  background: var(--c-barre);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.lien-evitement {
+  position: absolute;
+  left: -9999px;
+}
+.lien-evitement:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  background: var(--c-surface);
+  padding: 0.5rem 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

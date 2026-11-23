@@ -1,0 +1,25 @@
+{
+  "$schema": "../schemas/fluence.schema.json",
+  "id": "flu-e01",
+  "type": "fluence",
+  "titre": "Fluence : catégories d'entraînement (exemple)",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "items": [
+    {
+      "id": "flu-e01-fruits",
+      "modalite": "semantique",
+      "consigne": "Des fruits",
+      "cle": "fruits",
+      "reference": ["pomme", "poire", "pêche", "abricot", "cerise", "fraise", "framboise", "banane", "orange", "citron", "mandarine", "clémentine", "kiwi", "ananas", "mangue", "prune", "raisin", "figue", "melon", "pastèque", "groseille", "myrtille", "cassis", "mûre", "grenade", "papaye", "litchi", "nectarine", "coing", "datte"],
+      "exclusions": ["carotte", "pomme de terre", "poireau"]
+    },
+    {
+      "id": "flu-e01-lettre-f",
+      "modalite": "phonemique",
+      "consigne": "Des mots commençant par F (ni noms propres, ni mots de la même famille)",
+      "cle": "f",
+      "reference": ["famille", "fenêtre", "fleur", "forêt", "fromage", "fusée", "facteur", "femme", "feu", "fil", "fond", "force", "forme", "frère", "froid", "fruit", "fumée", "facile", "fable", "façade", "faucon", "fièvre"]
+    }
+  ]
+}
