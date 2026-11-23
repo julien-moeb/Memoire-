@@ -16,5 +16,5 @@ if (toutes.length) {
   for (const a of toutes) console.error(`  ${a.chemin}\n    ${a.message}\n`);
   process.exit(1);
 }
-const items = series.reduce((n, s) => n + s.items.length, 0);
+const items = series.reduce((n, s) => n + (s.type === 'forme-bilan' ? s.definitions.length : s.items.length), 0);
 console.log(`✓ Contenu valide : ${series.length} série(s), ${items} item(s).`);

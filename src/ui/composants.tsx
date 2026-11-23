@@ -116,7 +116,8 @@ export function ControleSegmente<T extends string | number>({ libelle, options, 
   const id = useId();
   const reduit = useReducedMotion();
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
-  const index = Math.max(0, options.findIndex((o) => o.valeur === valeur));
+  const trouve = options.findIndex((o) => o.valeur === valeur);
+  const index = Math.max(0, trouve);
 
   const clavier = (e: KeyboardEvent) => {
     const delta = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
@@ -131,7 +132,7 @@ export function ControleSegmente<T extends string | number>({ libelle, options, 
   return (
     <div role="radiogroup" aria-label={libelle} onKeyDown={clavier} className="relative flex rounded-[10px] bg-surface-2 p-0.5">
       {options.map((o, i) => {
-        const actif = i === index;
+        const actif = i === trouve;
         return (
           <button
             key={String(o.valeur)}
@@ -142,7 +143,7 @@ export function ControleSegmente<T extends string | number>({ libelle, options, 
             role="radio"
             aria-checked={actif}
             aria-label={o.aria}
-            tabIndex={actif ? 0 : -1}
+            tabIndex={i === index ? 0 : -1}
             onClick={() => {
               onChange(o.valeur);
               haptique(5);

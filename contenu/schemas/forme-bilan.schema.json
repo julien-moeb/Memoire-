@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Identifiant unique dans tout le dossier contenu/"
+    },
+    "type": {
+      "type": "string",
+      "const": "forme-bilan"
+    },
+    "titre": {
+      "type": "string",
+      "minLength": 3
+    },
+    "version": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "forme": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "Formes parallèles, utilisées à tour de rôle à chaque bilan"
+    },
+    "liste": {
+      "minItems": 15,
+      "maxItems": 15,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2
+      },
+      "description": "Liste de 15 mots à apprendre"
+    },
+    "fluenceSemantique": {
+      "type": "object",
+      "properties": {
+        "consigne": {
+          "type": "string",
+          "minLength": 3
+        },
+        "cle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reference": {
+          "minItems": 10,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exclusions": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "consigne",
+        "cle",
+        "reference"
+      ]
+    },
+    "fluencePhonemique": {
+      "type": "object",
+      "properties": {
+        "consigne": {
+          "type": "string",
+          "minLength": 3
+        },
+        "cle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reference": {
+          "minItems": 10,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exclusions": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "consigne",
+        "cle",
+        "reference"
+      ]
+    },
+    "definitions": {
+      "minItems": 12,
+      "maxItems": 12,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "description": "Identifiant unique dans tout le dossier contenu/"
+          },
+          "definition": {
+            "type": "string",
+            "minLength": 10,
+            "description": "Définition précise, sans contenir le mot attendu"
+          },
+          "reponse": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Terme attendu"
+          },
+          "variantes": {
+            "default": [],
+            "description": "Autres réponses acceptées",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "indices": {
+            "type": "object",
+            "properties": {
+              "trait": {
+                "type": "string",
+                "minLength": 3,
+                "description": "Premier indice : un trait sémantique (catégorie, usage, contexte)"
+              },
+              "syllabe": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Second indice : début du mot, qui doit en être le préfixe exact"
+              }
+            },
+            "required": [
+              "trait",
+              "syllabe"
+            ]
+          },
+          "difficulte": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "1 = très facile, 5 = très difficile"
+          }
+        },
+        "required": [
+          "id",
+          "definition",
+          "reponse",
+          "indices",
+          "difficulte"
+        ]
+      }
+    },
+    "decisionLexicale": {
+      "type": "object",
+      "properties": {
+        "mots": {
+          "minItems": 30,
+          "maxItems": 30,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 2
+          }
+        },
+        "pseudoMots": {
+          "minItems": 30,
+          "maxItems": 30,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 2
+          },
+          "description": "Suites de lettres prononçables qui ne sont pas des mots français"
+        }
+      },
+      "required": [
+        "mots",
+        "pseudoMots"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "titre",
+    "version",
+    "forme",
+    "liste",
+    "fluenceSemantique",
+    "fluencePhonemique",
+    "definitions",
+    "decisionLexicale"
+  ]
+}

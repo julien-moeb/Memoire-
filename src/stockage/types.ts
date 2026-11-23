@@ -67,8 +67,13 @@ export interface Seance {
 }
 
 export interface Bilan {
+  /** `${groupe}-p${partie}` */
   id: string;
+  /** Identifiant commun aux deux parties d'un même bilan. */
+  groupe: string;
   date: DateLocale;
+  debut: string;
+  fin: string;
   forme: 'A' | 'B' | 'C' | 'D';
   partie: 1 | 2;
   metriques: Record<string, number>;

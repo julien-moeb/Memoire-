@@ -1,0 +1,345 @@
+{
+  "$schema": "../schemas/forme-bilan.schema.json",
+  "id": "bilan-d",
+  "type": "forme-bilan",
+  "titre": "Bilan, forme D",
+  "version": 1,
+  "forme": "D",
+  "liste": [
+    "guitare",
+    "falaise",
+    "renard",
+    "vallée",
+    "armoire",
+    "poireau",
+    "bateau",
+    "sapin",
+    "fauteuil",
+    "hibou",
+    "gilet",
+    "château",
+    "pelle",
+    "brouillard",
+    "cuillère"
+  ],
+  "fluenceSemantique": {
+    "consigne": "Des métiers",
+    "cle": "métiers",
+    "reference": [
+      "acteur",
+      "agriculteur",
+      "architecte",
+      "avocat",
+      "banquier",
+      "bibliothécaire",
+      "bijoutier",
+      "boucher",
+      "boulanger",
+      "caissier",
+      "carreleur",
+      "chanteur",
+      "charpentier",
+      "chauffeur",
+      "chirurgien",
+      "coiffeur",
+      "comptable",
+      "cordonnier",
+      "couturier",
+      "couvreur",
+      "cuisinier",
+      "dentiste",
+      "douanier",
+      "enseignant",
+      "facteur",
+      "fermier",
+      "fleuriste",
+      "garagiste",
+      "gendarme",
+      "horloger",
+      "infirmier",
+      "informaticien",
+      "ingénieur",
+      "instituteur",
+      "jardinier",
+      "journaliste",
+      "juge",
+      "kinésithérapeute",
+      "libraire",
+      "marin",
+      "maçon",
+      "menuisier",
+      "militaire",
+      "musicien",
+      "mécanicien",
+      "médecin",
+      "notaire",
+      "peintre",
+      "pharmacien",
+      "photographe",
+      "pilote",
+      "plombier",
+      "policier",
+      "pompier",
+      "professeur",
+      "psychologue",
+      "pâtissier",
+      "pêcheur",
+      "sage-femme",
+      "secrétaire",
+      "serveur",
+      "soldat",
+      "tailleur",
+      "vendeur",
+      "vétérinaire",
+      "éboueur",
+      "écrivain",
+      "électricien"
+    ],
+    "exclusions": []
+  },
+  "fluencePhonemique": {
+    "consigne": "Des mots commençant par L",
+    "cle": "l",
+    "reference": [
+      "lait",
+      "lampe",
+      "lapin",
+      "larme",
+      "lavabo",
+      "légume",
+      "lettre",
+      "lèvre",
+      "lézard",
+      "libre",
+      "lien",
+      "lime",
+      "linge",
+      "lion",
+      "lire",
+      "lit",
+      "livre",
+      "loi",
+      "long",
+      "loup",
+      "lourd",
+      "lumière",
+      "lune",
+      "lunettes",
+      "lycée",
+      "lac",
+      "laine",
+      "lame",
+      "langue",
+      "large",
+      "laser",
+      "lent",
+      "leçon",
+      "légende",
+      "lessive",
+      "levier",
+      "liane",
+      "lilas"
+    ],
+    "exclusions": []
+  },
+  "definitions": [
+    {
+      "id": "bil-d-01",
+      "definition": "Appareil qui bat la mesure à un rythme réglable, utilisé par les musiciens.",
+      "reponse": "métronome",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; il produit un tic-tac régulier.",
+        "syllabe": "mé"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-d-02",
+      "definition": "Instrument d'optique qui grossit l'image d'objets très petits.",
+      "reponse": "microscope",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; outil de biologiste.",
+        "syllabe": "mi"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-d-03",
+      "definition": "Grand instrument à cordes et à archet, que l'on joue assis en le tenant entre les jambes.",
+      "reponse": "violoncelle",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; de la famille du violon, au son grave.",
+        "syllabe": "vio"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-d-04",
+      "definition": "Souvenir tenace d'une offense, accompagné du désir de se venger.",
+      "reponse": "rancune",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; on dit de quelqu'un qu'il ne la garde pas.",
+        "syllabe": "ran"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-d-05",
+      "definition": "Mécanisme qui permet de fermer une porte à clé.",
+      "reponse": "serrure",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; on y introduit la clé.",
+        "syllabe": "se"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-d-06",
+      "definition": "Piste inclinée sur laquelle on se laisse glisser, notamment dans les aires de jeux.",
+      "reponse": "toboggan",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; jeu d'enfants.",
+        "syllabe": "to"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-d-07",
+      "definition": "Lieu du désert où la présence d'eau permet la végétation.",
+      "reponse": "oasis",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; refuge verdoyant au milieu des dunes.",
+        "syllabe": "oa"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-d-08",
+      "definition": "Grande cuillère à long manche servant à servir le potage.",
+      "reponse": "louche",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; ustensile de service.",
+        "syllabe": "lou"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-d-09",
+      "definition": "Accord obtenu par des concessions mutuelles.",
+      "reponse": "compromis",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; issue d'une négociation.",
+        "syllabe": "com"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "bil-d-10",
+      "definition": "Relief formé par l'accumulation de laves et de projections issues des profondeurs de la Terre.",
+      "reponse": "volcan",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; il peut entrer en éruption.",
+        "syllabe": "vol"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-d-11",
+      "definition": "Qui peut être facilement blessé ou attaqué.",
+      "reponse": "vulnérable",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif ; qualifie une personne fragile ou exposée.",
+        "syllabe": "vul"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "bil-d-12",
+      "definition": "Outil servant à serrer ou desserrer les vis.",
+      "reponse": "tournevis",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; il peut être plat ou cruciforme.",
+        "syllabe": "tour"
+      },
+      "difficulte": 2
+    }
+  ],
+  "decisionLexicale": {
+    "mots": [
+      "arbre",
+      "bol",
+      "cou",
+      "dos",
+      "four",
+      "feuille",
+      "lion",
+      "plat",
+      "riz",
+      "noix",
+      "souris",
+      "terre",
+      "veste",
+      "ventre",
+      "zèbre",
+      "lettre",
+      "clé",
+      "cheveu",
+      "beurre",
+      "bouton",
+      "chèvre",
+      "couloir",
+      "drap",
+      "étoile",
+      "flamme",
+      "glace",
+      "jupe",
+      "miel",
+      "œuf",
+      "pierre"
+    ],
+    "pseudoMots": [
+      "tafrel",
+      "vonce",
+      "brulet",
+      "sangin",
+      "picule",
+      "mardon",
+      "felche",
+      "gruvin",
+      "lonpe",
+      "carbun",
+      "suldon",
+      "trivel",
+      "bampe",
+      "nicorle",
+      "pestin",
+      "rolfe",
+      "gaumel",
+      "dupine",
+      "vertol",
+      "chamblin",
+      "forpe",
+      "lusque",
+      "mibron",
+      "tarvole",
+      "souvrin",
+      "plécon",
+      "gondre",
+      "burlet",
+      "fremble",
+      "calpin"
+    ]
+  }
+}

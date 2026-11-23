@@ -34,9 +34,9 @@ corriger un item, changez son texte et augmentez la `version` de la série.
 
 ## Types disponibles
 
-Les types `definition-mot`, `fluence` et `carte-lexique` sont disponibles. Les autres (`discrimination`, `intrus`,
-`registre`, `liste-memoire`, `paragraphe`, `strategie`, `forme-bilan`) seront ajoutés avec les incréments suivants et
-documentés ici.
+Les types `definition-mot`, `fluence`, `carte-lexique` et `forme-bilan` sont disponibles. Les autres
+(`discrimination`, `intrus`, `registre`, `liste-memoire`, `paragraphe`, `strategie`) seront ajoutés avec les
+incréments suivants et documentés ici.
 
 ### `definition-mot` : de la définition au mot, avec indices
 
@@ -124,6 +124,42 @@ d'épreuve pour arbitrage.
   ]
 }
 ```
+
+### `forme-bilan` : une forme parallèle du bilan
+
+Le dossier `contenu/bilan/` contient quatre formes (A, B, C, D), utilisées à tour de rôle d'un bilan à l'autre pour
+limiter l'effet d'apprentissage. Chaque forme fournit le matériel verbal du bilan ; les épreuves non verbales
+(chiffres, lettres, couleurs, double décision) sont générées par le programme.
+
+```jsonc
+{
+  "$schema": "../schemas/forme-bilan.schema.json",
+  "id": "bilan-a",
+  "type": "forme-bilan",
+  "titre": "Bilan, forme A",
+  "version": 1,
+  "forme": "A",
+  "liste": ["bougie", "fenêtre", "…"],          // exactement 15 mots concrets et fréquents
+  "fluenceSemantique": { "consigne": "Des animaux", "cle": "animaux", "reference": ["…"], "exclusions": [] },
+  "fluencePhonemique": { "consigne": "Des mots commençant par P", "cle": "p", "reference": ["…"], "exclusions": [] },
+  "definitions": [ /* exactement 12 items au format definition-mot */ ],
+  "decisionLexicale": {
+    "mots": ["…"],                              // exactement 30 mots
+    "pseudoMots": ["…"]                         // exactement 30 suites prononçables qui ne sont pas des mots
+  }
+}
+```
+
+Le validateur vérifie en outre que :
+
+- aucun mot n'est en double dans une forme ;
+- en fluence phonémique, chaque mot de référence commence par la lettre indiquée ;
+- les mots de liste et les réponses des définitions ne se retrouvent pas d'une forme à l'autre, faute de quoi le
+  bilan suivant serait facilité ;
+- les catégories et lettres de fluence du bilan ne sont pas employées dans les séries d'entraînement.
+
+Les pseudo-mots ont été rédigés à la main, sans contrôle automatique contre un lexique de référence : relisez-les
+si vous en ajoutez, afin qu'aucun ne soit un mot rare mais réel.
 
 ## Après une modification des schémas
 

@@ -14,6 +14,8 @@ const base = process.env.BASE_PATH ?? '/';
 export default defineConfig({
   base,
   define: { __VERSION__: JSON.stringify(version) },
+  // Recharts occupe l'essentiel du module du bilan, chargé à la demande.
+  build: { chunkSizeWarningLimit: 600 },
   plugins: [
     react(),
     tailwindcss(),

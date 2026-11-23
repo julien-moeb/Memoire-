@@ -6,10 +6,13 @@ import { Methode } from './pages/Methode';
 import { Reglages } from './pages/Reglages';
 import { Affichage } from './pages/Affichage';
 import { Bientot } from './pages/Bientot';
+import { lazy, Suspense } from 'react';
+
+const PageBilan = lazy(() => import('./pages/Bilan').then((m) => ({ default: m.PageBilan })));
 
 function Ecran() {
   const route = useRoute();
-  const { pret } = useApp();
+  const { pret, concentration } = useApp();
   if (!pret) return <p className="p-8 text-center text-texte-2" role="status">Chargement…</p>;
 
   const page = (() => {
@@ -21,7 +24,11 @@ function Ecran() {
       case '/reglages/affichage':
         return <Affichage />;
       case '/bilan':
-        return <Bientot titre="Bilan initial" texte="Le bilan évalue six domaines en deux parties d'environ 13 minutes. Il établit votre ligne de base personnelle, sans aucune comparaison à une norme." />;
+        return (
+          <Suspense fallback={<p className="p-8 text-center text-texte-2" role="status">Chargement…</p>}>
+            <PageBilan />
+          </Suspense>
+        );
       case '/seance':
         return <Bientot titre="Séance du jour" texte="La séance quotidienne dure environ 18 minutes et s'adapte à votre niveau pour maintenir près de 80 % de réussite." />;
       case '/progression':
@@ -37,7 +44,7 @@ function Ecran() {
     <>
       <a href="#contenu" className="lien-evitement">Aller au contenu</a>
       <div key={route} className="pt-[env(safe-area-inset-top)]">{page}</div>
-      <BarreOnglets route={route} />
+      {!concentration && <BarreOnglets route={route} />}
     </>
   );
 }

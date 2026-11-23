@@ -41,6 +41,22 @@ Ce document est repris dans la page « Méthode » de l'application (`src/pages/
 | Fluences, décision lexicale, quasi-synonymes et paronymes, intrus, reformulation de registre | C | Mesure, échauffement, entraînement écologique | Paradigmes de mesure ; validité écologique |
 | Mémoire de travail et fonctions exécutives (n-back, empans, Stroop, alternance, go/no-go) | C | Mesure et maintien, faible poids | Transfert lointain non démontré (Melby-Lervåg et al. 2016) |
 
+## Bilan
+
+Le bilan comprend treize épreuves réparties en deux parties d'environ 13 minutes, à réaliser sur deux jours pour
+limiter la fatigue, qui fausserait surtout les épreuves de vitesse placées en fin de séance.
+
+- **Partie 1** : apprentissage d'une liste de 15 mots en trois essais, fluences sémantique et phonémique (60 s),
+  dénomination sur définition avec indices, décision lexicale, double décision, puis rappel différé de la liste.
+- **Partie 2** : empan de chiffres inverse, mise à jour en mémoire de travail, go/no-go, double tâche, Stroop,
+  alternance de tâches, puis questionnaire de gêne ressentie (une question par domaine, de 1 à 5).
+
+Quatre formes parallèles (A à D) sont utilisées à tour de rôle ; l'intervalle conseillé entre deux bilans est de trois
+mois. Chaque score est ramené en pourcentage du maximum possible de l'épreuve (POMP), puis moyenné par domaine. Le
+radar qui en résulte compare des domaines entre eux chez la même personne : c'est un repère indicatif, non une norme,
+et il ne permet aucun diagnostic. Les épreuves sont inspirées de paradigmes classiques, mais elles n'en sont pas des
+versions étalonnées.
+
 ## Choix techniques justifiés
 
 - **Escalier adaptatif 3 réussites / 1 échec.** Il converge vers 79,4 % de réussite (Levitt 1971). La règle
