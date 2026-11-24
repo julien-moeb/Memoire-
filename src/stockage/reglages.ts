@@ -9,6 +9,7 @@ export const REGLAGES_PAR_DEFAUT: Reglages = {
   domainePrioritaire: 'acces-lexical',
   ponderations: Object.fromEntries(DOMAINES.map((d) => [d, d === 'acces-lexical' ? 2 : 1])) as Record<Domaine, number>,
   ignorerAccents: false,
+  modeOral: false,
   derniereSauvegarde: null,
 };
 

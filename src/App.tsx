@@ -8,6 +8,7 @@ import { Affichage } from './pages/Affichage';
 import { Bientot } from './pages/Bientot';
 import { lazy, Suspense } from 'react';
 
+const PageSeance = lazy(() => import('./pages/Seance').then((m) => ({ default: m.PageSeance })));
 const PageBilan = lazy(() => import('./pages/Bilan').then((m) => ({ default: m.PageBilan })));
 
 function Ecran() {
@@ -30,7 +31,11 @@ function Ecran() {
           </Suspense>
         );
       case '/seance':
-        return <Bientot titre="Séance du jour" texte="La séance quotidienne dure environ 18 minutes et s'adapte à votre niveau pour maintenir près de 80 % de réussite." />;
+        return (
+          <Suspense fallback={<p className="p-8 text-center text-texte-2" role="status">Chargement…</p>}>
+            <PageSeance />
+          </Suspense>
+        );
       case '/progression':
         return <Bientot titre="Progression" texte="Vos courbes par domaine, lissées sur 7 jours, et la comparaison de vos bilans successifs apparaîtront ici." />;
       case '/journal':

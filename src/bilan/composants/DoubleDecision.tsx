@@ -38,16 +38,27 @@ export interface ResultatDoubleDecision {
   essais: { niveau: number; dureeMs: number; images: number; ecartMs: number; correcte: boolean; forme: string; position: number; reponseForme: string; reponsePosition: number }[];
   seuilMs: number;
   periodeMs: number;
+  escalier: EtatEscalier;
 }
 
-export function DoubleDecision({ essais, onTerminer }: { essais: readonly EssaiDoubleDecision[]; onTerminer: (r: ResultatDoubleDecision) => void }) {
+export function DoubleDecision({ essais, onTerminer, escalierInitial, dureeMs }: {
+  essais: readonly EssaiDoubleDecision[];
+  onTerminer: (r: ResultatDoubleDecision) => void;
+  /** Entraînement : reprise de l'escalier de la veille. */
+  escalierInitial?: EtatEscalier;
+  /** Entraînement : durée du bloc ; les essais s'arrêtent à son terme. */
+  dureeMs?: number;
+}) {
   const stimulus = useRef<HTMLDivElement>(null);
   const masque = useRef<HTMLDivElement>(null);
   const [i, setI] = useState(0);
   const [phase, setPhase] = useState<'preparation' | 'presentation' | 'forme' | 'position'>('preparation');
   const [reponseForme, setReponseForme] = useState<string>('');
   const periode = useRef(16.667);
-  const escalier = useRef<EtatEscalier>(creerEscalier({ niveauMin: 1, niveauMax: DUREES_DOUBLE_DECISION.length, niveauInitial: 3, reussitesPourMonter: 3 }));
+  const escalier = useRef<EtatEscalier>(
+    escalierInitial ?? creerEscalier({ niveauMin: 1, niveauMax: DUREES_DOUBLE_DECISION.length, niveauInitial: 3, reussitesPourMonter: 3 }),
+  );
+  const debut = useRef(performance.now());
   const derniere = useRef<{ images: number; ecartMs: number; niveau: number } | null>(null);
   const res = useRef<ResultatDoubleDecision['essais']>([]);
   const essai = essais[i]!;
@@ -95,19 +106,20 @@ export function DoubleDecision({ essais, onTerminer }: { essais: readonly EssaiD
       forme: essai.forme, position: essai.position, reponseForme, reponsePosition: pos,
     });
     escalier.current = enregistrerReponse(escalier.current, correcte);
-    if (i + 1 < essais.length) {
+    const tempsEcoule = dureeMs !== undefined && performance.now() - debut.current >= dureeMs;
+    if (i + 1 < essais.length && !tempsEcoule) {
       setI(i + 1);
       setPhase('presentation');
     } else {
       const s = estimationSeuil(escalier.current, 6);
-      onTerminer({ essais: res.current, seuilMs: seuilEnMs(s ?? escalier.current.niveau), periodeMs: periode.current });
+      onTerminer({ essais: res.current, seuilMs: seuilEnMs(s ?? escalier.current.niveau), periodeMs: periode.current, escalier: escalier.current });
     }
   };
 
   const { x, y } = positionXY(essai.position);
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-xl flex-col items-center justify-center gap-6 px-4 py-6">
-      <p className="text-[0.875rem] text-texte-2">Essai {i + 1} sur {essais.length}</p>
+      <p className="text-[0.875rem] text-texte-2">{dureeMs === undefined ? `Essai ${i + 1} sur ${essais.length}` : `Essai ${i + 1}`}</p>
       <div className="relative h-[300px] w-[300px] rounded-full bg-surface" aria-hidden={phase === 'presentation'}>
         <div className="absolute top-1/2 left-1/2 h-2 w-2 -translate-1/2 rounded-full bg-texte-2" />
         <div ref={stimulus} style={{ visibility: 'hidden' }} className="absolute inset-0 text-texte">

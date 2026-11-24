@@ -4,15 +4,20 @@ import { useApp } from '../etat/contexte';
 import { lien } from '../etat/routeur';
 import { useEffect, useState } from 'react';
 import { lireBilans, prochainBilanConseille, type BilanComplet } from '../bilan/historique';
-import { formatDate } from '../moteur/dates';
+import { dateLocale, formatDate } from '../moteur/dates';
 
 const JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
 
 export function Accueil() {
   const { reglages, modeDegrade, db } = useApp();
   const [bilans, setBilans] = useState<BilanComplet[] | null>(null);
+  const [seanceDuJour, setSeanceDuJour] = useState<'aucune' | 'en-cours' | 'faite'>('aucune');
   useEffect(() => {
     void lireBilans(db).then(setBilans);
+    if (!db) return;
+    void db.getAllFromIndex('seances', 'date', dateLocale()).then((s) =>
+      setSeanceDuJour(s.some((x) => x.fin) ? 'faite' : s.length ? 'en-cours' : 'aucune'),
+    );
   }, [db]);
   const enCours = bilans?.find((b) => !b.complet) ?? null;
   const bilanFait = bilans?.some((b) => b.complet) ?? false;
@@ -42,7 +47,7 @@ export function Accueil() {
       <Carte>
         <Anneaux
           anneaux={[
-            { libelle: 'Séance', valeur: 0, couleur: 'var(--c-anneau-1)', detail: 'Pas encore réalisée' },
+            { libelle: 'Séance', valeur: seanceDuJour === 'faite' ? 1 : seanceDuJour === 'en-cours' ? 0.5 : 0, couleur: 'var(--c-anneau-1)', detail: seanceDuJour === 'faite' ? 'Réalisée' : seanceDuJour === 'en-cours' ? 'Commencée' : 'Pas encore réalisée' },
             { libelle: 'Entraînement', valeur: 0, couleur: 'var(--c-anneau-2)', detail: '0 sur 18 min' },
             { libelle: 'Journal', valeur: 0, couleur: 'var(--c-anneau-3)', detail: 'Non renseigné' },
           ]}
@@ -62,8 +67,15 @@ export function Accueil() {
         <Ligne libelle={bilanFait ? 'Bilan et profil' : 'Bilan initial'} detail={detailBilan} href={lien('/bilan')} />
         <Ligne
           libelle="Séance du jour"
-          detail={bilanFait ? 'Disponible avec le prochain incrément' : 'Disponible après le bilan initial'}
-          desactive
+          detail={
+            !bilanFait ? 'Disponible après le bilan initial'
+            : jourDeRepos ? 'Jour de repos'
+            : seanceDuJour === 'faite' ? 'Faite aujourd’hui'
+            : seanceDuJour === 'en-cours' ? 'Commencée : reprendre'
+            : 'Environ 18 minutes'
+          }
+          href={bilanFait ? lien('/seance') : undefined}
+          desactive={!bilanFait}
         />
       </ListeGroupee>
 

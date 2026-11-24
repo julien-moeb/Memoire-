@@ -125,6 +125,17 @@ export function Reglages() {
             className="h-6 w-11 accent-[var(--c-accent)]"
           />
         </li>
+        <li className="flex min-h-[44px] items-center justify-between px-4 py-2">
+          <label htmlFor="oral" className="text-[1.0625rem]">Mode oral pour les exercices de mots</label>
+          <input
+            id="oral"
+            type="checkbox"
+            role="switch"
+            checked={reglages.modeOral}
+            onChange={(e) => modifierReglages({ modeOral: e.target.checked })}
+            className="h-6 w-11 accent-[var(--c-accent)]"
+          />
+        </li>
       </ListeGroupee>
 
       <ListeGroupee titre="Mesure" pied="Vérifie la fréquence d'affichage de cet appareil et la régularité des images, dont dépendent les épreuves chronométrées.">

@@ -19,6 +19,19 @@ function contientMot(texte: string, mot: string): boolean {
   return new RegExp(`(^|[^\\p{L}])${m.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'u').test(t);
 }
 
+/** Items identifiés d'une série (les séries de décision lexicale n'en ont pas). */
+export function itemsDe(s: Serie): readonly { id: string }[] {
+  if (s.type === 'forme-bilan') return s.definitions;
+  if (s.type === 'decision-lexicale') return [];
+  return s.items;
+}
+
+/** Nombre d'unités de contenu, pour le récapitulatif de validation. */
+export function tailleDe(s: Serie): number {
+  if (s.type === 'decision-lexicale') return s.mots.length + s.pseudoMots.length;
+  return itemsDe(s).length;
+}
+
 export function verifierContenu(fichiers: readonly Fichier[]): { series: Serie[]; anomalies: Anomalie[] } {
   const anomalies: Anomalie[] = [];
   const series: Serie[] = [];
@@ -42,8 +55,7 @@ export function verifierContenu(fichiers: readonly Fichier[]): { series: Serie[]
     const s = r.data;
     series.push(s);
     enregistrerId(s.id, chemin);
-    const items = s.type === 'forme-bilan' ? s.definitions : s.items;
-    for (const item of items) enregistrerId(item.id, chemin);
+    for (const item of itemsDe(s)) enregistrerId(item.id, chemin);
 
     if (s.type === 'forme-bilan') {
       const doublons = (mots: readonly string[]) => mots.filter((m, i) => mots.findIndex((x) => normaliser(x) === normaliser(m)) !== i);
@@ -72,6 +84,39 @@ export function verifierContenu(fichiers: readonly Fichier[]): { series: Serie[]
           anomalies.push({ chemin, message: `${it.id} : l'indice sémantique dévoile la réponse.` });
         }
       }
+    }
+    if (s.type === 'discrimination') {
+      for (const it of s.items) {
+        if (!it.options.some((o) => normaliser(o) === normaliser(it.reponse))) {
+          anomalies.push({ chemin, message: `${it.id} : la réponse « ${it.reponse} » ne figure pas parmi les options.` });
+        }
+        if (!it.phrase.includes('___')) anomalies.push({ chemin, message: `${it.id} : la phrase doit contenir « ___ ».` });
+        if (new Set(it.options.map((o) => normaliser(o))).size !== it.options.length) {
+          anomalies.push({ chemin, message: `${it.id} : options en double.` });
+        }
+      }
+    }
+    if (s.type === 'intrus') {
+      for (const it of s.items) {
+        if (!it.mots.some((m) => normaliser(m) === normaliser(it.intrus))) {
+          anomalies.push({ chemin, message: `${it.id} : l'intrus « ${it.intrus} » ne figure pas parmi les mots.` });
+        }
+      }
+    }
+    if (s.type === 'liste-memoire') {
+      for (const it of s.items) {
+        const vus = new Set<string>();
+        for (const m of it.mots) {
+          const k = normaliser(m);
+          if (vus.has(k)) anomalies.push({ chemin, message: `${it.id} : mot répété « ${m} ».` });
+          vus.add(k);
+        }
+      }
+    }
+    if (s.type === 'decision-lexicale') {
+      const mots = new Set(s.mots.map((m) => normaliser(m)));
+      const communs = s.pseudoMots.filter((p) => mots.has(normaliser(p)));
+      if (communs.length) anomalies.push({ chemin, message: `Présents à la fois comme mots et pseudo-mots : ${communs.join(', ')}.` });
     }
     if (s.type === 'fluence') {
       // (contrôle des fluences d'entraînement)
