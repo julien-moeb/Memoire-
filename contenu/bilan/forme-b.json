@@ -1,0 +1,343 @@
+{
+  "$schema": "../schemas/forme-bilan.schema.json",
+  "id": "bilan-b",
+  "type": "forme-bilan",
+  "titre": "Bilan, forme B",
+  "version": 1,
+  "forme": "B",
+  "liste": [
+    "lampe",
+    "rivage",
+    "mouton",
+    "grenier",
+    "panier",
+    "cerise",
+    "soldat",
+    "forêt",
+    "miroir",
+    "abeille",
+    "journal",
+    "église",
+    "pinceau",
+    "orage",
+    "couteau"
+  ],
+  "fluenceSemantique": {
+    "consigne": "Des vêtements",
+    "cle": "vêtements",
+    "reference": [
+      "anorak",
+      "ballerine",
+      "basket",
+      "bermuda",
+      "blouse",
+      "blouson",
+      "bonnet",
+      "botte",
+      "béret",
+      "caleçon",
+      "cape",
+      "cardigan",
+      "casquette",
+      "ceinture",
+      "chapeau",
+      "chaussette",
+      "chausson",
+      "chaussure",
+      "chemise",
+      "châle",
+      "collant",
+      "combinaison",
+      "corsage",
+      "costume",
+      "cravate",
+      "culotte",
+      "débardeur",
+      "espadrille",
+      "foulard",
+      "gant",
+      "gilet",
+      "imperméable",
+      "jean",
+      "jogging",
+      "jupe",
+      "kimono",
+      "maillot",
+      "manteau",
+      "mitaine",
+      "mocassin",
+      "pantalon",
+      "pantoufle",
+      "parka",
+      "peignoir",
+      "polo",
+      "poncho",
+      "pull",
+      "pyjama",
+      "robe",
+      "sabot",
+      "salopette",
+      "sandale",
+      "short",
+      "slip",
+      "smoking",
+      "soutien-gorge",
+      "survêtement",
+      "sweat",
+      "tablier",
+      "tailleur",
+      "tee-shirt",
+      "tunique",
+      "veste",
+      "écharpe"
+    ],
+    "exclusions": []
+  },
+  "fluencePhonemique": {
+    "consigne": "Des mots commençant par R",
+    "cle": "r",
+    "reference": [
+      "roi",
+      "robe",
+      "rose",
+      "rue",
+      "riz",
+      "rat",
+      "radio",
+      "rail",
+      "raison",
+      "rang",
+      "rapide",
+      "rare",
+      "rasoir",
+      "rayon",
+      "recette",
+      "regard",
+      "reine",
+      "renard",
+      "repas",
+      "rêve",
+      "rideau",
+      "rire",
+      "rivière",
+      "robinet",
+      "roche",
+      "roman",
+      "rond",
+      "roue",
+      "rouge",
+      "route",
+      "ruban",
+      "ruche",
+      "rugby",
+      "ruisseau",
+      "rythme",
+      "raisin",
+      "racine",
+      "rocher"
+    ],
+    "exclusions": []
+  },
+  "definitions": [
+    {
+      "id": "bil-b-01",
+      "definition": "Instrument qui mesure la température.",
+      "reponse": "thermomètre",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; on le consulte en cas de fièvre.",
+        "syllabe": "ther"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-b-02",
+      "definition": "Instrument d'optique permettant de voir par-dessus un obstacle, utilisé notamment dans les sous-marins.",
+      "reponse": "périscope",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; tube muni de miroirs.",
+        "syllabe": "pé"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-b-03",
+      "definition": "Instrument de musique portatif à soufflet et à clavier.",
+      "reponse": "accordéon",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; associé au bal musette.",
+        "syllabe": "ac"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-b-04",
+      "definition": "Sentiment intense de bien-être et de joie.",
+      "reponse": "euphorie",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; état d'exaltation joyeuse.",
+        "syllabe": "eu"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-b-05",
+      "definition": "Serrure mobile munie d'un anneau, que l'on accroche pour fermer.",
+      "reponse": "cadenas",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; protège un casier ou un vélo.",
+        "syllabe": "ca"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-b-06",
+      "definition": "Grande ombrelle fixée sur un pied, qui protège du soleil.",
+      "reponse": "parasol",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; objet de terrasse ou de plage.",
+        "syllabe": "pa"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-b-07",
+      "definition": "Grande étendue de terre entourée d'eau de tous côtés sauf un.",
+      "reponse": "péninsule",
+      "variantes": [
+        "presqu'île"
+      ],
+      "indices": {
+        "trait": "Nom féminin ; l'Italie et l'Espagne en sont des exemples.",
+        "syllabe": "pé"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-b-08",
+      "definition": "Ustensile formé d'une toile ou d'un grillage fin, servant à séparer les parties fines d'une matière.",
+      "reponse": "tamis",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; on y passe la farine.",
+        "syllabe": "ta"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "bil-b-09",
+      "definition": "Situation où l'on doit choisir entre deux possibilités également insatisfaisantes.",
+      "reponse": "dilemme",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; alternative embarrassante.",
+        "syllabe": "di"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-b-10",
+      "definition": "Mannequin placé dans un champ pour effrayer les oiseaux.",
+      "reponse": "épouvantail",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; se dit aussi d'une personne mal habillée.",
+        "syllabe": "é"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-b-11",
+      "definition": "Qui ne dure que très peu de temps.",
+      "reponse": "éphémère",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif ; c'est aussi le nom d'un insecte qui vit un seul jour.",
+        "syllabe": "é"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "bil-b-12",
+      "definition": "Outil formé de deux branches articulées servant à saisir ou arracher, par exemple un clou.",
+      "reponse": "tenaille",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin, souvent employé au pluriel ; outil de menuisier.",
+        "syllabe": "te"
+      },
+      "difficulte": 4
+    }
+  ],
+  "decisionLexicale": {
+    "mots": [
+      "route",
+      "nez",
+      "fusil",
+      "poule",
+      "sac",
+      "mer",
+      "champ",
+      "laine",
+      "goutte",
+      "piano",
+      "tigre",
+      "plage",
+      "gant",
+      "bois",
+      "corde",
+      "lit",
+      "bague",
+      "savon",
+      "crabe",
+      "fumée",
+      "nappe",
+      "ruche",
+      "pied",
+      "linge",
+      "toit",
+      "clou",
+      "poivre",
+      "sucre",
+      "peigne",
+      "chaise"
+    ],
+    "pseudoMots": [
+      "rugel",
+      "manfe",
+      "polise",
+      "tirle",
+      "bafon",
+      "sirde",
+      "clampe",
+      "feuvre",
+      "morlin",
+      "dugne",
+      "parble",
+      "virsot",
+      "cholpe",
+      "grenin",
+      "lufer",
+      "tamble",
+      "nuvre",
+      "spalot",
+      "broumin",
+      "gelpe",
+      "hurtin",
+      "fornel",
+      "cabrol",
+      "pilmon",
+      "dréfon",
+      "voinel",
+      "sarque",
+      "jonpe",
+      "ripoche",
+      "lortin"
+    ]
+  }
+}

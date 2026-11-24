@@ -24,3 +24,8 @@ export function ajouterJours(s: DateLocale, n: number): DateLocale {
 export function ecartJours(a: DateLocale, b: DateLocale): number {
   return Math.round((versDate(b).getTime() - versDate(a).getTime()) / 86_400_000);
 }
+
+/** Date locale lisible, par exemple « 22 février 2027 ». */
+export function formatDate(s: DateLocale): string {
+  return versDate(s).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}

@@ -55,4 +55,19 @@ describe('vérification du contenu', () => {
     }]);
     expect(anomalies[0]?.message).toMatch(/table/);
   });
+
+  it('signale une catégorie de fluence réservée au bilan', () => {
+    const fichiers = lireFichiersContenu().filter((f) => 'donnees' in f && f.chemin.includes('forme-a')) as { chemin: string; donnees: unknown }[];
+    const { anomalies } = verifierContenu([
+      ...fichiers,
+      {
+        chemin: 'f.json',
+        donnees: {
+          id: 'flu-t', type: 'fluence', titre: 'Test', domaine: 'acces-lexical', version: 1,
+          items: [{ id: 'flu-t-a', modalite: 'semantique', consigne: 'Des animaux', cle: 'Animaux', reference: ['chat'] }],
+        },
+      },
+    ]);
+    expect(anomalies.map((a) => a.message).join(' ')).toMatch(/réservée au bilan/);
+  });
 });

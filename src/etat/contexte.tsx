@@ -12,6 +12,9 @@ interface EtatApp {
   reglages: Reglages;
   modifierReglages: (modif: Partial<Reglages>) => Promise<void>;
   rechargerReglages: () => Promise<void>;
+  /** Mode concentration : la barre d'onglets est masquée pendant une épreuve. */
+  concentration: boolean;
+  setConcentration: (v: boolean) => void;
 }
 
 const Contexte = createContext<EtatApp | null>(null);
@@ -22,6 +25,7 @@ export function FournisseurApp({ children }: { children: ReactNode }) {
   const [modeDegrade, setModeDegrade] = useState(false);
   const [stockagePersistant, setStockagePersistant] = useState<boolean | null>(null);
   const [reglages, setReglages] = useState<Reglages>(REGLAGES_PAR_DEFAUT);
+  const [concentration, setConcentration] = useState(false);
 
   useEffect(() => {
     let actif = true;
@@ -64,7 +68,7 @@ export function FournisseurApp({ children }: { children: ReactNode }) {
   const rechargerReglages = useCallback(async () => setReglages(await lireReglages(db)), [db]);
 
   return (
-    <Contexte.Provider value={{ pret, db, modeDegrade, stockagePersistant, reglages, modifierReglages, rechargerReglages }}>
+    <Contexte.Provider value={{ pret, db, modeDegrade, stockagePersistant, reglages, modifierReglages, rechargerReglages, concentration, setConcentration }}>
       {children}
     </Contexte.Provider>
   );

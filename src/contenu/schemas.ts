@@ -77,13 +77,40 @@ export const serieCarteLexique = z.object({
   items: z.array(itemCarteLexique).min(1),
 });
 
-export const serie = z.discriminatedUnion('type', [serieDefinitionMot, serieFluence, serieCarteLexique]);
+const fluenceBilan = z.object({
+  consigne: z.string().min(3),
+  cle: z.string().min(1),
+  reference: z.array(z.string()).min(10),
+  exclusions: z.array(z.string()).default([]),
+});
+
+export const formeBilan = z.object({
+  $schema: z.string().optional(),
+  id: identifiant,
+  type: z.literal('forme-bilan'),
+  titre: z.string().min(3),
+  version: z.number().int().positive(),
+  forme: z.enum(['A', 'B', 'C', 'D']).describe('Formes parallèles, utilisées à tour de rôle à chaque bilan'),
+  liste: z.array(z.string().min(2)).length(15).describe('Liste de 15 mots à apprendre'),
+  fluenceSemantique: fluenceBilan,
+  fluencePhonemique: fluenceBilan,
+  definitions: z.array(itemDefinitionMot).length(12),
+  decisionLexicale: z.object({
+    mots: z.array(z.string().min(2)).length(30),
+    pseudoMots: z.array(z.string().min(2)).length(30).describe('Suites de lettres prononçables qui ne sont pas des mots français'),
+  }),
+});
+
+export const serie = z.discriminatedUnion('type', [serieDefinitionMot, serieFluence, serieCarteLexique, formeBilan]);
 
 export type Serie = z.infer<typeof serie>;
 export type TypeSerie = Serie['type'];
+
+export type FormeBilan = z.infer<typeof formeBilan>;
 
 export const SCHEMAS_PAR_TYPE = {
   'definition-mot': serieDefinitionMot,
   fluence: serieFluence,
   'carte-lexique': serieCarteLexique,
+  'forme-bilan': formeBilan,
 } as const satisfies Record<TypeSerie, z.ZodType>;

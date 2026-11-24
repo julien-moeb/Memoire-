@@ -1,0 +1,351 @@
+{
+  "$schema": "../schemas/forme-bilan.schema.json",
+  "id": "bilan-c",
+  "type": "forme-bilan",
+  "titre": "Bilan, forme C",
+  "version": 1,
+  "forme": "C",
+  "liste": [
+    "horloge",
+    "chemin",
+    "lapin",
+    "colline",
+    "tiroir",
+    "ballon",
+    "facteur",
+    "étang",
+    "coussin",
+    "canard",
+    "chemise",
+    "prairie",
+    "scie",
+    "tempête",
+    "assiette"
+  ],
+  "fluenceSemantique": {
+    "consigne": "Des fruits et légumes",
+    "cle": "fruits et légumes",
+    "reference": [
+      "abricot",
+      "ail",
+      "ananas",
+      "artichaut",
+      "asperge",
+      "aubergine",
+      "avocat",
+      "banane",
+      "betterave",
+      "brocoli",
+      "carotte",
+      "cassis",
+      "cerise",
+      "champignon",
+      "chou",
+      "chou-fleur",
+      "citron",
+      "citrouille",
+      "clémentine",
+      "coing",
+      "concombre",
+      "courge",
+      "courgette",
+      "cresson",
+      "céleri",
+      "datte",
+      "endive",
+      "fenouil",
+      "figue",
+      "fraise",
+      "framboise",
+      "grenade",
+      "groseille",
+      "haricot",
+      "kiwi",
+      "laitue",
+      "lentille",
+      "litchi",
+      "mandarine",
+      "mangue",
+      "maïs",
+      "melon",
+      "myrtille",
+      "mûre",
+      "navet",
+      "nectarine",
+      "oignon",
+      "olive",
+      "orange",
+      "panais",
+      "papaye",
+      "pastèque",
+      "patate douce",
+      "petit pois",
+      "poire",
+      "poireau",
+      "poivron",
+      "pomme",
+      "pomme de terre",
+      "potiron",
+      "prune",
+      "pêche",
+      "radis",
+      "raisin",
+      "rutabaga",
+      "salade",
+      "tomate",
+      "topinambour",
+      "échalote",
+      "épinard"
+    ],
+    "exclusions": [
+      "riz",
+      "pain"
+    ]
+  },
+  "fluencePhonemique": {
+    "consigne": "Des mots commençant par T",
+    "cle": "t",
+    "reference": [
+      "table",
+      "tapis",
+      "tasse",
+      "taxi",
+      "tête",
+      "thé",
+      "tigre",
+      "toit",
+      "tomate",
+      "tonneau",
+      "tour",
+      "train",
+      "trésor",
+      "tribu",
+      "tronc",
+      "trou",
+      "tulipe",
+      "tunnel",
+      "tuyau",
+      "talon",
+      "tambour",
+      "tante",
+      "tarte",
+      "temps",
+      "tenue",
+      "terre",
+      "timbre",
+      "tiroir",
+      "toile",
+      "tonnerre",
+      "torche",
+      "tortue",
+      "tracteur",
+      "trottoir",
+      "truite",
+      "tube",
+      "tissu"
+    ],
+    "exclusions": []
+  },
+  "definitions": [
+    {
+      "id": "bil-c-01",
+      "definition": "Instrument qui mesure la pression atmosphérique.",
+      "reponse": "baromètre",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; il aide à prévoir le temps.",
+        "syllabe": "ba"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-c-02",
+      "definition": "Lunette d'approche portative permettant d'observer des objets éloignés.",
+      "reponse": "longue-vue",
+      "variantes": [
+        "longue vue"
+      ],
+      "indices": {
+        "trait": "Nom féminin ; instrument du marin ou du guetteur.",
+        "syllabe": "lon"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-c-03",
+      "definition": "Petit instrument de musique à anches, que l'on fait glisser contre les lèvres en soufflant.",
+      "reponse": "harmonica",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; instrument de poche du blues.",
+        "syllabe": "har"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-c-04",
+      "definition": "Tristesse vague et durable, sans cause précise.",
+      "reponse": "mélancolie",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; état d'âme cher aux poètes romantiques.",
+        "syllabe": "mé"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-c-05",
+      "definition": "Ensemble de clés réunies par un anneau.",
+      "reponse": "trousseau",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; se dit aussi du linge d'une mariée.",
+        "syllabe": "trou"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-c-06",
+      "definition": "Petite caisse montée sur une roue, munie de deux brancards, pour transporter des charges.",
+      "reponse": "brouette",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; outil de jardin ou de chantier.",
+        "syllabe": "brou"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-c-07",
+      "definition": "Embouchure large d'un fleuve, où la marée se fait sentir.",
+      "reponse": "estuaire",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; celui de la Gironde est le plus vaste d'Europe occidentale.",
+        "syllabe": "es"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "bil-c-08",
+      "definition": "Ustensile percé de trous, servant à égoutter les aliments.",
+      "reponse": "passoire",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; on y verse les pâtes.",
+        "syllabe": "pa"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-c-09",
+      "definition": "Affirmation qui semble contraire au bon sens ou à la logique, tout en pouvant être vraie.",
+      "reponse": "paradoxe",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; contradiction apparente.",
+        "syllabe": "pa"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "bil-c-10",
+      "definition": "Tour élevée portant une puissante lumière pour guider les navires la nuit.",
+      "reponse": "phare",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom masculin ; se dit aussi des feux avant d'une voiture.",
+        "syllabe": "pha"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "bil-c-11",
+      "definition": "Qui relève d'un idéal séduisant mais irréalisable.",
+      "reponse": "utopique",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif ; dérivé d'un mot inventé par Thomas More.",
+        "syllabe": "u"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "bil-c-12",
+      "definition": "Outil formé d'un fer pointu fixé à un manche, servant à creuser la terre dure.",
+      "reponse": "pioche",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin ; outil de terrassier.",
+        "syllabe": "pio"
+      },
+      "difficulte": 3
+    }
+  ],
+  "decisionLexicale": {
+    "mots": [
+      "ferme",
+      "lèvre",
+      "bouche",
+      "rue",
+      "vent",
+      "pomme",
+      "singe",
+      "genou",
+      "cuir",
+      "pluie",
+      "brique",
+      "cage",
+      "front",
+      "phoque",
+      "flûte",
+      "herbe",
+      "loup",
+      "île",
+      "épée",
+      "parc",
+      "nid",
+      "tasse",
+      "grille",
+      "ours",
+      "seau",
+      "gâteau",
+      "poisson",
+      "plante",
+      "roche",
+      "vin"
+    ],
+    "pseudoMots": [
+      "fargon",
+      "nipe",
+      "bulte",
+      "rolvin",
+      "crapin",
+      "tesque",
+      "mounel",
+      "pluson",
+      "gavre",
+      "chirne",
+      "desvol",
+      "surmon",
+      "farpe",
+      "lisbou",
+      "trinche",
+      "boleu",
+      "vupin",
+      "grosle",
+      "nafon",
+      "pessule",
+      "malbic",
+      "cofrène",
+      "jilpe",
+      "frunel",
+      "sopral",
+      "tuvin",
+      "bredon",
+      "calude",
+      "mirtole",
+      "pondel"
+    ]
+  }
+}

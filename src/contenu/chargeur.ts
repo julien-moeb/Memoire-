@@ -24,3 +24,7 @@ export const SERIES: readonly Serie[] = charger();
 export function seriesDeType<T extends Serie['type']>(type: T): Extract<Serie, { type: T }>[] {
   return SERIES.filter((s): s is Extract<Serie, { type: T }> => s.type === type);
 }
+
+export function formesBilan() {
+  return seriesDeType('forme-bilan').sort((a, b) => a.forme.localeCompare(b.forme));
+}
