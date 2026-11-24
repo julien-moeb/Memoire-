@@ -60,6 +60,7 @@ contenu/          séries d'exercices en JSON, éditables sans toucher au code (
 scripts/          validation du contenu, génération des schémas
 src/moteur/       logique pure et testée : escalier adaptatif, SM-2, statistiques, saisie libre, aléa à graine
 src/bilan/        protocole, générateurs d'essais, cotation et épreuves du bilan
+src/seance/       composition de la séance, niveaux, sélection des items, exercices, persistance
 src/chrono/       chronométrage synchronisé sur les images d'écran, profil d'appareil
 src/contenu/      schémas Zod et chargement du contenu
 src/stockage/     base IndexedDB, réglages, sauvegarde et import
@@ -77,6 +78,6 @@ résultats, elle est donc isolée et testée.
 | --- | --- | --- |
 | 1. Socle | Projet, déploiement, stockage, chronométrage, interface, page Méthode | Livré |
 | 2. Bilan initial | Treize épreuves en deux parties, quatre formes parallèles, questionnaire de gêne ressentie, profil radar, domaine prioritaire | Livré |
-| 3. Moteur d'exercices | 24 exercices, séance quotidienne, contenu des 30 premiers jours | À venir |
-| 4. Suivi | Anneaux, courbes, journal, volet comportemental | À venir |
+| 3. Moteur d'exercices | Séance quotidienne composée automatiquement, 19 exercices (dont 14 à difficulté adaptative), révisions espacées, contenu des 30 premiers jours | Livré |
+| 4. Suivi | Courbes, journal complet, volet comportemental (exercices 22 à 24), cartes issues du journal | À venir |
 | 5. Export | Archive CSV, synthèse PDF de deux pages | À venir |

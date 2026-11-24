@@ -1,5 +1,5 @@
 /** Séance quotidienne : contexte, blocs composés par le moteur, clôture. */
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Bandeau, Bouton, Carte, GrandTitre, ListeGroupee, Ligne, Page } from '../ui/composants';
 import { useApp } from '../etat/contexte';
 import { lien } from '../etat/routeur';
@@ -65,6 +65,10 @@ export function PageSeance() {
   const [resultats, setResultats] = useState<{ titre: string; r: ResultatExercice }[]>([]);
   const [rang, setRang] = useState(0);
   const [confirmerArret, setConfirmerArret] = useState(false);
+  /** Blocs dont l'enregistrement est lancé : un double appui sur « Continuer » ne doit rien enregistrer deux fois. */
+  const enregistres = useRef(new Set<number>());
+  const seanceRef = useRef<Seance | null>(null);
+  seanceRef.current = seance;
 
   useEffect(() => {
     if (!db) return;
@@ -111,7 +115,10 @@ export function PageSeance() {
   };
 
   const apresBloc = async (index: number, r: ResultatExercice, cartesRevisees: CarteSm2[] = []) => {
-    const s = await P.enregistrerBloc(db, seance!, P.cleBloc(blocs[index]!, index), r, date, cartesRevisees);
+    if (enregistres.current.has(index)) return;
+    enregistres.current.add(index);
+    const s = await P.enregistrerBloc(db, seanceRef.current!, P.cleBloc(blocs[index]!, index), r, date, cartesRevisees);
+    seanceRef.current = s;
     setSeance(s);
     setResultats((t) => [...t, { titre: titreBloc(blocs[index]!), r }]);
     const suivant = prochainIndex(index + 1, s);
@@ -152,7 +159,7 @@ export function PageSeance() {
     return (
       <div className="min-h-screen">
         {barreArret}
-        <Consigne titre={titreBloc(b)} numero={ecran.index + 1} total={blocs.length} onCommencer={() => void preparerBloc(ecran.index)}>
+        <Consigne libelle="Étape" titre={titreBloc(b)} numero={ecran.index + 1} total={blocs.length} onCommencer={() => void preparerBloc(ecran.index)}>
           <p>{consigneBloc(b)}</p>
           {b.type === 'exercice' && (
             <p className="mt-3 text-[0.9375rem] text-texte-2">
@@ -195,7 +202,7 @@ export function PageSeance() {
       <Cloture
         onTerminer={async (episode) => {
           if (episode) await db.put('episodes', episode);
-          if (seance) setSeance(await P.cloreSeance(db, seance));
+          if (seanceRef.current) setSeance(await P.cloreSeance(db, seanceRef.current));
           setEcran({ type: 'fin' });
         }}
       />

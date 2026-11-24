@@ -25,6 +25,23 @@ export function Methode() {
         </ul>
       </Carte>
 
+      <TitreSection>La séance du jour</TitreSection>
+      <Carte>
+        <ol className="list-decimal space-y-2 pl-5 text-[1rem] leading-relaxed">
+          <li>Contexte (sommeil, fatigue), saisi avant l'effort.</li>
+          <li>Rappel de la liste apprise la veille, s'il y a lieu.</li>
+          <li>Échauffement : 90 secondes de fluence.</li>
+          <li>Deux exercices de votre domaine prioritaire, 4 minutes chacun, en rotation.</li>
+          <li>Double décision, 4 minutes, au moins quatre séances sur six ; sinon, un exercice de maintien.</li>
+          <li>Révisions espacées : 15 cartes au plus, dont vos mots manqués.</li>
+          <li>Clôture : un épisode de manque du mot depuis la veille, si vous le souhaitez.</li>
+        </ol>
+        <p className="mt-3 text-[0.9375rem] leading-relaxed text-texte-2">
+          Chaque exercice reprend votre niveau de la veille, un cran en dessous pour commencer, puis s'ajuste selon la règle
+          3 réussites / 1 échec, qui maintient environ 80 % de réussite.
+        </p>
+      </Carte>
+
       <TitreSection>Niveaux de preuve</TitreSection>
       <Carte>
         <dl className="space-y-3">

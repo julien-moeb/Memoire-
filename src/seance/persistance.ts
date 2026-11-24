@@ -133,8 +133,10 @@ export async function enregistrerBloc(
   return suivante;
 }
 
+/** Clôt la séance à partir de l'enregistrement stocké, pour ne jamais écraser les blocs réalisés par une copie ancienne. */
 export async function cloreSeance(db: Base, seance: Seance): Promise<Seance> {
-  const s = { ...seance, fin: new Date().toISOString() };
+  const stockee = (await db.get('seances', seance.id)) ?? seance;
+  const s = { ...stockee, fin: new Date().toISOString() };
   await db.put('seances', s);
   return s;
 }

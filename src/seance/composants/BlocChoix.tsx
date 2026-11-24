@@ -170,7 +170,7 @@ export function BlocChoix({ dureeMs, escalier, generer, retour = 'bref', onTermi
     <div className="mx-auto flex min-h-[70vh] max-w-xl flex-col gap-6 px-4 py-6">
       <BarreTemps resteMs={reste} totalMs={dureeMs} />
       {essai?.contexte && <p className="text-center text-[1.125rem] leading-relaxed">{essai.contexte}</p>}
-      <div className="relative flex min-h-40 w-full items-center justify-center">
+      <div className={`relative flex w-full items-center justify-center ${essai && !essai.texte ? 'min-h-10' : 'min-h-40'}`}>
         <div ref={zone} className="text-center text-[2.5rem] leading-snug font-semibold tracking-wide whitespace-pre-line select-none" aria-live="off" />
         {message && !message.detail && message.texte && (
           <p role="status" className="absolute bottom-0 text-[1rem] text-texte-2">{message.texte}</p>
