@@ -176,6 +176,28 @@ export const serieDecisionLexicale = z.object({
   pseudoMots: z.array(z.string().min(2)).min(20).describe('Suites prononçables qui ne sont pas des mots français'),
 });
 
+export const CATEGORIES_STRATEGIE = ['pendant', 'preparation', 'regulation', 'organisation'] as const;
+
+export const itemStrategie = z.object({
+  id: identifiant,
+  titre: z.string().min(3),
+  categorie: z.enum(CATEGORIES_STRATEGIE).describe("pendant l'échange, préparation, régulation de l'activation, organisation"),
+  resume: z.string().min(10).max(140).describe('Une phrase, affichée dans la liste des fiches'),
+  quand: z.string().min(10).describe('Situations où la stratégie est utile'),
+  principe: z.string().min(20).describe('Pourquoi elle aide, en quelques phrases'),
+  etapes: z.array(z.string().min(5)).min(2).max(6),
+  exemple: z.string().min(10),
+  aEviter: z.string().min(5).optional(),
+  outil: z.enum(['respiration']).optional().describe("Exercice guidé associé dans l'application"),
+});
+
+export const serieStrategie = z.object({
+  ...enveloppe,
+  domaine: domaine.optional(),
+  type: z.literal('strategie'),
+  items: z.array(itemStrategie).min(1),
+});
+
 const fluenceBilan = z.object({
   consigne: z.string().min(3),
   cle: z.string().min(1),
@@ -202,7 +224,7 @@ export const formeBilan = z.object({
 
 export const serie = z.discriminatedUnion('type', [
   serieDefinitionMot, serieFluence, serieCarteLexique, formeBilan, serieDiscrimination, serieIntrus, serieRegistre,
-  serieTraits, serieListeMemoire, serieParagraphe, serieDecisionLexicale,
+  serieTraits, serieListeMemoire, serieParagraphe, serieDecisionLexicale, serieStrategie,
 ]);
 
 export type Serie = z.infer<typeof serie>;
@@ -222,6 +244,7 @@ export const SCHEMAS_PAR_TYPE = {
   'liste-memoire': serieListeMemoire,
   paragraphe: serieParagraphe,
   'decision-lexicale': serieDecisionLexicale,
+  strategie: serieStrategie,
 } as const satisfies Record<TypeSerie, z.ZodType>;
 
 export type ItemDefinitionMot = z.infer<typeof itemDefinitionMot>;
@@ -233,3 +256,4 @@ export type ItemListeMemoire = z.infer<typeof itemListeMemoire>;
 export type ItemParagraphe = z.infer<typeof itemParagraphe>;
 export type ItemFluence = z.infer<typeof itemFluence>;
 export type ItemCarteLexique = z.infer<typeof itemCarteLexique>;
+export type ItemStrategie = z.infer<typeof itemStrategie>;

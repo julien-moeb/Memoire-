@@ -6,7 +6,7 @@ import { creerEscalier, debutDeSeance, type EtatEscalier } from '../moteur/escal
 import { cartesDues } from '../moteur/sm2';
 import { EXERCICES, type IdExercice } from './catalogue';
 import type { Bloc, SeancePassee } from './composer';
-import type { ResultatExercice } from './types';
+import { resultatVide, type ResultatExercice } from './types';
 import { nouvellesCartes, NOUVELLES_PAR_SEANCE } from './exercices/Revisions';
 
 /** Clé d'un bloc dans le plan d'une séance, pour la reprise après interruption. */
@@ -20,7 +20,11 @@ export async function historique(db: Base): Promise<SeancePassee[]> {
   const seances = await db.getAllFromIndex('seances', 'date');
   return seances
     .filter((s) => s.fin !== null)
-    .map((s) => ({ date: s.date, exercices: s.blocsRealises.map((k) => k.split(':')[1] ?? '').filter((e) => e in EXERCICES) }));
+    .map((s) => ({
+      date: s.date,
+      exercices: s.blocsRealises.map((k) => k.split(':')[1] ?? '').filter((e) => e in EXERCICES),
+      comportemental: s.blocsRealises.some((k) => k.endsWith(':comportemental')),
+    }));
 }
 
 export async function seanceOuverte(db: Base, date: DateLocale): Promise<Seance | undefined> {
@@ -86,8 +90,10 @@ export async function ouvrirSeance(db: Base, date: DateLocale, contexte: Context
  * cartes à reprendre, confusions, rappel différé, et avancement de la séance.
  */
 export async function enregistrerBloc(
-  db: Base, seance: Seance, cle: string, r: ResultatExercice, date: DateLocale, cartesRevisees: Carte[] = [],
+  db: Base, seance: Seance, cle: string, resultat: ResultatExercice | null, date: DateLocale, cartesRevisees: Carte[] = [],
 ): Promise<Seance> {
+  // Un bloc sans mesure (volet comportemental) ne fait qu'avancer la séance.
+  const r: ResultatExercice = resultat ?? { ...resultatVide('fluence') };
   const tx = db.transaction(['essais', 'resultats', 'escaliers', 'cartes', 'confusions', 'rappels', 'seances'], 'readwrite');
   const horodatage = new Date().toISOString();
   for (const e of r.essais) {

@@ -42,6 +42,23 @@ export function Methode() {
         </p>
       </Carte>
 
+      <TitreSection>Lire vos courbes</TitreSection>
+      <Carte className="space-y-3 text-[1rem] leading-relaxed">
+        <p>
+          Chaque courbe montre l'écart à votre propre ligne de base (le bilan et vos sept premières séances de l'exercice),
+          en écarts-types, lissé sur sept jours. Zéro correspond à vos débuts ; au-dessus, vous faites mieux. Aucune norme
+          de population n'est utilisée.
+        </p>
+        <p>
+          Les liens entre vos résultats et le sommeil, la fatigue ou l'heure ne sont affichés qu'après 30 séances, sous
+          forme de médianes, et décrivent des associations, non des causes.
+        </p>
+        <p>
+          Une fois par semaine, un volet comportemental remplace les exercices ciblés : relecture du journal, une
+          stratégie à essayer, respiration lente. Chaque mot cherché noté dans le journal devient une carte de révision.
+        </p>
+      </Carte>
+
       <TitreSection>Niveaux de preuve</TitreSection>
       <Carte>
         <dl className="space-y-3">

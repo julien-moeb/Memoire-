@@ -36,6 +36,8 @@ export interface PropsExercice {
   modeOral: boolean;
   /** Items déjà présentés : identifiant → date de dernière présentation. */
   vus: ReadonlyMap<string, string>;
+  /** Mots cherchés consignés dans le journal (traits sémantiques appliqués à vos propres mots). */
+  motsPerso?: readonly string[];
   onTerminer: (r: ResultatExercice) => void;
 }
 

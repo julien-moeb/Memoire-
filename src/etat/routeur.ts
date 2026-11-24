@@ -1,9 +1,12 @@
 /** Routage par ancre (#/chemin) : GitHub Pages ne sait pas servir les routes profondes. */
 import { useEffect, useState } from 'react';
 
-export type Route = '/' | '/bilan' | '/seance' | '/progression' | '/journal' | '/reglages' | '/reglages/affichage' | '/methode';
+export type Route =
+  | '/' | '/bilan' | '/seance' | '/progression' | '/journal' | '/fiches' | '/respiration' | '/reglages' | '/reglages/affichage' | '/methode';
 
-const ROUTES: readonly Route[] = ['/', '/bilan', '/seance', '/progression', '/journal', '/reglages', '/reglages/affichage', '/methode'];
+const ROUTES: readonly Route[] = [
+  '/', '/bilan', '/seance', '/progression', '/journal', '/fiches', '/respiration', '/reglages', '/reglages/affichage', '/methode',
+];
 
 function lire(): Route {
   const h = window.location.hash.replace(/^#/, '') || '/';

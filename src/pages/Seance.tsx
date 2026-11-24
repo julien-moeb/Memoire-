@@ -23,6 +23,9 @@ import { NBack, SeriesMemoire } from '../seance/exercices/MemoireTravail';
 import { ListeStrategies, MethodeLieux, Paragraphe, RappelDiffere } from '../seance/exercices/Episodique';
 import { Revisions } from '../seance/exercices/Revisions';
 import type { EtatEscalier } from '../moteur/escalier';
+import { SeanceComportementale } from '../comportemental/SeanceComportementale';
+import * as J from '../suivi/journal';
+import { ISSUES, SITUATIONS } from '../suivi/calculs';
 
 type Ecran =
   | { type: 'accueil' }
@@ -36,21 +39,25 @@ interface DonneesBloc {
   escalier: EtatEscalier | null;
   vus: Map<string, string>;
   cartes: CarteSm2[];
+  motsPerso: string[];
 }
 
 const titreBloc = (b: Bloc) =>
-  b.type === 'exercice' ? EXERCICES[b.exercice].titre
+  b.type === 'comportemental' ? 'Volet comportemental'
+  : b.type === 'exercice' ? EXERCICES[b.exercice].titre
   : b.type === 'echauffement' ? EXERCICES.fluence.titre
   : b.type === 'repetition-espacee' ? EXERCICES['repetition-espacee'].titre
   : 'Rappel de la liste d’hier';
 
 const consigneBloc = (b: Bloc) =>
-  b.type === 'exercice' ? CONSIGNES[b.exercice]
+  b.type === 'comportemental'
+    ? "Une fois par semaine, ce volet remplace les exercices ciblés : vous relisez votre semaine dans le journal, choisissez une stratégie à essayer dans une situation précise, puis pratiquez trois minutes de respiration lente."
+  : b.type === 'exercice' ? CONSIGNES[b.exercice]
   : b.type === 'echauffement' ? CONSIGNES.fluence
   : b.type === 'repetition-espacee' ? CONSIGNES['repetition-espacee']
   : 'Lors de votre dernière séance, vous avez appris une liste de mots. Écrivez tous ceux dont vous vous souvenez.';
 
-const exerciceDuBloc = (b: Bloc): IdExercice =>
+const exerciceDuBloc = (b: Exclude<Bloc, { type: 'comportemental' }>): IdExercice =>
   b.type === 'exercice' ? b.exercice : b.type === 'echauffement' ? 'fluence' : b.type === 'repetition-espacee' ? 'repetition-espacee' : 'liste-strategies';
 
 const formatValeur = (r: ResultatExercice) => (Number.isFinite(r.valeur) ? `${r.valeur} ${r.unite}` : '');
@@ -101,8 +108,13 @@ export function PageSeance() {
 
   const preparerBloc = async (index: number) => {
     const b = blocs[index]!;
+    if (b.type === 'comportemental') {
+      setEcran({ type: 'bloc', index, donnees: { escalier: null, vus: new Map(), cartes: [], motsPerso: [] } });
+      return;
+    }
     const id = exerciceDuBloc(b);
     const donnees: DonneesBloc = {
+      motsPerso: id === 'traits-semantiques' ? await J.motsPersonnels(db) : [],
       escalier: b.type === 'exercice' ? await P.escalierDuJour(db, id) : null,
       vus: await P.itemsVus(db, id),
       cartes: b.type === 'repetition-espacee' ? await P.cartesDuJour(db, date, b.max) : [],
@@ -114,13 +126,13 @@ export function PageSeance() {
     setEcran({ type: 'bloc', index, donnees });
   };
 
-  const apresBloc = async (index: number, r: ResultatExercice, cartesRevisees: CarteSm2[] = []) => {
+  const apresBloc = async (index: number, r: ResultatExercice | null, cartesRevisees: CarteSm2[] = []) => {
     if (enregistres.current.has(index)) return;
     enregistres.current.add(index);
     const s = await P.enregistrerBloc(db, seanceRef.current!, P.cleBloc(blocs[index]!, index), r, date, cartesRevisees);
     seanceRef.current = s;
     setSeance(s);
-    setResultats((t) => [...t, { titre: titreBloc(blocs[index]!), r }]);
+    if (r) setResultats((t) => [...t, { titre: titreBloc(blocs[index]!), r }]);
     const suivant = prochainIndex(index + 1, s);
     setEcran(suivant === -1 ? { type: 'cloture' } : { type: 'consigne', index: suivant });
   };
@@ -161,6 +173,7 @@ export function PageSeance() {
         {barreArret}
         <Consigne libelle="Étape" titre={titreBloc(b)} numero={ecran.index + 1} total={blocs.length} onCommencer={() => void preparerBloc(ecran.index)}>
           <p>{consigneBloc(b)}</p>
+          {b.type === 'comportemental' && <p className="mt-3 text-[0.9375rem] text-texte-2">Environ 10 minutes · une fois par semaine</p>}
           {b.type === 'exercice' && (
             <p className="mt-3 text-[0.9375rem] text-texte-2">
               Environ {Math.round(b.dureeMs / 60_000)} minutes · niveau de preuve {EXERCICES[b.exercice].preuve}
@@ -176,17 +189,19 @@ export function PageSeance() {
     const b = blocs[ecran.index]!;
     const d = ecran.donnees;
     const props: PropsExercice = {
-      dureeMs: b.type === 'exercice' ? b.dureeMs : DUREE_ECHAUFFEMENT_MS,
+      dureeMs: b.type === 'exercice' || b.type === 'comportemental' ? b.dureeMs : DUREE_ECHAUFFEMENT_MS,
       escalier: d.escalier,
       alea: creerAlea(graineDe(`${seance!.id}-${ecran.index}`)),
       ignorerAccents: reglages.ignorerAccents,
       modeOral: reglages.modeOral,
       vus: d.vus,
+      motsPerso: d.motsPerso,
       onTerminer: (r) => void apresBloc(ecran.index, r),
     };
     return (
       <div className="min-h-screen" key={ecran.index}>
         {barreArret}
+        {b.type === 'comportemental' && <SeanceComportementale db={db} date={date} onTerminer={() => void apresBloc(ecran.index, null)} />}
         {b.type === 'echauffement' && <Echauffement {...props} />}
         {b.type === 'rappel-differe' && <RappelDiffere listeId={b.listeId} onTerminer={props.onTerminer} />}
         {b.type === 'repetition-espacee' && (
@@ -201,7 +216,8 @@ export function PageSeance() {
     return (
       <Cloture
         onTerminer={async (episode) => {
-          if (episode) await db.put('episodes', episode);
+          if (episode) await J.enregistrerEpisode(db, episode, null);
+          else await J.noterJournalSansEpisode(db, date);
           if (seanceRef.current) setSeance(await P.cloreSeance(db, seanceRef.current));
           setEcran({ type: 'fin' });
         }}
@@ -253,7 +269,7 @@ export function PageSeance() {
       <GrandTitre sousTitre={`Environ ${dureeEstimeeMin(blocs)} minutes`}>Séance du jour</GrandTitre>
       <ListeGroupee titre="Au programme" pied="Le niveau de chaque exercice reprend celui de la veille, un cran en dessous pour les premiers essais, puis s'ajuste pour maintenir environ 80 % de réussite.">
         {blocs.map((b, i) => (
-          <Ligne key={i} libelle={titreBloc(b)} detail={b.type === 'exercice' ? `${EXERCICES[b.exercice].numero === 1 ? 'Prioritaire · ' : ''}${Math.round(b.dureeMs / 60_000)} min` : undefined} valeur={seance?.blocsRealises.includes(P.cleBloc(b, i)) ? 'Fait' : undefined} />
+          <Ligne key={i} libelle={titreBloc(b)} detail={b.type === 'exercice' ? `${EXERCICES[b.exercice].numero === 1 ? 'Prioritaire · ' : ''}${Math.round(b.dureeMs / 60_000)} min` : b.type === 'comportemental' ? 'Hebdomadaire · 10 min' : undefined} valeur={seance?.blocsRealises.includes(P.cleBloc(b, i)) ? 'Fait' : undefined} />
         ))}
       </ListeGroupee>
       <div className="mt-6">
@@ -350,19 +366,12 @@ function SaisieContexte({ onValider }: { onValider: (c: ContexteSeance) => void 
   );
 }
 
-const SITUATIONS: { valeur: Episode['situation']; libelle: string }[] = [
-  { valeur: 'reunion', libelle: 'Réunion' }, { valeur: 'ecrit', libelle: 'Écrit' }, { valeur: 'telephone', libelle: 'Téléphone' },
-  { valeur: 'echange-informel', libelle: 'Échange informel' }, { valeur: 'presentation', libelle: 'Présentation' }, { valeur: 'autre', libelle: 'Autre' },
-];
-const ISSUES: { valeur: Episode['issue']; libelle: string }[] = [
-  { valeur: 'immediate', libelle: 'Retrouvé vite' }, { valeur: 'differee', libelle: 'Retrouvé plus tard' }, { valeur: 'non-retrouve', libelle: 'Pas retrouvé' },
-];
 
 /** Clôture : un épisode de manque du mot depuis la veille, en trois touches si vous le souhaitez. */
 function Cloture({ onTerminer }: { onTerminer: (e: Episode | null) => void }) {
   const [etape, setEtape] = useState<'question' | 'situation' | 'issue'>('question');
   const [situation, setSituation] = useState<Episode['situation']>('autre');
-  const grille = (items: { valeur: string; libelle: string }[], choisir: (v: string) => void) => (
+  const grille = (items: readonly { valeur: string; libelle: string }[], choisir: (v: string) => void) => (
     <div className="grid grid-cols-2 gap-3">
       {items.map((i) => <button key={i.valeur} type="button" onClick={() => choisir(i.valeur)} className="min-h-[56px] rounded-[14px] bg-surface font-semibold shadow-sm">{i.libelle}</button>)}
     </div>
@@ -392,7 +401,7 @@ function Cloture({ onTerminer }: { onTerminer: (e: Episode | null) => void }) {
             onTerminer({
               id: `episode-${Date.now().toString(36)}`, dateHeure: new Date().toISOString(), situation, interlocuteur: 'autre',
               enjeu: 3, fatigue: 3, motCherche: null, motProduit: null, strategie: null, issue: v as Episode['issue'],
-              notes: 'Saisi en clôture de séance ; détails à compléter dans le journal.',
+              notes: 'Saisi en fin de séance ; détails à compléter dans le journal.',
             }),
           )}
         </>

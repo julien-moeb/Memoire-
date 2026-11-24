@@ -3,24 +3,30 @@
  * ce qui permet de tester toutes les règles du programme.
  */
 import { DOMAINES, type Domaine } from '../stockage/types';
-import { versDate, type DateLocale } from '../moteur/dates';
+import { ecartJours, versDate, type DateLocale } from '../moteur/dates';
 import { EXERCICES_PAR_DOMAINE, type IdExercice } from './catalogue';
 
 export const DUREE_CIBLE_MS = 4 * 60_000;
 export const DUREE_VITESSE_MS = 4 * 60_000;
 export const DUREE_ECHAUFFEMENT_MS = 90_000;
 export const CARTES_MAX = 15;
+export const DUREE_COMPORTEMENTALE_MS = 10 * 60_000;
+/** Séances terminées requises avant la première séance comportementale. */
+export const SEANCES_AVANT_COMPORTEMENTAL = 4;
 
 export type Bloc =
   | { type: 'rappel-differe'; rappelId: string; listeId: string }
   | { type: 'echauffement' }
   | { type: 'exercice'; exercice: IdExercice; dureeMs: number; role: 'cible' | 'vitesse' | 'maintien' }
-  | { type: 'repetition-espacee'; max: number };
+  | { type: 'repetition-espacee'; max: number }
+  | { type: 'comportemental'; dureeMs: number };
 
 export interface SeancePassee {
   date: DateLocale;
   /** Identifiants des exercices réalisés (blocs `exercice`). */
   exercices: readonly string[];
+  /** Vrai si la séance comportait le volet comportemental hebdomadaire. */
+  comportemental?: boolean;
 }
 
 export interface EntreeComposition {
@@ -46,6 +52,16 @@ export function doubleDecisionDuJour(historique: readonly SeancePassee[]): boole
   const avecDD = cinq.filter((s) => s.exercices.includes('double-decision')).length;
   const derniere = cinq.at(-1);
   return !(avecDD >= 4 && derniere?.exercices.includes('double-decision'));
+}
+
+/**
+ * Séance comportementale hebdomadaire (journal, fiche de stratégie, régulation de l'activation) :
+ * elle remplace les exercices ciblés un jour par semaine, dès la cinquième séance, si aucune
+ * séance des six jours précédents ne l'a comportée.
+ */
+export function comportementalDuJour(historique: readonly SeancePassee[], date: DateLocale): boolean {
+  if (historique.length < SEANCES_AVANT_COMPORTEMENTAL) return false;
+  return !historique.some((s) => s.comportemental && ecartJours(s.date, date) < 7);
 }
 
 /** Deux exercices distincts du domaine prioritaire, en rotation d'une séance à l'autre. */
@@ -77,7 +93,9 @@ export function composerSeance(e: EntreeComposition): Composition {
   const blocs: Bloc[] = [];
   for (const r of e.rappelsDus) blocs.push({ type: 'rappel-differe', rappelId: r.id, listeId: r.listeId });
   blocs.push({ type: 'echauffement' });
-  const cibles = exercicesCibles(e.domainePrioritaire, rang);
+  const comportemental = comportementalDuJour(e.historique, e.date);
+  const cibles = comportemental ? [] : exercicesCibles(e.domainePrioritaire, rang);
+  if (comportemental) blocs.push({ type: 'comportemental', dureeMs: DUREE_COMPORTEMENTALE_MS });
   for (const c of cibles) blocs.push({ type: 'exercice', exercice: c, dureeMs: DUREE_CIBLE_MS, role: 'cible' });
   if (doubleDecisionDuJour(e.historique)) {
     blocs.push({ type: 'exercice', exercice: 'double-decision', dureeMs: DUREE_VITESSE_MS, role: 'vitesse' });
@@ -92,7 +110,7 @@ export function composerSeance(e: EntreeComposition): Composition {
 export function dureeEstimeeMin(blocs: readonly Bloc[]): number {
   let ms = 30_000; // contexte et clôture
   for (const b of blocs) {
-    if (b.type === 'exercice') ms += b.dureeMs + 30_000;
+    if (b.type === 'exercice' || b.type === 'comportemental') ms += b.dureeMs + 30_000;
     else if (b.type === 'echauffement') ms += DUREE_ECHAUFFEMENT_MS + 30_000;
     else if (b.type === 'repetition-espacee') ms += 150_000;
     else ms += 90_000;

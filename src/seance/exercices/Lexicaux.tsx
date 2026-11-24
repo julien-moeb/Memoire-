@@ -11,6 +11,7 @@ import * as C from '../contenu';
 import { resultatVide, type EssaiExercice, type PropsExercice, type ResultatExercice } from '../types';
 import { useTempsRestant } from '../composants/temps';
 import type { ItemRegistre, ItemTraits } from '../../contenu/schemas';
+import { idCartePerso } from '../../suivi/journal';
 
 /** Exercice 6 : de la définition au mot, avec indices. Escalier sur la difficulté des définitions. */
 export function MotJuste({ dureeMs, escalier, ignorerAccents, modeOral, vus, onTerminer }: PropsExercice) {
@@ -71,8 +72,19 @@ const QUESTIONS_TRAITS: { cle: keyof ItemTraits['traits']; question: string }[] 
  * vous produisez ses traits ; les traits modèles sont ensuite affichés. Pas de note : c'est
  * l'activation du réseau sémantique autour du mot qui compte.
  */
-export function TraitsSemantiques({ dureeMs, vus, onTerminer }: PropsExercice) {
-  const file = useMemo(() => ordonnerItems(C.traits(), vus, 3), [vus]);
+/** Item de l'exercice : mot du contenu (avec traits modèles) ou mot de votre journal (sans modèle). */
+type ItemTraitsSeance = Omit<ItemTraits, 'traits'> & { traits: ItemTraits['traits'] | null };
+
+/** Deux mots du journal au plus par bloc, les moins récemment travaillés d'abord. */
+export const MOTS_PERSO_PAR_BLOC = 2;
+
+export function itemsTraits(motsPerso: readonly string[], vus: ReadonlyMap<string, string>): ItemTraitsSeance[] {
+  const perso: ItemTraitsSeance[] = motsPerso.map((mot) => ({ id: idCartePerso(mot), mot, traits: null, difficulte: 3 }));
+  return [...ordonnerItems(perso, vus, 3).slice(0, MOTS_PERSO_PAR_BLOC), ...ordonnerItems<ItemTraitsSeance>(C.traits(), vus, 3)];
+}
+
+export function TraitsSemantiques({ dureeMs, vus, motsPerso = [], onTerminer }: PropsExercice) {
+  const file = useMemo(() => itemsTraits(motsPerso, vus), [vus, motsPerso]);
   const [item, setItem] = useState(() => prochainItem(file, 3));
   const [reponses, setReponses] = useState<Record<string, string>>({});
   const [corrige, setCorrige] = useState(false);
@@ -86,7 +98,7 @@ export function TraitsSemantiques({ dureeMs, vus, onTerminer }: PropsExercice) {
   if (!item) return <FinContenu onContinuer={terminer} />;
   return (
     <Cadre reste={reste} total={dureeMs}>
-      <p className="text-[0.875rem] text-texte-2">Décrivez ce mot sous tous ses aspects</p>
+      <p className="text-[0.875rem] text-texte-2">{item.traits ? 'Décrivez ce mot sous tous ses aspects' : 'Un mot de votre journal : décrivez-le sous tous ses aspects'}</p>
       <p className="text-center text-[2rem] font-semibold">{item.mot}</p>
       <div className="space-y-3">
         {QUESTIONS_TRAITS.map((q) => (
@@ -100,12 +112,18 @@ export function TraitsSemantiques({ dureeMs, vus, onTerminer }: PropsExercice) {
               autoComplete="off"
               className="min-h-[46px] w-full rounded-[12px] bg-surface px-3 text-[1.0625rem] shadow-sm outline-none focus:ring-2 focus:ring-accent"
             />
-            {corrige && <p className="px-1 text-[0.9375rem] text-accent">{item.traits[q.cle]}</p>}
+            {corrige && item.traits && <p className="px-1 text-[0.9375rem] text-accent">{item.traits[q.cle]}</p>}
           </div>
         ))}
       </div>
+      {corrige && !item.traits && (
+        <p className="text-[0.9375rem] leading-relaxed text-texte-2">
+          C'est un mot de votre journal : il n'a pas de traits modèles. Relisez vos réponses et dites le mot à voix haute
+          en les gardant en tête ; c'est ce lien entre le mot et ses traits qui le rendra plus accessible.
+        </p>
+      )}
       {!corrige ? (
-        <Bouton onClick={() => setCorrige(true)}>Comparer avec des traits modèles</Bouton>
+        <Bouton onClick={() => setCorrige(true)}>{item.traits ? 'Comparer avec des traits modèles' : 'Terminer ce mot'}</Bouton>
       ) : (
         <Bouton
           onClick={() => {

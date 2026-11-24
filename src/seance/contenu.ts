@@ -15,3 +15,4 @@ export function motsDecision() {
   const s = seriesDeType('decision-lexicale');
   return { mots: s.flatMap((x) => x.mots), pseudoMots: s.flatMap((x) => x.pseudoMots) };
 }
+export const strategies = () => seriesDeType('strategie').flatMap((s) => s.items);
