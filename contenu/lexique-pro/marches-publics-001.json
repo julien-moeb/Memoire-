@@ -1,0 +1,111 @@
+{
+  "$schema": "../schemas/carte-lexique.schema.json",
+  "id": "pro-mp",
+  "type": "carte-lexique",
+  "titre": "Commande publique",
+  "domaine": "acces-lexical",
+  "theme": "Commande publique",
+  "version": 1,
+  "items": [
+    {
+      "id": "pro-mp-001",
+      "question": "Contrat conclu à titre onéreux par un acheteur public pour répondre à ses besoins en travaux, fournitures ou services.",
+      "reponse": "marché public",
+      "variantes": [
+        "marchés publics"
+      ],
+      "difficulte": 1,
+      "explication": "Régi par le code de la commande publique."
+    },
+    {
+      "id": "pro-mp-002",
+      "question": "Procédure formalisée dans laquelle l'acheteur choisit l'offre économiquement la plus avantageuse sans négociation.",
+      "reponse": "appel d'offres",
+      "variantes": [
+        "appel d'offres ouvert"
+      ],
+      "difficulte": 2,
+      "explication": "Il peut être ouvert ou restreint."
+    },
+    {
+      "id": "pro-mp-003",
+      "question": "Document qui fixe les règles de mise en concurrence et le contenu attendu des offres.",
+      "reponse": "règlement de la consultation",
+      "variantes": [
+        "RC"
+      ],
+      "difficulte": 4,
+      "explication": "Il précise notamment les critères de jugement des offres."
+    },
+    {
+      "id": "pro-mp-004",
+      "question": "Montant au-delà duquel une procédure formalisée est obligatoire.",
+      "reponse": "seuil de procédure formalisée",
+      "variantes": [
+        "seuils européens",
+        "seuil"
+      ],
+      "difficulte": 4,
+      "explication": "Il est fixé au niveau européen et révisé tous les deux ans."
+    },
+    {
+      "id": "pro-mp-005",
+      "question": "Offre dont le prix paraît manifestement sous-évalué au regard de la prestation.",
+      "reponse": "offre anormalement basse",
+      "variantes": [
+        "OAB"
+      ],
+      "difficulte": 4,
+      "explication": "L'acheteur doit demander des justifications avant de la rejeter."
+    },
+    {
+      "id": "pro-mp-006",
+      "question": "Contrat par lequel une autorité confie la gestion d'un service public à un opérateur, rémunéré substantiellement par l'exploitation.",
+      "reponse": "délégation de service public",
+      "variantes": [
+        "concession de service public",
+        "DSP"
+      ],
+      "difficulte": 4,
+      "explication": "La DSP est une forme de concession."
+    },
+    {
+      "id": "pro-mp-007",
+      "question": "Modification d'un contrat en cours d'exécution, formalisée par écrit.",
+      "reponse": "avenant",
+      "variantes": [
+        "modification du marché"
+      ],
+      "difficulte": 3,
+      "explication": "Il ne peut bouleverser l'économie du contrat."
+    },
+    {
+      "id": "pro-mp-008",
+      "question": "Entreprise à laquelle le marché est attribué.",
+      "reponse": "titulaire",
+      "variantes": [
+        "attributaire"
+      ],
+      "difficulte": 2,
+      "explication": "Le titulaire peut recourir à des sous-traitants déclarés."
+    },
+    {
+      "id": "pro-mp-009",
+      "question": "Contrat qui fixe les conditions des marchés à passer pendant une période donnée, sans engagement de quantité ferme.",
+      "reponse": "accord-cadre",
+      "variantes": [
+        "accord cadre"
+      ],
+      "difficulte": 3,
+      "explication": "Il donne lieu à des bons de commande ou des marchés subséquents."
+    },
+    {
+      "id": "pro-mp-010",
+      "question": "Retenue opérée sur les paiements pour garantir la bonne exécution du marché.",
+      "reponse": "retenue de garantie",
+      "variantes": [],
+      "difficulte": 5,
+      "explication": "Elle ne peut excéder 5 % du montant du marché."
+    }
+  ]
+}

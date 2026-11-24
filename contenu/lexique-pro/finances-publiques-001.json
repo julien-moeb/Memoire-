@@ -1,0 +1,215 @@
+{
+  "$schema": "../schemas/carte-lexique.schema.json",
+  "id": "pro-fp",
+  "type": "carte-lexique",
+  "titre": "Finances publiques : notions de base",
+  "domaine": "acces-lexical",
+  "theme": "Finances publiques",
+  "version": 1,
+  "items": [
+    {
+      "id": "pro-fp-001",
+      "question": "Document qui prévoit et autorise, pour une année, les recettes et les dépenses d'une collectivité ou de l'État.",
+      "reponse": "budget",
+      "variantes": [
+        "budget primitif"
+      ],
+      "difficulte": 1,
+      "explication": "Le budget primitif est voté avant le début de l'exercice ; il peut être modifié par des décisions modificatives."
+    },
+    {
+      "id": "pro-fp-002",
+      "question": "Période de douze mois sur laquelle porte un budget, généralement l'année civile.",
+      "reponse": "exercice",
+      "variantes": [
+        "exercice budgétaire"
+      ],
+      "difficulte": 2,
+      "explication": "On parle de clôture de l'exercice et de l'exercice suivant."
+    },
+    {
+      "id": "pro-fp-003",
+      "question": "Principe selon lequel toutes les recettes et toutes les dépenses figurent dans un document unique.",
+      "reponse": "unité",
+      "variantes": [
+        "principe d'unité"
+      ],
+      "difficulte": 3,
+      "explication": "Avec l'annualité, l'universalité et la spécialité, c'est l'un des grands principes budgétaires."
+    },
+    {
+      "id": "pro-fp-004",
+      "question": "Principe interdisant d'affecter une recette déterminée à une dépense déterminée.",
+      "reponse": "universalité",
+      "variantes": [
+        "principe d'universalité",
+        "non-affectation"
+      ],
+      "difficulte": 3,
+      "explication": "L'universalité comporte la règle de non-compensation et celle de non-affectation."
+    },
+    {
+      "id": "pro-fp-005",
+      "question": "Principe selon lequel les crédits sont ouverts pour un objet précis et ne peuvent être utilisés pour un autre.",
+      "reponse": "spécialité",
+      "variantes": [
+        "principe de spécialité"
+      ],
+      "difficulte": 3,
+      "explication": "La spécialité s'apprécie au niveau du programme dans le budget de l'État depuis la LOLF."
+    },
+    {
+      "id": "pro-fp-006",
+      "question": "Autorisation de dépense votée par l'assemblée délibérante.",
+      "reponse": "crédit",
+      "variantes": [
+        "crédits"
+      ],
+      "difficulte": 1,
+      "explication": "On distingue autorisations d'engagement et crédits de paiement."
+    },
+    {
+      "id": "pro-fp-007",
+      "question": "Plafond des dépenses pouvant être juridiquement engagées pendant l'exercice, y compris pour des opérations pluriannuelles.",
+      "reponse": "autorisation d'engagement",
+      "variantes": [
+        "autorisations d'engagement",
+        "AE"
+      ],
+      "difficulte": 4,
+      "explication": "Les AE couvrent l'engagement juridique ; les crédits de paiement, le décaissement."
+    },
+    {
+      "id": "pro-fp-008",
+      "question": "Limite supérieure des dépenses pouvant être payées pendant l'année.",
+      "reponse": "crédit de paiement",
+      "variantes": [
+        "crédits de paiement",
+        "CP"
+      ],
+      "difficulte": 4,
+      "explication": "Les CP correspondent aux décaissements de l'année."
+    },
+    {
+      "id": "pro-fp-009",
+      "question": "Acte par lequel une administration crée ou constate une obligation de laquelle résultera une charge.",
+      "reponse": "engagement",
+      "variantes": [
+        "engagement juridique"
+      ],
+      "difficulte": 3,
+      "explication": "Viennent ensuite la liquidation, l'ordonnancement et le paiement."
+    },
+    {
+      "id": "pro-fp-010",
+      "question": "Opération qui vérifie la réalité de la dette et arrête le montant de la dépense.",
+      "reponse": "liquidation",
+      "variantes": [
+        "liquidation de la dépense"
+      ],
+      "difficulte": 4,
+      "explication": "Elle suppose le service fait."
+    },
+    {
+      "id": "pro-fp-011",
+      "question": "Acte par lequel l'ordonnateur donne au comptable l'ordre de payer.",
+      "reponse": "ordonnancement",
+      "variantes": [
+        "mandatement"
+      ],
+      "difficulte": 4,
+      "explication": "Dans les collectivités, on parle de mandatement."
+    },
+    {
+      "id": "pro-fp-012",
+      "question": "Principe selon lequel les fonctions de celui qui décide la dépense et de celui qui la paie sont confiées à des personnes distinctes.",
+      "reponse": "séparation des ordonnateurs et des comptables",
+      "variantes": [
+        "séparation ordonnateur comptable"
+      ],
+      "difficulte": 4,
+      "explication": "Principe fondamental de la comptabilité publique."
+    },
+    {
+      "id": "pro-fp-013",
+      "question": "Situation dans laquelle les dépenses excèdent les recettes.",
+      "reponse": "déficit",
+      "variantes": [
+        "déficit budgétaire"
+      ],
+      "difficulte": 1,
+      "explication": "À distinguer de la dette, qui est un stock accumulé."
+    },
+    {
+      "id": "pro-fp-014",
+      "question": "Ensemble des emprunts contractés et non encore remboursés.",
+      "reponse": "dette",
+      "variantes": [
+        "dette publique"
+      ],
+      "difficulte": 1,
+      "explication": "La dette est un stock ; le déficit, un flux annuel."
+    },
+    {
+      "id": "pro-fp-015",
+      "question": "Loi qui détermine, pour un exercice, la nature, le montant et l'affectation des ressources et des charges de l'État.",
+      "reponse": "loi de finances",
+      "variantes": [
+        "loi de finances initiale",
+        "LFI"
+      ],
+      "difficulte": 2,
+      "explication": "Elle est votée chaque année par le Parlement à l'automne."
+    },
+    {
+      "id": "pro-fp-016",
+      "question": "Loi de 2001 qui a réformé la présentation et le pilotage du budget de l'État par missions, programmes et indicateurs de performance.",
+      "reponse": "LOLF",
+      "variantes": [
+        "loi organique relative aux lois de finances"
+      ],
+      "difficulte": 3,
+      "explication": "Entrée pleinement en vigueur en 2006."
+    },
+    {
+      "id": "pro-fp-017",
+      "question": "Document qui retrace l'exécution du budget au cours de l'exercice écoulé, établi par l'ordonnateur.",
+      "reponse": "compte administratif",
+      "variantes": [
+        "compte financier unique"
+      ],
+      "difficulte": 4,
+      "explication": "Il est progressivement remplacé par le compte financier unique."
+    },
+    {
+      "id": "pro-fp-018",
+      "question": "Somme versée par l'État aux collectivités pour concourir à leur fonctionnement.",
+      "reponse": "dotation globale de fonctionnement",
+      "variantes": [
+        "DGF"
+      ],
+      "difficulte": 3,
+      "explication": "Principale dotation de l'État aux collectivités."
+    },
+    {
+      "id": "pro-fp-019",
+      "question": "Mécanisme qui vise à réduire les écarts de richesse entre collectivités.",
+      "reponse": "péréquation",
+      "variantes": [
+        "péréquation financière"
+      ],
+      "difficulte": 4,
+      "explication": "Elle peut être verticale (État) ou horizontale (entre collectivités)."
+    },
+    {
+      "id": "pro-fp-020",
+      "question": "Aide financière accordée par une personne publique à un organisme pour une action d'intérêt général.",
+      "reponse": "subvention",
+      "variantes": [
+        "subventions"
+      ],
+      "difficulte": 1,
+      "explication": "Elle est en principe facultative et conditionnée."
+    }
+  ]
+}

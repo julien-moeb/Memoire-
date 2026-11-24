@@ -3,7 +3,7 @@
   "id": "bilan-b",
   "type": "forme-bilan",
   "titre": "Bilan, forme B",
-  "version": 1,
+  "version": 2,
   "forme": "B",
   "liste": [
     "lampe",
@@ -314,7 +314,7 @@
       "tirle",
       "bafon",
       "sirde",
-      "clampe",
+      "clurpe",
       "feuvre",
       "morlin",
       "dugne",

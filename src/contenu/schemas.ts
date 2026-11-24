@@ -3,7 +3,6 @@
  * - validés à la compilation par scripts/valider-contenu.ts ;
  * - exportés en JSON Schema (contenu/schemas/) pour l'autocomplétion dans l'éditeur ;
  * - revérifiés au chargement dans l'application.
- * Les types d'exercices restants seront ajoutés avec le moteur d'exercices (incrément 3).
  */
 import { z } from 'zod';
 
@@ -77,6 +76,106 @@ export const serieCarteLexique = z.object({
   items: z.array(itemCarteLexique).min(1),
 });
 
+export const itemDiscrimination = z.object({
+  id: identifiant,
+  nature: z.enum(['quasi-synonyme', 'paronyme']),
+  phrase: z.string().min(10).describe('Phrase avec un emplacement « ___ » pour le mot à choisir'),
+  options: z.array(z.string().min(1)).min(2).max(4).describe('Mots proposés, dont la réponse'),
+  reponse: z.string().min(1),
+  explication: z.string().min(10).describe('Distinction de sens, affichée après la réponse'),
+  difficulte,
+});
+
+export const serieDiscrimination = z.object({
+  ...enveloppe,
+  type: z.literal('discrimination'),
+  items: z.array(itemDiscrimination).min(1),
+});
+
+export const itemIntrus = z.object({
+  id: identifiant,
+  mots: z.array(z.string().min(1)).min(4).max(5).describe("Mots présentés, dont l'intrus"),
+  intrus: z.string().min(1),
+  explication: z.string().min(10).describe('Trait commun aux autres mots et raison de l’exclusion'),
+  difficulte,
+});
+
+export const serieIntrus = z.object({
+  ...enveloppe,
+  type: z.literal('intrus'),
+  items: z.array(itemIntrus).min(1),
+});
+
+export const itemRegistre = z.object({
+  id: identifiant,
+  contexte: z.string().min(5).describe('Situation professionnelle visée'),
+  phrase: z.string().min(5).describe('Formulation familière ou imprécise à reformuler'),
+  reformulations: z.array(z.string().min(5)).min(1).describe('Reformulations modèles, affichées après votre essai'),
+  difficulte,
+});
+
+export const serieRegistre = z.object({
+  ...enveloppe,
+  type: z.literal('registre'),
+  items: z.array(itemRegistre).min(1),
+});
+
+export const itemTraits = z.object({
+  id: identifiant,
+  mot: z.string().min(1),
+  traits: z.object({
+    categorie: z.string().min(2).describe('À quelle catégorie appartient-il ?'),
+    usage: z.string().min(2).describe('À quoi sert-il ?'),
+    description: z.string().min(2).describe('À quoi ressemble-t-il ? (forme, matière, propriétés)'),
+    lieu: z.string().min(2).describe('Où le trouve-t-on ?'),
+    association: z.string().min(2).describe('À quoi vous fait-il penser ?'),
+  }),
+  difficulte,
+});
+
+export const serieTraits = z.object({
+  ...enveloppe,
+  type: z.literal('traits'),
+  items: z.array(itemTraits).min(1),
+});
+
+export const itemListeMemoire = z.object({
+  id: identifiant,
+  theme: z.string().min(3).describe('Contexte qui donne sens à la liste (ex. « courses pour un dîner »)'),
+  mots: z.array(z.string().min(2)).length(15),
+});
+
+export const serieListeMemoire = z.object({
+  ...enveloppe,
+  type: z.literal('liste-memoire'),
+  items: z.array(itemListeMemoire).min(1),
+});
+
+export const itemParagraphe = z.object({
+  id: identifiant,
+  titre: z.string().min(3),
+  texte: z.string().min(200),
+  unites: z.array(z.string().min(2)).min(6).describe('Idées clés à retrouver au rappel libre (mots-clés)'),
+  questions: z
+    .array(z.object({ question: z.string().min(5), reponse: z.string().min(1), variantes: z.array(z.string()).default([]) }))
+    .min(3)
+    .describe('Questions du rappel indicé'),
+  difficulte,
+});
+
+export const serieParagraphe = z.object({
+  ...enveloppe,
+  type: z.literal('paragraphe'),
+  items: z.array(itemParagraphe).min(1),
+});
+
+export const serieDecisionLexicale = z.object({
+  ...enveloppe,
+  type: z.literal('decision-lexicale'),
+  mots: z.array(z.string().min(2)).min(20),
+  pseudoMots: z.array(z.string().min(2)).min(20).describe('Suites prononçables qui ne sont pas des mots français'),
+});
+
 const fluenceBilan = z.object({
   consigne: z.string().min(3),
   cle: z.string().min(1),
@@ -101,7 +200,10 @@ export const formeBilan = z.object({
   }),
 });
 
-export const serie = z.discriminatedUnion('type', [serieDefinitionMot, serieFluence, serieCarteLexique, formeBilan]);
+export const serie = z.discriminatedUnion('type', [
+  serieDefinitionMot, serieFluence, serieCarteLexique, formeBilan, serieDiscrimination, serieIntrus, serieRegistre,
+  serieTraits, serieListeMemoire, serieParagraphe, serieDecisionLexicale,
+]);
 
 export type Serie = z.infer<typeof serie>;
 export type TypeSerie = Serie['type'];
@@ -113,4 +215,21 @@ export const SCHEMAS_PAR_TYPE = {
   fluence: serieFluence,
   'carte-lexique': serieCarteLexique,
   'forme-bilan': formeBilan,
+  discrimination: serieDiscrimination,
+  intrus: serieIntrus,
+  registre: serieRegistre,
+  traits: serieTraits,
+  'liste-memoire': serieListeMemoire,
+  paragraphe: serieParagraphe,
+  'decision-lexicale': serieDecisionLexicale,
 } as const satisfies Record<TypeSerie, z.ZodType>;
+
+export type ItemDefinitionMot = z.infer<typeof itemDefinitionMot>;
+export type ItemDiscrimination = z.infer<typeof itemDiscrimination>;
+export type ItemIntrus = z.infer<typeof itemIntrus>;
+export type ItemRegistre = z.infer<typeof itemRegistre>;
+export type ItemTraits = z.infer<typeof itemTraits>;
+export type ItemListeMemoire = z.infer<typeof itemListeMemoire>;
+export type ItemParagraphe = z.infer<typeof itemParagraphe>;
+export type ItemFluence = z.infer<typeof itemFluence>;
+export type ItemCarteLexique = z.infer<typeof itemCarteLexique>;

@@ -1,0 +1,150 @@
+{
+  "$schema": "../schemas/carte-lexique.schema.json",
+  "id": "pro-ev",
+  "type": "carte-lexique",
+  "titre": "Évaluation des politiques publiques",
+  "domaine": "acces-lexical",
+  "theme": "Évaluation des politiques publiques",
+  "version": 1,
+  "items": [
+    {
+      "id": "pro-ev-001",
+      "question": "Rapport entre les résultats obtenus et les objectifs fixés.",
+      "reponse": "efficacité",
+      "variantes": [],
+      "difficulte": 2,
+      "explication": "À distinguer de l'efficience, qui rapporte les résultats aux moyens."
+    },
+    {
+      "id": "pro-ev-002",
+      "question": "Adéquation entre les objectifs d'une politique et les besoins qu'elle entend satisfaire.",
+      "reponse": "pertinence",
+      "variantes": [],
+      "difficulte": 3,
+      "explication": "Premier critère classique de l'évaluation."
+    },
+    {
+      "id": "pro-ev-003",
+      "question": "Compatibilité d'une intervention avec les autres politiques menées sur le même champ.",
+      "reponse": "cohérence",
+      "variantes": [
+        "cohérence externe"
+      ],
+      "difficulte": 3,
+      "explication": "On distingue cohérence interne (entre objectifs et moyens) et externe."
+    },
+    {
+      "id": "pro-ev-004",
+      "question": "Évaluation réalisée avant la mise en œuvre d'une politique, pour en apprécier les effets probables.",
+      "reponse": "évaluation ex ante",
+      "variantes": [
+        "ex ante",
+        "étude d'impact"
+      ],
+      "difficulte": 4,
+      "explication": "L'étude d'impact accompagne certains projets de loi."
+    },
+    {
+      "id": "pro-ev-005",
+      "question": "Évaluation conduite après la mise en œuvre d'une politique.",
+      "reponse": "évaluation ex post",
+      "variantes": [
+        "ex post"
+      ],
+      "difficulte": 3,
+      "explication": "Elle mesure les effets réellement produits."
+    },
+    {
+      "id": "pro-ev-006",
+      "question": "Situation qui aurait prévalu en l'absence de l'intervention évaluée.",
+      "reponse": "contrefactuel",
+      "variantes": [
+        "scénario contrefactuel"
+      ],
+      "difficulte": 5,
+      "explication": "Sa construction est au cœur des méthodes d'évaluation d'impact."
+    },
+    {
+      "id": "pro-ev-007",
+      "question": "Groupe qui ne bénéficie pas de l'intervention et sert de point de comparaison.",
+      "reponse": "groupe témoin",
+      "variantes": [
+        "groupe de contrôle"
+      ],
+      "difficulte": 4,
+      "explication": "Indispensable pour attribuer un effet à l'intervention."
+    },
+    {
+      "id": "pro-ev-008",
+      "question": "Donnée chiffrée qui permet de suivre l'atteinte d'un objectif.",
+      "reponse": "indicateur",
+      "variantes": [
+        "indicateur de performance"
+      ],
+      "difficulte": 1,
+      "explication": "Un bon indicateur est pertinent, fiable et disponible à coût raisonnable."
+    },
+    {
+      "id": "pro-ev-009",
+      "question": "Effet d'une aide qui finance un comportement qui aurait eu lieu sans elle.",
+      "reponse": "effet d'aubaine",
+      "variantes": [
+        "aubaine"
+      ],
+      "difficulte": 4,
+      "explication": "Risque classique des dispositifs d'aide aux entreprises ou aux ménages."
+    },
+    {
+      "id": "pro-ev-010",
+      "question": "Effet indirect d'une politique qui déplace un problème vers un autre lieu ou une autre population.",
+      "reponse": "effet de substitution",
+      "variantes": [
+        "effet de déplacement"
+      ],
+      "difficulte": 5,
+      "explication": "À intégrer dans l'appréciation de l'impact net."
+    },
+    {
+      "id": "pro-ev-011",
+      "question": "Ensemble des acteurs concernés par une politique et consultés lors de son évaluation.",
+      "reponse": "parties prenantes",
+      "variantes": [
+        "partie prenante"
+      ],
+      "difficulte": 3,
+      "explication": "Leur association renforce l'appropriation des conclusions."
+    },
+    {
+      "id": "pro-ev-012",
+      "question": "Situation de départ mesurée avant une intervention, servant de référence.",
+      "reponse": "situation de référence",
+      "variantes": [
+        "ligne de base",
+        "état initial"
+      ],
+      "difficulte": 3,
+      "explication": "Sans elle, aucune évolution ne peut être mesurée."
+    },
+    {
+      "id": "pro-ev-013",
+      "question": "Méthode de calcul comparant les coûts et les avantages monétarisés d'un projet.",
+      "reponse": "analyse coût-bénéfice",
+      "variantes": [
+        "analyse coûts-avantages"
+      ],
+      "difficulte": 4,
+      "explication": "Fréquente pour les grands investissements publics."
+    },
+    {
+      "id": "pro-ev-014",
+      "question": "Schéma qui relie les moyens, les réalisations, les résultats et les impacts attendus d'une politique.",
+      "reponse": "logique d'intervention",
+      "variantes": [
+        "théorie du changement",
+        "arbre des objectifs"
+      ],
+      "difficulte": 5,
+      "explication": "Elle explicite les hypothèses causales de la politique."
+    }
+  ]
+}

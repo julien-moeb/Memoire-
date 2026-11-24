@@ -4,7 +4,7 @@ import { attendre } from './commun';
 import { arretEmpan, empanMaximal, inverse, scoreMiseAJour, type EssaiEmpan } from '../scoring';
 
 /** Présente une série de symboles (un par seconde), puis demande une réponse tapée. */
-function useSerie(serie: readonly string[] | null, onFin: () => void) {
+export function useSerie(serie: readonly string[] | null, onFin: () => void) {
   const [courant, setCourant] = useState<string | null>(null);
   const fin = useRef(onFin);
   fin.current = onFin;
@@ -29,7 +29,7 @@ function useSerie(serie: readonly string[] | null, onFin: () => void) {
   return courant;
 }
 
-function Reponse({ invite, numerique, onValider }: { invite: string; numerique?: boolean; onValider: (v: string) => void }) {
+export function Reponse({ invite, numerique, onValider }: { invite: string; numerique?: boolean; onValider: (v: string) => void }) {
   const [v, setV] = useState('');
   const ref = useRef<HTMLInputElement>(null);
   useEffect(() => ref.current?.focus(), []);

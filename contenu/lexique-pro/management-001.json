@@ -1,0 +1,133 @@
+{
+  "$schema": "../schemas/carte-lexique.schema.json",
+  "id": "pro-mg",
+  "type": "carte-lexique",
+  "titre": "Management et conduite de projet",
+  "domaine": "acces-lexical",
+  "theme": "Management",
+  "version": 1,
+  "items": [
+    {
+      "id": "pro-mg-001",
+      "question": "Document qui décrit les besoins, les contraintes et les exigences auxquels un projet doit répondre.",
+      "reponse": "cahier des charges",
+      "variantes": [],
+      "difficulte": 2,
+      "explication": "En marchés publics, on parle de cahier des clauses techniques particulières."
+    },
+    {
+      "id": "pro-mg-002",
+      "question": "Personne ou entité pour le compte de laquelle un ouvrage ou un projet est réalisé.",
+      "reponse": "maître d'ouvrage",
+      "variantes": [
+        "maîtrise d'ouvrage",
+        "MOA"
+      ],
+      "difficulte": 3,
+      "explication": "Elle définit le besoin, le budget et le calendrier."
+    },
+    {
+      "id": "pro-mg-003",
+      "question": "Personne ou entité chargée de concevoir et de réaliser l'ouvrage pour le compte du commanditaire.",
+      "reponse": "maître d'œuvre",
+      "variantes": [
+        "maîtrise d'œuvre",
+        "MOE"
+      ],
+      "difficulte": 3,
+      "explication": "Elle répond techniquement au besoin exprimé."
+    },
+    {
+      "id": "pro-mg-004",
+      "question": "Instance de décision qui oriente un projet et arbitre ses grandes options.",
+      "reponse": "comité de pilotage",
+      "variantes": [
+        "COPIL"
+      ],
+      "difficulte": 2,
+      "explication": "Elle se distingue du comité technique, chargé du suivi opérationnel."
+    },
+    {
+      "id": "pro-mg-005",
+      "question": "Représentation graphique du calendrier d'un projet sous forme de barres.",
+      "reponse": "diagramme de Gantt",
+      "variantes": [
+        "Gantt"
+      ],
+      "difficulte": 3,
+      "explication": "Il fait apparaître les tâches, leur durée et leurs dépendances."
+    },
+    {
+      "id": "pro-mg-006",
+      "question": "Étape clé d'un projet, marquant la fin d'une phase ou une décision importante.",
+      "reponse": "jalon",
+      "variantes": [
+        "jalons"
+      ],
+      "difficulte": 3,
+      "explication": "En anglais : milestone."
+    },
+    {
+      "id": "pro-mg-007",
+      "question": "Fait de confier à un collaborateur la responsabilité d'une tâche en lui laissant une marge d'autonomie.",
+      "reponse": "délégation de tâches",
+      "variantes": [
+        "délégation managériale"
+      ],
+      "difficulte": 2,
+      "explication": "À distinguer de la délégation de compétence au sens juridique."
+    },
+    {
+      "id": "pro-mg-008",
+      "question": "Entretien annuel au cours duquel l'agent et son supérieur font le bilan de l'année et fixent des objectifs.",
+      "reponse": "entretien professionnel",
+      "variantes": [
+        "entretien annuel"
+      ],
+      "difficulte": 2,
+      "explication": "Il a remplacé la notation dans la fonction publique."
+    },
+    {
+      "id": "pro-mg-009",
+      "question": "Ensemble des actions qui accompagnent les agents lors d'une transformation de l'organisation.",
+      "reponse": "conduite du changement",
+      "variantes": [
+        "accompagnement du changement"
+      ],
+      "difficulte": 2,
+      "explication": "Elle mobilise communication, formation et participation."
+    },
+    {
+      "id": "pro-mg-010",
+      "question": "Organisation dans laquelle les agents relèvent à la fois d'un responsable hiérarchique et d'un responsable de projet.",
+      "reponse": "organisation matricielle",
+      "variantes": [
+        "matricielle"
+      ],
+      "difficulte": 4,
+      "explication": "Fréquente dans les projets transversaux."
+    },
+    {
+      "id": "pro-mg-011",
+      "question": "Démarche visant à anticiper les besoins futurs en effectifs et en compétences.",
+      "reponse": "gestion prévisionnelle des emplois et des compétences",
+      "variantes": [
+        "GPEC",
+        "GPEEC"
+      ],
+      "difficulte": 4,
+      "explication": "Dans la fonction publique : gestion prévisionnelle des effectifs, des emplois et des compétences."
+    },
+    {
+      "id": "pro-mg-012",
+      "question": "Retour d'information sur un travail ou un comportement, destiné à aider à progresser.",
+      "reponse": "rétroaction",
+      "variantes": [
+        "feedback",
+        "retour"
+      ],
+      "difficulte": 3,
+      "explication": "Le terme français recommandé est rétroaction."
+    }
+  ]
+}

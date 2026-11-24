@@ -1,0 +1,611 @@
+{
+  "$schema": "../schemas/intrus.schema.json",
+  "id": "int-s01",
+  "type": "intrus",
+  "titre": "L'intrus",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "description": "Repérer le mot qui ne partage pas le trait commun.",
+  "items": [
+    {
+      "id": "int-s01-001",
+      "mots": [
+        "pomme",
+        "poire",
+        "abricot",
+        "carotte"
+      ],
+      "intrus": "carotte",
+      "explication": "La carotte est un légume racine ; les autres sont des fruits.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-002",
+      "mots": [
+        "violon",
+        "violoncelle",
+        "contrebasse",
+        "trompette"
+      ],
+      "intrus": "trompette",
+      "explication": "La trompette est un cuivre ; les autres sont des instruments à cordes frottées.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-003",
+      "mots": [
+        "chêne",
+        "hêtre",
+        "sapin",
+        "bouleau"
+      ],
+      "intrus": "sapin",
+      "explication": "Le sapin est un conifère à aiguilles persistantes ; les autres sont des feuillus.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-004",
+      "mots": [
+        "moineau",
+        "merle",
+        "chauve-souris",
+        "mésange"
+      ],
+      "intrus": "chauve-souris",
+      "explication": "La chauve-souris est un mammifère ; les autres sont des oiseaux.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-005",
+      "mots": [
+        "marteau",
+        "tournevis",
+        "clé",
+        "pinceau"
+      ],
+      "intrus": "pinceau",
+      "explication": "Le pinceau sert à peindre ; les autres sont des outils de bricolage mécanique.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-006",
+      "mots": [
+        "Lyon",
+        "Marseille",
+        "Genève",
+        "Toulouse"
+      ],
+      "intrus": "Genève",
+      "explication": "Genève est en Suisse ; les autres villes sont françaises.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-007",
+      "mots": [
+        "dauphin",
+        "requin",
+        "baleine",
+        "phoque"
+      ],
+      "intrus": "requin",
+      "explication": "Le requin est un poisson ; les autres sont des mammifères marins.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-008",
+      "mots": [
+        "cuivre",
+        "fer",
+        "bronze",
+        "zinc"
+      ],
+      "intrus": "bronze",
+      "explication": "Le bronze est un alliage ; les autres sont des métaux purs.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-009",
+      "mots": [
+        "sonnet",
+        "ode",
+        "roman",
+        "ballade"
+      ],
+      "intrus": "roman",
+      "explication": "Le roman est en prose ; les autres sont des formes poétiques.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-010",
+      "mots": [
+        "courroux",
+        "colère",
+        "ire",
+        "allégresse"
+      ],
+      "intrus": "allégresse",
+      "explication": "L'allégresse est une joie vive ; les autres désignent la colère.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-011",
+      "mots": [
+        "pérenne",
+        "durable",
+        "éphémère",
+        "permanent"
+      ],
+      "intrus": "éphémère",
+      "explication": "Éphémère signifie de courte durée ; les autres expriment la durée.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-012",
+      "mots": [
+        "décret",
+        "arrêté",
+        "circulaire",
+        "loi"
+      ],
+      "intrus": "loi",
+      "explication": "La loi est votée par le Parlement ; les autres sont des actes de l'exécutif ou de l'administration.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-013",
+      "mots": [
+        "maire",
+        "préfet",
+        "conseiller régional",
+        "député"
+      ],
+      "intrus": "préfet",
+      "explication": "Le préfet est nommé par l'État ; les autres sont des élus.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-014",
+      "mots": [
+        "Sénat",
+        "Assemblée nationale",
+        "Conseil d'État",
+        "Congrès"
+      ],
+      "intrus": "Conseil d'État",
+      "explication": "Le Conseil d'État est une juridiction et un conseiller du gouvernement ; les autres sont des formations parlementaires.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-015",
+      "mots": [
+        "pertinent",
+        "judicieux",
+        "opportun",
+        "inepte"
+      ],
+      "intrus": "inepte",
+      "explication": "Inepte signifie sot, absurde ; les autres qualifient ce qui est approprié.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-016",
+      "mots": [
+        "loquace",
+        "volubile",
+        "bavard",
+        "taciturne"
+      ],
+      "intrus": "taciturne",
+      "explication": "Taciturne qualifie celui qui parle peu ; les autres celui qui parle beaucoup.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-017",
+      "mots": [
+        "avarice",
+        "cupidité",
+        "générosité",
+        "pingrerie"
+      ],
+      "intrus": "générosité",
+      "explication": "La générosité est une qualité ; les autres sont des formes d'attachement excessif à l'argent.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-018",
+      "mots": [
+        "saule",
+        "peuplier",
+        "roseau",
+        "aulne"
+      ],
+      "intrus": "roseau",
+      "explication": "Le roseau est une plante herbacée ; les autres sont des arbres des bords de l'eau.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-019",
+      "mots": [
+        "cumulus",
+        "stratus",
+        "cirrus",
+        "mistral"
+      ],
+      "intrus": "mistral",
+      "explication": "Le mistral est un vent ; les autres sont des types de nuages.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-020",
+      "mots": [
+        "Mozart",
+        "Beethoven",
+        "Rembrandt",
+        "Chopin"
+      ],
+      "intrus": "Rembrandt",
+      "explication": "Rembrandt est peintre ; les autres sont compositeurs.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-021",
+      "mots": [
+        "Molière",
+        "Racine",
+        "Corneille",
+        "Voltaire"
+      ],
+      "intrus": "Voltaire",
+      "explication": "Voltaire appartient au XVIIIe siècle ; les autres sont des dramaturges du XVIIe.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-022",
+      "mots": [
+        "budget",
+        "crédit",
+        "dotation",
+        "organigramme"
+      ],
+      "intrus": "organigramme",
+      "explication": "L'organigramme décrit l'organisation ; les autres sont des notions financières.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-023",
+      "mots": [
+        "audit",
+        "contrôle",
+        "inspection",
+        "subvention"
+      ],
+      "intrus": "subvention",
+      "explication": "La subvention est une aide financière ; les autres sont des formes de vérification.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-024",
+      "mots": [
+        "dérogation",
+        "exception",
+        "exemption",
+        "obligation"
+      ],
+      "intrus": "obligation",
+      "explication": "L'obligation impose une règle ; les autres désignent une dispense ou un écart à la règle.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-025",
+      "mots": [
+        "lucide",
+        "clairvoyant",
+        "perspicace",
+        "naïf"
+      ],
+      "intrus": "naïf",
+      "explication": "Naïf qualifie celui qui manque de discernement ; les autres celui qui voit juste.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-026",
+      "mots": [
+        "hexagone",
+        "pentagone",
+        "octogone",
+        "cylindre"
+      ],
+      "intrus": "cylindre",
+      "explication": "Le cylindre est un solide ; les autres sont des polygones plans.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-027",
+      "mots": [
+        "seconde",
+        "minute",
+        "heure",
+        "mètre"
+      ],
+      "intrus": "mètre",
+      "explication": "Le mètre mesure une longueur ; les autres mesurent le temps.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-028",
+      "mots": [
+        "gramme",
+        "kilogramme",
+        "tonne",
+        "litre"
+      ],
+      "intrus": "litre",
+      "explication": "Le litre mesure un volume ; les autres mesurent une masse.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-029",
+      "mots": [
+        "sporadique",
+        "occasionnel",
+        "épisodique",
+        "constant"
+      ],
+      "intrus": "constant",
+      "explication": "Constant signifie sans interruption ; les autres qualifient ce qui se produit de temps en temps.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-030",
+      "mots": [
+        "prudent",
+        "circonspect",
+        "précautionneux",
+        "téméraire"
+      ],
+      "intrus": "téméraire",
+      "explication": "Téméraire qualifie celui qui prend des risques inconsidérés ; les autres celui qui est prudent.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-031",
+      "mots": [
+        "chuchoter",
+        "murmurer",
+        "susurrer",
+        "vociférer"
+      ],
+      "intrus": "vociférer",
+      "explication": "Vociférer, c'est crier avec colère ; les autres, parler à voix basse.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-032",
+      "mots": [
+        "arpenter",
+        "flâner",
+        "déambuler",
+        "courir"
+      ],
+      "intrus": "courir",
+      "explication": "Courir implique la vitesse ; les autres désignent une marche lente ou mesurée.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-033",
+      "mots": [
+        "jubiler",
+        "exulter",
+        "se réjouir",
+        "se lamenter"
+      ],
+      "intrus": "se lamenter",
+      "explication": "Se lamenter exprime la plainte ; les autres la joie.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-034",
+      "mots": [
+        "ébauche",
+        "esquisse",
+        "brouillon",
+        "achèvement"
+      ],
+      "intrus": "achèvement",
+      "explication": "L'achèvement est la fin d'un travail ; les autres en désignent une version préparatoire.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-035",
+      "mots": [
+        "cohérent",
+        "logique",
+        "rationnel",
+        "incohérent"
+      ],
+      "intrus": "incohérent",
+      "explication": "Incohérent exprime l'absence de logique ; les autres sa présence.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-036",
+      "mots": [
+        "alouette",
+        "hirondelle",
+        "pingouin",
+        "rossignol"
+      ],
+      "intrus": "pingouin",
+      "explication": "Le pingouin est un oiseau marin qui ne chante pas ; les autres sont des passereaux chanteurs.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-037",
+      "mots": [
+        "granit",
+        "marbre",
+        "calcaire",
+        "béton"
+      ],
+      "intrus": "béton",
+      "explication": "Le béton est un matériau fabriqué ; les autres sont des roches naturelles.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-038",
+      "mots": [
+        "thym",
+        "romarin",
+        "basilic",
+        "safran"
+      ],
+      "intrus": "safran",
+      "explication": "Le safran est une épice issue d'une fleur (crocus) ; les autres sont des herbes aromatiques dont on utilise les feuilles.",
+      "difficulte": 4
+    },
+    {
+      "id": "int-s01-039",
+      "mots": [
+        "camembert",
+        "roquefort",
+        "brie",
+        "mozzarella"
+      ],
+      "intrus": "mozzarella",
+      "explication": "La mozzarella est un fromage italien ; les autres sont français.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-040",
+      "mots": [
+        "baguette",
+        "croissant",
+        "brioche",
+        "éclair"
+      ],
+      "intrus": "baguette",
+      "explication": "La baguette est un pain ; les autres sont des viennoiseries ou des pâtisseries.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-041",
+      "mots": [
+        "préface",
+        "avant-propos",
+        "prologue",
+        "épilogue"
+      ],
+      "intrus": "épilogue",
+      "explication": "L'épilogue est placé à la fin ; les autres précèdent le texte.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-042",
+      "mots": [
+        "synonyme",
+        "homonyme",
+        "paronyme",
+        "pseudonyme"
+      ],
+      "intrus": "pseudonyme",
+      "explication": "Le pseudonyme est un nom d'emprunt ; les autres désignent des relations entre les mots.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-043",
+      "mots": [
+        "anticiper",
+        "prévoir",
+        "pressentir",
+        "oublier"
+      ],
+      "intrus": "oublier",
+      "explication": "Oublier se tourne vers le passé et la perte ; les autres vers l'avenir.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-044",
+      "mots": [
+        "neurone",
+        "synapse",
+        "cortex",
+        "rotule"
+      ],
+      "intrus": "rotule",
+      "explication": "La rotule est un os du genou ; les autres concernent le système nerveux.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-045",
+      "mots": [
+        "avocat",
+        "notaire",
+        "huissier",
+        "architecte"
+      ],
+      "intrus": "architecte",
+      "explication": "L'architecte n'est pas un professionnel du droit.",
+      "difficulte": 1
+    },
+    {
+      "id": "int-s01-046",
+      "mots": [
+        "hebdomadaire",
+        "mensuel",
+        "quotidien",
+        "bimoteur"
+      ],
+      "intrus": "bimoteur",
+      "explication": "Bimoteur qualifie un avion à deux moteurs ; les autres désignent une périodicité.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-047",
+      "mots": [
+        "abdiquer",
+        "renoncer",
+        "démissionner",
+        "briguer"
+      ],
+      "intrus": "briguer",
+      "explication": "Briguer, c'est chercher à obtenir un poste ; les autres, y renoncer.",
+      "difficulte": 3
+    },
+    {
+      "id": "int-s01-048",
+      "mots": [
+        "sobre",
+        "frugal",
+        "tempérant",
+        "glouton"
+      ],
+      "intrus": "glouton",
+      "explication": "Glouton qualifie celui qui mange avec avidité ; les autres celui qui est modéré.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-049",
+      "mots": [
+        "tacite",
+        "implicite",
+        "sous-entendu",
+        "explicite"
+      ],
+      "intrus": "explicite",
+      "explication": "Explicite signifie clairement exprimé ; les autres, non formulé.",
+      "difficulte": 2
+    },
+    {
+      "id": "int-s01-050",
+      "mots": [
+        "acronyme",
+        "sigle",
+        "abréviation",
+        "onomatopée"
+      ],
+      "intrus": "onomatopée",
+      "explication": "L'onomatopée imite un son ; les autres sont des formes abrégées.",
+      "difficulte": 3
+    }
+  ]
+}

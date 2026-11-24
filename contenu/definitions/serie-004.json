@@ -1,0 +1,382 @@
+{
+  "$schema": "../schemas/definition-mot.schema.json",
+  "id": "def-s04",
+  "type": "definition-mot",
+  "titre": "Vocabulaire soutenu",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "description": "Mots précis et rares du registre soutenu et administratif.",
+  "items": [
+    {
+      "id": "def-s04-001",
+      "definition": "Fait de différer une décision en cherchant des délais.",
+      "reponse": "atermoiement",
+      "variantes": [],
+      "indices": {
+        "trait": "Synonyme de tergiversation, souvent au pluriel.",
+        "syllabe": "ater"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-002",
+      "definition": "Emploi rémunéré qui ne demande presque aucun travail.",
+      "reponse": "sinécure",
+      "variantes": [],
+      "indices": {
+        "trait": "Mot souvent employé à la forme négative : « ce n'est pas une … ».",
+        "syllabe": "siné"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-003",
+      "definition": "Abondance excessive d'une chose.",
+      "reponse": "pléthore",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin qui exprime le trop-plein.",
+        "syllabe": "plé"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-004",
+      "definition": "Entreprise si difficile qu'elle semble impossible à réussir.",
+      "reponse": "gageure",
+      "variantes": [],
+      "indices": {
+        "trait": "Mot dont la prononciation est souvent discutée.",
+        "syllabe": "ga"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-005",
+      "definition": "Ce qui est le propre de quelqu'un ou de quelque chose.",
+      "reponse": "apanage",
+      "variantes": [],
+      "indices": {
+        "trait": "Mot à l'origine lié aux biens des princes cadets.",
+        "syllabe": "apa"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-006",
+      "definition": "Qui est périmé, dépassé par l'évolution technique.",
+      "reponse": "obsolète",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif fréquent en informatique.",
+        "syllabe": "obso"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s04-007",
+      "definition": "Qui convient parfaitement à l'usage auquel on le destine.",
+      "reponse": "idoine",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif soutenu, synonyme d'approprié.",
+        "syllabe": "idoi"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-008",
+      "definition": "Qui se fait de manière furtive, à l'insu des autres.",
+      "reponse": "subreptice",
+      "variantes": [
+        "subrepticement"
+      ],
+      "indices": {
+        "trait": "Adjectif, souvent employé sous forme d'adverbe.",
+        "syllabe": "subrep"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-009",
+      "definition": "Difficile à comprendre, obscur.",
+      "reponse": "abscons",
+      "variantes": [
+        "absconse"
+      ],
+      "indices": {
+        "trait": "Adjectif qui qualifie un jargon.",
+        "syllabe": "abs"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-010",
+      "definition": "Que l'on ne doit pas toucher, à quoi l'on ne peut porter atteinte.",
+      "reponse": "intangible",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qui qualifie un principe.",
+        "syllabe": "intan"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-011",
+      "definition": "Qui ne souffre pas de discussion, tranchant.",
+      "reponse": "péremptoire",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qualifiant un ton ou un argument.",
+        "syllabe": "pérem"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-012",
+      "definition": "Dont le sens est obscur, énigmatique.",
+      "reponse": "sibyllin",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif lié aux prophétesses de l'Antiquité.",
+        "syllabe": "sibyl"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-013",
+      "definition": "Si embrouillé qu'on ne peut s'en sortir.",
+      "reponse": "inextricable",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qui qualifie une situation.",
+        "syllabe": "inex"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-014",
+      "definition": "Conséquence qui découle naturellement d'une proposition.",
+      "reponse": "corollaire",
+      "variantes": [],
+      "indices": {
+        "trait": "Terme de logique et de mathématiques.",
+        "syllabe": "corol"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-015",
+      "definition": "Vérité si évidente qu'il est inutile de l'énoncer.",
+      "reponse": "truisme",
+      "variantes": [
+        "lapalissade"
+      ],
+      "indices": {
+        "trait": "Synonyme de lapalissade.",
+        "syllabe": "tru"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-016",
+      "definition": "Intention faible, qui ne se traduit pas en action.",
+      "reponse": "velléité",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom souvent au pluriel.",
+        "syllabe": "vel"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-017",
+      "definition": "Mauvaise humeur qui s'exprime par des propos acerbes.",
+      "reponse": "acrimonie",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom féminin, synonyme d'aigreur.",
+        "syllabe": "acri"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-018",
+      "definition": "Prudence réfléchie dans la parole et dans l'action.",
+      "reponse": "circonspection",
+      "variantes": [],
+      "indices": {
+        "trait": "Qualité de qui pèse ses mots.",
+        "syllabe": "circons"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-019",
+      "definition": "Division d'un ensemble en deux parties nettement opposées.",
+      "reponse": "dichotomie",
+      "variantes": [],
+      "indices": {
+        "trait": "Terme de logique.",
+        "syllabe": "dicho"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-020",
+      "definition": "Rendre définitif en approuvant officiellement.",
+      "reponse": "entériner",
+      "variantes": [],
+      "indices": {
+        "trait": "Verbe employé pour une décision ou un usage.",
+        "syllabe": "enté"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-021",
+      "definition": "Mettre une affaire ou un dossier en état d'être jugé ou décidé.",
+      "reponse": "instruire",
+      "variantes": [],
+      "indices": {
+        "trait": "Verbe au sens administratif et judiciaire.",
+        "syllabe": "ins"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s04-022",
+      "definition": "Qui constitue un obstacle radical.",
+      "reponse": "rédhibitoire",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif, à l'origine juridique (vice caché).",
+        "syllabe": "rédhi"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-023",
+      "definition": "Qui n'a plus cours, qui a perdu sa validité.",
+      "reponse": "caduc",
+      "variantes": [
+        "caduque"
+      ],
+      "indices": {
+        "trait": "Adjectif qui qualifie un texte ou une règle périmés.",
+        "syllabe": "ca"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-024",
+      "definition": "Honnêteté scrupuleuse dans l'accomplissement de ses devoirs.",
+      "reponse": "probité",
+      "variantes": [],
+      "indices": {
+        "trait": "Qualité attendue des agents publics.",
+        "syllabe": "pro"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s04-025",
+      "definition": "Manque de compétence dans l'exercice de sa fonction.",
+      "reponse": "impéritie",
+      "variantes": [],
+      "indices": {
+        "trait": "Nom soutenu, voisin d'incapacité.",
+        "syllabe": "impé"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-026",
+      "definition": "Approuver officiellement ce qui a été conclu, notamment un traité.",
+      "reponse": "ratifier",
+      "variantes": [],
+      "indices": {
+        "trait": "Verbe du droit international.",
+        "syllabe": "rati"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s04-027",
+      "definition": "Modifier un texte par des ajouts ou des corrections.",
+      "reponse": "amender",
+      "variantes": [],
+      "indices": {
+        "trait": "Verbe parlementaire.",
+        "syllabe": "amen"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s04-028",
+      "definition": "Exagérément compliqué et peu naturel.",
+      "reponse": "alambiqué",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qui qualifie un raisonnement ou un style.",
+        "syllabe": "alam"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-029",
+      "definition": "Attitude de supériorité bienveillante et un peu méprisante.",
+      "reponse": "condescendance",
+      "variantes": [],
+      "indices": {
+        "trait": "Défaut relationnel.",
+        "syllabe": "condes"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-030",
+      "definition": "Hésiter, user de détours pour éviter de décider.",
+      "reponse": "tergiverser",
+      "variantes": [],
+      "indices": {
+        "trait": "Verbe proche de « atermoyer ».",
+        "syllabe": "tergi"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s04-031",
+      "definition": "Droit de précéder les autres dans un ordre protocolaire.",
+      "reponse": "préséance",
+      "variantes": [],
+      "indices": {
+        "trait": "Notion de protocole républicain.",
+        "syllabe": "pré"
+      },
+      "difficulte": 5
+    },
+    {
+      "id": "def-s04-032",
+      "definition": "Durée du mandat d'une assemblée élue.",
+      "reponse": "mandature",
+      "variantes": [],
+      "indices": {
+        "trait": "Terme de vie politique locale.",
+        "syllabe": "manda"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s04-033",
+      "definition": "Qui se rapporte aux fonctions essentielles de l'État : justice, police, défense, monnaie.",
+      "reponse": "régalien",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif lié à la souveraineté.",
+        "syllabe": "réga"
+      },
+      "difficulte": 3
+    }
+  ]
+}

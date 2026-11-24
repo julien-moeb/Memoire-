@@ -57,6 +57,56 @@ radar qui en résulte compare des domaines entre eux chez la même personne : c'
 et il ne permet aucun diagnostic. Les épreuves sont inspirées de paradigmes classiques, mais elles n'en sont pas des
 versions étalonnées.
 
+## Séance quotidienne
+
+Une séance par jour au plus, environ 18 minutes, jamais le jour de repos choisi.
+
+1. **Contexte** (20 s) : heures de sommeil et fatigue, saisies avant l'effort pour ne pas être influencées par la
+   performance du jour.
+2. **Rappel différé** de la liste apprise la veille, s'il y a lieu.
+3. **Échauffement** (90 s) : fluence sur une catégorie ou une lettre distincte de celles du bilan.
+4. **Deux exercices ciblés** (2 × 4 min) du domaine prioritaire, en rotation d'une séance à l'autre.
+5. **Double décision** (4 min) ; si quatre des cinq dernières séances l'ont comportée, dont la précédente, elle cède la
+   place à un exercice de maintien d'un autre domaine. La règle garantit au moins quatre séances sur six (vérifié par
+   simulation sur soixante séances dans les tests).
+6. **Révisions espacées** : cartes arrivées à échéance (15 au plus), complétées par quatre cartes nouvelles du lexique
+   professionnel au plus ; une définition trouvée seulement avec un indice, ou manquée, devient une carte révisée dès
+   le lendemain.
+7. **Clôture** : un épisode de manque du mot depuis la veille, en trois touches si vous le souhaitez.
+
+Une séance interrompue peut être reprise le jour même : les blocs terminés sont conservés.
+
+### Adaptation de la difficulté
+
+Le niveau de chaque exercice est conservé d'un jour à l'autre et reculé d'un cran au début de la séance, pour que les
+premiers essais réussissent. Il évolue ensuite selon la règle 3 réussites / 1 échec, sauf pour le n-back, ajusté entre
+deux blocs de 20 lettres (au moins 85 % : niveau supérieur ; moins de 65 % : niveau inférieur), car changer de règle au
+milieu d'une séquence n'aurait pas de sens.
+
+| Exercice | Ce que le niveau fait varier |
+| --- | --- |
+| Double décision | Durée d'affichage, de 500 ms à 17 ms (une image à 60 Hz) |
+| Mot ou pas mot | Délai de réponse, de 2 000 à 800 ms |
+| Pareil ou différent | Suites de 3 à 7 symboles ; délai de 3 500 à 1 800 ms |
+| Agir ou se retenir | Délai de 900 à 450 ms ; intervalle de 900 à 500 ms |
+| Couleurs et mots | Délai de 2 500 à 1 100 ms ; part d'essais en conflit de 40 à 75 % |
+| Alternance de règles | Délai de 3 000 à 1 300 ms |
+| N-back verbal | 2-back puis 3-back ; cadence de 2,5 à 1,9 s |
+| Chiffres à rebours | Suites de 3 à 9 chiffres |
+| Les dernières lettres | De 3 à 7 lettres à restituer |
+| Liste et stratégies | De 8 à 15 mots |
+| Méthode des lieux | De 5 à 10 éléments |
+| Le mot juste, paronymes, intrus | Difficulté des items (1 à 5) |
+
+Ces bornes sont des choix de conception destinés à offrir une progression régulière, non des normes.
+
+### Exercices sans escalier
+
+Les traits sémantiques, la reformulation de registre et la note à retenir se font à votre rythme. Pour la
+reformulation, une grille de trois critères (sens conservé, vocabulaire précis, phrase fluide) sert d'autoévaluation.
+Dans les exercices de mots, le **mode oral** (Réglages) remplace la saisie : vous dites le mot à voix haute, puis
+indiquez si vous l'aviez trouvé. Aucune reconnaissance vocale n'est utilisée, faute de solution entièrement locale.
+
 ## Choix techniques justifiés
 
 - **Escalier adaptatif 3 réussites / 1 échec.** Il converge vers 79,4 % de réussite (Levitt 1971). La règle

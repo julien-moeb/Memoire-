@@ -1,0 +1,959 @@
+{
+  "$schema": "../schemas/discrimination.schema.json",
+  "id": "dis-s01",
+  "type": "discrimination",
+  "titre": "Paronymes et quasi-synonymes",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "description": "Choisir le mot exact en contexte, avec explication de la nuance.",
+  "items": [
+    {
+      "id": "dis-s01-001",
+      "nature": "paronyme",
+      "phrase": "Le préfet a ___ les mesures de restriction jusqu'à la fin du mois.",
+      "options": [
+        "prolongé",
+        "prorogé"
+      ],
+      "reponse": "prorogé",
+      "explication": "Proroger, c'est reporter l'échéance d'un acte juridique ; prolonger, c'est allonger une durée dans le temps, au sens courant.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-002",
+      "nature": "paronyme",
+      "phrase": "Il faut ___ ce dossier aux services compétents avant vendredi.",
+      "options": [
+        "transmettre",
+        "transférer"
+      ],
+      "reponse": "transmettre",
+      "explication": "On transmet une information ou un document ; on transfère une personne, un siège ou une compétence d'un lieu à un autre.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-003",
+      "nature": "paronyme",
+      "phrase": "Ce rapport est ___ : il contient plusieurs erreurs de calcul.",
+      "options": [
+        "éminent",
+        "imminent",
+        "erroné"
+      ],
+      "reponse": "erroné",
+      "explication": "Erroné signifie entaché d'erreurs. Éminent qualifie ce qui est remarquable, imminent ce qui va arriver très bientôt.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-004",
+      "nature": "paronyme",
+      "phrase": "L'arrivée du ministre est ___ : il sera là dans cinq minutes.",
+      "options": [
+        "éminente",
+        "imminente"
+      ],
+      "reponse": "imminente",
+      "explication": "Imminent : sur le point de se produire. Éminent : qui s'élève au-dessus des autres par son mérite.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-005",
+      "nature": "paronyme",
+      "phrase": "Cet ___ juriste a présidé la commission pendant dix ans.",
+      "options": [
+        "éminent",
+        "imminent"
+      ],
+      "reponse": "éminent",
+      "explication": "Éminent qualifie une personne remarquable ; imminent un événement tout proche.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-006",
+      "nature": "paronyme",
+      "phrase": "La commission a ___ en faveur du projet à l'unanimité.",
+      "options": [
+        "statué",
+        "statufié"
+      ],
+      "reponse": "statué",
+      "explication": "Statuer, c'est prendre une décision sur une affaire. Statufier, c'est représenter quelqu'un par une statue.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-007",
+      "nature": "paronyme",
+      "phrase": "Le conducteur a été condamné pour ___ de fuite.",
+      "options": [
+        "délit",
+        "délai"
+      ],
+      "reponse": "délit",
+      "explication": "Un délit est une infraction ; un délai est un temps accordé pour faire quelque chose.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-008",
+      "nature": "paronyme",
+      "phrase": "Il a ___ la parole à son adjoint pour la suite de la réunion.",
+      "options": [
+        "cédé",
+        "concédé"
+      ],
+      "reponse": "cédé",
+      "explication": "Céder la parole, c'est la laisser à un autre. Concéder, c'est accorder à contrecœur ou reconnaître un point.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-009",
+      "nature": "paronyme",
+      "phrase": "Cette décision risque d'___ l'opinion publique.",
+      "options": [
+        "affecter",
+        "infecter"
+      ],
+      "reponse": "affecter",
+      "explication": "Affecter, c'est toucher, émouvoir ou destiner à un usage ; infecter, c'est contaminer par des germes.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-010",
+      "nature": "paronyme",
+      "phrase": "Le budget a été ___ par le conseil municipal.",
+      "options": [
+        "adopté",
+        "adapté"
+      ],
+      "reponse": "adopté",
+      "explication": "Adopter un texte, c'est l'approuver par un vote ; adapter, c'est le modifier pour l'ajuster à une situation.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-011",
+      "nature": "paronyme",
+      "phrase": "Il faudra ___ la procédure aux spécificités du territoire.",
+      "options": [
+        "adopter",
+        "adapter"
+      ],
+      "reponse": "adapter",
+      "explication": "Adapter : ajuster à des conditions particulières. Adopter : faire sien, approuver.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-012",
+      "nature": "paronyme",
+      "phrase": "L'auteur de l'agression a été ___ par la police.",
+      "options": [
+        "appréhendé",
+        "apprécié"
+      ],
+      "reponse": "appréhendé",
+      "explication": "Appréhender, c'est arrêter quelqu'un ; c'est aussi redouter ou comprendre. Apprécier, c'est estimer.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-013",
+      "nature": "paronyme",
+      "phrase": "Cette mesure aura un effet ___ sur l'emploi local.",
+      "options": [
+        "bénéfique",
+        "bénévole"
+      ],
+      "reponse": "bénéfique",
+      "explication": "Bénéfique : qui fait du bien. Bénévole : qui agit sans être rémunéré.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-014",
+      "nature": "paronyme",
+      "phrase": "Le maire a ___ une enquête interne.",
+      "options": [
+        "diligenté",
+        "dilapidé"
+      ],
+      "reponse": "diligenté",
+      "explication": "Diligenter une enquête, c'est la faire mener avec soin et rapidité. Dilapider, c'est gaspiller.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-015",
+      "nature": "paronyme",
+      "phrase": "Ce témoin n'est pas ___ : ses déclarations varient.",
+      "options": [
+        "crédible",
+        "crédule"
+      ],
+      "reponse": "crédible",
+      "explication": "Crédible : digne d'être cru. Crédule : qui croit trop facilement.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-016",
+      "nature": "paronyme",
+      "phrase": "Il est trop ___ : il croit tout ce qu'on lui raconte.",
+      "options": [
+        "crédible",
+        "crédule"
+      ],
+      "reponse": "crédule",
+      "explication": "Crédule qualifie celui qui croit ; crédible, ce qui mérite d'être cru.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-017",
+      "nature": "paronyme",
+      "phrase": "Le directeur a fait preuve d'une grande ___ envers ses équipes.",
+      "options": [
+        "affection",
+        "affectation"
+      ],
+      "reponse": "affection",
+      "explication": "Affection : attachement tendre. Affectation : poste attribué à quelqu'un, ou manque de naturel.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-018",
+      "nature": "paronyme",
+      "phrase": "Sa nouvelle ___ l'amène à rejoindre la préfecture de région.",
+      "options": [
+        "affection",
+        "affectation"
+      ],
+      "reponse": "affectation",
+      "explication": "L'affectation désigne le poste où un agent est nommé.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-019",
+      "nature": "paronyme",
+      "phrase": "Une ___ de documents a été retrouvée dans les archives.",
+      "options": [
+        "liasse",
+        "lisse"
+      ],
+      "reponse": "liasse",
+      "explication": "Une liasse est un paquet de papiers liés ensemble ; lisse est un adjectif (sans aspérité).",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-020",
+      "nature": "paronyme",
+      "phrase": "Cette entreprise est sur le point de faire ___.",
+      "options": [
+        "faillite",
+        "faille"
+      ],
+      "reponse": "faillite",
+      "explication": "Faire faillite, c'est cesser ses paiements. Une faille est une fissure ou un point faible.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-021",
+      "nature": "paronyme",
+      "phrase": "Le texte a été ___ au Journal officiel.",
+      "options": [
+        "promulgué",
+        "divulgué"
+      ],
+      "reponse": "promulgué",
+      "explication": "Promulguer une loi, c'est la rendre exécutoire. Divulguer, c'est rendre public ce qui était secret.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-022",
+      "nature": "paronyme",
+      "phrase": "Un fonctionnaire a ___ des informations confidentielles.",
+      "options": [
+        "promulgué",
+        "divulgué"
+      ],
+      "reponse": "divulgué",
+      "explication": "Divulguer : révéler ce qui devait rester secret.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-023",
+      "nature": "paronyme",
+      "phrase": "L'association a reçu une ___ de la région.",
+      "options": [
+        "allocation",
+        "allocution"
+      ],
+      "reponse": "allocation",
+      "explication": "Une allocation est une somme attribuée ; une allocution est un bref discours.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-024",
+      "nature": "paronyme",
+      "phrase": "Le président a prononcé une courte ___ à l'ouverture du congrès.",
+      "options": [
+        "allocation",
+        "allocution"
+      ],
+      "reponse": "allocution",
+      "explication": "Une allocution est un discours bref et solennel.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-025",
+      "nature": "paronyme",
+      "phrase": "Ce comportement est ___ : il méritera une sanction.",
+      "options": [
+        "inexcusable",
+        "inexorable"
+      ],
+      "reponse": "inexcusable",
+      "explication": "Inexcusable : qui ne peut être excusé. Inexorable : que rien ne peut arrêter ou fléchir.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-026",
+      "nature": "paronyme",
+      "phrase": "La montée des eaux semble ___.",
+      "options": [
+        "inexcusable",
+        "inexorable"
+      ],
+      "reponse": "inexorable",
+      "explication": "Inexorable qualifie ce qui suit son cours sans qu'on puisse l'arrêter.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-027",
+      "nature": "paronyme",
+      "phrase": "Il a ___ à toutes les réunions du comité.",
+      "options": [
+        "participé",
+        "précipité"
+      ],
+      "reponse": "participé",
+      "explication": "Participer à une réunion, c'est y prendre part.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-028",
+      "nature": "paronyme",
+      "phrase": "Merci de ___ votre présence avant lundi.",
+      "options": [
+        "confirmer",
+        "conformer"
+      ],
+      "reponse": "confirmer",
+      "explication": "Confirmer, c'est assurer de nouveau ; se conformer, c'est agir selon une règle.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-029",
+      "nature": "paronyme",
+      "phrase": "Les agents doivent se ___ aux consignes de sécurité.",
+      "options": [
+        "confirmer",
+        "conformer"
+      ],
+      "reponse": "conformer",
+      "explication": "Se conformer à une règle, c'est la respecter.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-030",
+      "nature": "paronyme",
+      "phrase": "Le chantier a pris du retard en raison d'un ___ de matériaux.",
+      "options": [
+        "défaut",
+        "déficit"
+      ],
+      "reponse": "défaut",
+      "explication": "Un défaut de matériaux, c'est leur manque. Le déficit désigne surtout un solde négatif, en particulier budgétaire.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-031",
+      "nature": "paronyme",
+      "phrase": "Le ___ de la sécurité sociale s'est creusé cette année.",
+      "options": [
+        "défaut",
+        "déficit"
+      ],
+      "reponse": "déficit",
+      "explication": "Déficit : excédent des dépenses sur les recettes.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-032",
+      "nature": "paronyme",
+      "phrase": "Elle a ___ un nouveau poste au ministère.",
+      "options": [
+        "intégré",
+        "intégral"
+      ],
+      "reponse": "intégré",
+      "explication": "Intégrer un poste ou une équipe, c'est y entrer. Intégral est un adjectif (complet).",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-033",
+      "nature": "paronyme",
+      "phrase": "Il faudra ___ le paiement de cette facture.",
+      "options": [
+        "différer",
+        "déférer"
+      ],
+      "reponse": "différer",
+      "explication": "Différer, c'est remettre à plus tard. Déférer, c'est porter une affaire devant une juridiction, ou s'en remettre à l'avis d'autrui.",
+      "difficulte": 4
+    },
+    {
+      "id": "dis-s01-034",
+      "nature": "paronyme",
+      "phrase": "Le préfet a décidé de ___ cet arrêté au tribunal administratif.",
+      "options": [
+        "différer",
+        "déférer"
+      ],
+      "reponse": "déférer",
+      "explication": "Le préfet défère au juge un acte qu'il estime illégal (déféré préfectoral).",
+      "difficulte": 4
+    },
+    {
+      "id": "dis-s01-035",
+      "nature": "paronyme",
+      "phrase": "Cette situation ___ une réponse rapide.",
+      "options": [
+        "appelle",
+        "rappelle"
+      ],
+      "reponse": "appelle",
+      "explication": "Une situation appelle (exige) une réponse ; rappeler, c'est appeler de nouveau ou faire souvenir.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-036",
+      "nature": "paronyme",
+      "phrase": "Il faut ___ les causes de l'accident.",
+      "options": [
+        "élucider",
+        "éluder"
+      ],
+      "reponse": "élucider",
+      "explication": "Élucider, c'est éclaircir ce qui était obscur. Éluder, c'est éviter habilement une question.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-037",
+      "nature": "paronyme",
+      "phrase": "Le ministre a ___ la question du journaliste.",
+      "options": [
+        "élucidé",
+        "éludé"
+      ],
+      "reponse": "éludé",
+      "explication": "Éluder une question, c'est l'esquiver.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-038",
+      "nature": "paronyme",
+      "phrase": "Votre demande sera examinée lors de la ___ session.",
+      "options": [
+        "prochaine",
+        "proche"
+      ],
+      "reponse": "prochaine",
+      "explication": "Prochain : qui vient immédiatement après. Proche : peu éloigné dans l'espace ou le temps.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-039",
+      "nature": "paronyme",
+      "phrase": "Le directeur ___ la réunion de service tous les lundis.",
+      "options": [
+        "préside",
+        "précède"
+      ],
+      "reponse": "préside",
+      "explication": "Présider, c'est diriger une réunion ; précéder, c'est venir avant.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-040",
+      "nature": "quasi-synonyme",
+      "phrase": "Le rapport ___ trois points d'amélioration prioritaires.",
+      "options": [
+        "identifie",
+        "découvre",
+        "invente"
+      ],
+      "reponse": "identifie",
+      "explication": "Identifier, c'est reconnaître et désigner précisément ; découvrir suppose que la chose était cachée, inventer qu'elle n'existait pas.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-041",
+      "nature": "quasi-synonyme",
+      "phrase": "Cette réforme vise à ___ les démarches des usagers.",
+      "options": [
+        "simplifier",
+        "réduire",
+        "abréger"
+      ],
+      "reponse": "simplifier",
+      "explication": "Simplifier, c'est rendre moins complexe. Réduire et abréger portent sur la quantité ou la durée, pas sur la complexité.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-042",
+      "nature": "quasi-synonyme",
+      "phrase": "Le projet a été ___ faute de financement.",
+      "options": [
+        "abandonné",
+        "délaissé",
+        "négligé"
+      ],
+      "reponse": "abandonné",
+      "explication": "Abandonner un projet, c'est y renoncer définitivement ; délaisser et négliger suggèrent un manque d'attention plutôt qu'une décision.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-043",
+      "nature": "quasi-synonyme",
+      "phrase": "Les deux services doivent ___ leurs actions sur le territoire.",
+      "options": [
+        "coordonner",
+        "subordonner",
+        "ordonner"
+      ],
+      "reponse": "coordonner",
+      "explication": "Coordonner, c'est agencer des actions pour qu'elles concourent au même but ; subordonner, c'est placer sous l'autorité d'un autre ; ordonner, c'est commander ou ranger.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-044",
+      "nature": "quasi-synonyme",
+      "phrase": "L'étude ___ une hausse de 3 % de la fréquentation.",
+      "options": [
+        "révèle",
+        "dévoile",
+        "trahit"
+      ],
+      "reponse": "révèle",
+      "explication": "Révéler, c'est faire connaître ce qui était inconnu ; dévoiler suggère un secret volontairement caché ; trahir, une révélation involontaire.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-045",
+      "nature": "quasi-synonyme",
+      "phrase": "Nous devons ___ les risques avant de nous engager.",
+      "options": [
+        "évaluer",
+        "estimer",
+        "mesurer"
+      ],
+      "reponse": "évaluer",
+      "explication": "Évaluer, c'est porter un jugement sur la valeur ou l'importance d'une chose ; estimer est plus approximatif ; mesurer suppose une grandeur quantifiable.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-046",
+      "nature": "quasi-synonyme",
+      "phrase": "Le directeur a ___ son mécontentement en termes mesurés.",
+      "options": [
+        "exprimé",
+        "manifesté"
+      ],
+      "reponse": "exprimé",
+      "explication": "Exprimer, c'est rendre sensible par la parole ; manifester insiste sur ce qui se voit, se montre.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-047",
+      "nature": "quasi-synonyme",
+      "phrase": "Ce choix ___ des conséquences budgétaires importantes.",
+      "options": [
+        "entraîne",
+        "provoque",
+        "suscite"
+      ],
+      "reponse": "entraîne",
+      "explication": "Entraîner : avoir pour conséquence nécessaire. Provoquer suggère une cause plus directe et souvent brutale ; susciter s'applique plutôt à des sentiments ou des réactions.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-048",
+      "nature": "quasi-synonyme",
+      "phrase": "Cette annonce a ___ de vives réactions chez les élus.",
+      "options": [
+        "entraîné",
+        "suscité",
+        "induit"
+      ],
+      "reponse": "suscité",
+      "explication": "Susciter, c'est faire naître des sentiments ou des réactions. Induire relève du raisonnement ou de l'erreur (induire en erreur).",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-049",
+      "nature": "quasi-synonyme",
+      "phrase": "Il faut ___ ce poste avant l'été.",
+      "options": [
+        "pourvoir",
+        "fournir",
+        "remplir"
+      ],
+      "reponse": "pourvoir",
+      "explication": "On pourvoit un poste vacant en y nommant quelqu'un. Fournir, c'est approvisionner ; remplir un poste se dit de celui qui l'occupe.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-050",
+      "nature": "quasi-synonyme",
+      "phrase": "L'enquête a ___ l'existence de dysfonctionnements graves.",
+      "options": [
+        "établi",
+        "fondé",
+        "institué"
+      ],
+      "reponse": "établi",
+      "explication": "Établir un fait, c'est le démontrer. Fonder et instituer, c'est créer.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-051",
+      "nature": "quasi-synonyme",
+      "phrase": "Le conseil a ___ une nouvelle commission consultative.",
+      "options": [
+        "établi",
+        "institué",
+        "fondé"
+      ],
+      "reponse": "institué",
+      "explication": "Instituer, c'est créer officiellement une institution ou une règle durable.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-052",
+      "nature": "quasi-synonyme",
+      "phrase": "Cette note ___ la position du ministère sur ce dossier.",
+      "options": [
+        "expose",
+        "exhibe",
+        "étale"
+      ],
+      "reponse": "expose",
+      "explication": "Exposer, c'est présenter de manière ordonnée. Exhiber et étaler comportent une nuance d'ostentation.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-053",
+      "nature": "quasi-synonyme",
+      "phrase": "Votre candidature a retenu toute notre ___.",
+      "options": [
+        "attention",
+        "vigilance",
+        "méfiance"
+      ],
+      "reponse": "attention",
+      "explication": "L'attention est l'application de l'esprit ; la vigilance suppose un danger ; la méfiance, un soupçon.",
+      "difficulte": 1
+    },
+    {
+      "id": "dis-s01-054",
+      "nature": "quasi-synonyme",
+      "phrase": "Les résultats sont ___ : on ne peut en tirer aucune conclusion.",
+      "options": [
+        "ambigus",
+        "contradictoires",
+        "erronés"
+      ],
+      "reponse": "ambigus",
+      "explication": "Ambigu : susceptible de plusieurs interprétations. Contradictoire : qui se contredit. Erroné : faux.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-055",
+      "nature": "quasi-synonyme",
+      "phrase": "Les deux témoignages sont ___ : l'un dit blanc, l'autre noir.",
+      "options": [
+        "ambigus",
+        "contradictoires",
+        "flous"
+      ],
+      "reponse": "contradictoires",
+      "explication": "Contradictoires qualifie des affirmations incompatibles entre elles.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-056",
+      "nature": "quasi-synonyme",
+      "phrase": "Il a fait preuve d'une ___ remarquable pendant la crise.",
+      "options": [
+        "sérénité",
+        "indifférence",
+        "apathie"
+      ],
+      "reponse": "sérénité",
+      "explication": "La sérénité est un calme maîtrisé ; l'indifférence est une absence d'intérêt ; l'apathie, une absence d'énergie.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-057",
+      "nature": "quasi-synonyme",
+      "phrase": "Ce projet nécessite des moyens ___ à ses ambitions.",
+      "options": [
+        "proportionnés",
+        "proportionnels",
+        "mesurés"
+      ],
+      "reponse": "proportionnés",
+      "explication": "Proportionné : qui est dans un juste rapport avec autre chose. Proportionnel : qui varie dans le même rapport (sens mathématique).",
+      "difficulte": 4
+    },
+    {
+      "id": "dis-s01-058",
+      "nature": "quasi-synonyme",
+      "phrase": "La cotisation est ___ au revenu.",
+      "options": [
+        "proportionnée",
+        "proportionnelle"
+      ],
+      "reponse": "proportionnelle",
+      "explication": "Proportionnel : dont la grandeur varie en fonction d'une autre, selon un rapport constant.",
+      "difficulte": 4
+    },
+    {
+      "id": "dis-s01-059",
+      "nature": "quasi-synonyme",
+      "phrase": "Le service a enregistré une ___ des demandes cet hiver.",
+      "options": [
+        "recrudescence",
+        "augmentation",
+        "croissance"
+      ],
+      "reponse": "recrudescence",
+      "explication": "Recrudescence : reprise avec une intensité accrue, après une accalmie. Augmentation est neutre ; croissance suggère un développement progressif.",
+      "difficulte": 4
+    },
+    {
+      "id": "dis-s01-060",
+      "nature": "quasi-synonyme",
+      "phrase": "Il convient de ___ les deux versions du texte.",
+      "options": [
+        "comparer",
+        "confronter",
+        "opposer"
+      ],
+      "reponse": "comparer",
+      "explication": "Comparer, c'est examiner les ressemblances et les différences ; confronter suggère une mise en présence contradictoire ; opposer, une mise en contraste.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-061",
+      "nature": "quasi-synonyme",
+      "phrase": "Le juge a décidé de ___ les deux témoins.",
+      "options": [
+        "comparer",
+        "confronter",
+        "opposer"
+      ],
+      "reponse": "confronter",
+      "explication": "Confronter des témoins, c'est les mettre en présence pour vérifier leurs déclarations.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-062",
+      "nature": "quasi-synonyme",
+      "phrase": "La direction a ___ la demande de mutation.",
+      "options": [
+        "rejeté",
+        "refusé",
+        "décliné"
+      ],
+      "reponse": "rejeté",
+      "explication": "Rejeter une demande s'emploie pour une décision formelle ; décliner, c'est refuser poliment une offre ou une invitation.",
+      "difficulte": 4
+    },
+    {
+      "id": "dis-s01-063",
+      "nature": "quasi-synonyme",
+      "phrase": "Je dois ___ votre invitation, mon agenda étant complet.",
+      "options": [
+        "rejeter",
+        "décliner",
+        "réfuter"
+      ],
+      "reponse": "décliner",
+      "explication": "Décliner une invitation, c'est la refuser courtoisement ; réfuter, c'est démontrer la fausseté d'un argument.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-064",
+      "nature": "quasi-synonyme",
+      "phrase": "L'avocat a ___ point par point les arguments de la partie adverse.",
+      "options": [
+        "réfuté",
+        "refusé",
+        "nié"
+      ],
+      "reponse": "réfuté",
+      "explication": "Réfuter, c'est démontrer qu'une affirmation est fausse. Nier, c'est simplement la déclarer fausse.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-065",
+      "nature": "quasi-synonyme",
+      "phrase": "Le chantier a pris un retard ___.",
+      "options": [
+        "considérable",
+        "conséquent",
+        "important"
+      ],
+      "reponse": "considérable",
+      "explication": "« Conséquent » au sens d'important est critiqué : conséquent signifie d'abord « qui agit avec logique ». Considérable est le terme juste.",
+      "difficulte": 5
+    },
+    {
+      "id": "dis-s01-066",
+      "nature": "quasi-synonyme",
+      "phrase": "Il est resté ___ avec ses principes jusqu'au bout.",
+      "options": [
+        "conséquent",
+        "cohérent",
+        "considérable"
+      ],
+      "reponse": "cohérent",
+      "explication": "Cohérent : dont les éléments s'accordent logiquement. Conséquent avec soi-même est correct mais plus rare ; considérable n'a pas ce sens.",
+      "difficulte": 4
+    },
+    {
+      "id": "dis-s01-067",
+      "nature": "quasi-synonyme",
+      "phrase": "Le président de séance a ___ la réunion à 18 heures.",
+      "options": [
+        "clos",
+        "fermé",
+        "terminé"
+      ],
+      "reponse": "clos",
+      "explication": "On clôt une séance ou des débats ; fermer s'applique à un lieu ou un objet.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-068",
+      "nature": "quasi-synonyme",
+      "phrase": "Sa présentation était claire et ___.",
+      "options": [
+        "concise",
+        "courte",
+        "brève"
+      ],
+      "reponse": "concise",
+      "explication": "Concis : qui dit beaucoup en peu de mots. Court et bref ne portent que sur la longueur.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-069",
+      "nature": "quasi-synonyme",
+      "phrase": "Le contrôle a ___ plusieurs irrégularités comptables.",
+      "options": [
+        "relevé",
+        "soulevé",
+        "élevé"
+      ],
+      "reponse": "relevé",
+      "explication": "Relever des irrégularités, c'est les constater et les noter. Soulever, c'est faire naître une question.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-070",
+      "nature": "quasi-synonyme",
+      "phrase": "Votre remarque ___ une question de fond.",
+      "options": [
+        "relève",
+        "soulève",
+        "élève"
+      ],
+      "reponse": "soulève",
+      "explication": "Soulever une question, c'est la faire apparaître dans la discussion.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-071",
+      "nature": "quasi-synonyme",
+      "phrase": "Ce document doit rester ___ jusqu'à sa publication.",
+      "options": [
+        "confidentiel",
+        "secret",
+        "intime"
+      ],
+      "reponse": "confidentiel",
+      "explication": "Confidentiel : qui ne doit être communiqué qu'à des personnes autorisées. Secret est plus absolu ; intime relève de la vie privée.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-072",
+      "nature": "quasi-synonyme",
+      "phrase": "Le nouveau logiciel permet de ___ le traitement des dossiers.",
+      "options": [
+        "accélérer",
+        "précipiter",
+        "hâter"
+      ],
+      "reponse": "accélérer",
+      "explication": "Accélérer : rendre plus rapide. Précipiter comporte l'idée d'une hâte excessive.",
+      "difficulte": 2
+    },
+    {
+      "id": "dis-s01-073",
+      "nature": "quasi-synonyme",
+      "phrase": "Il ne faut pas ___ la décision : prenons le temps de consulter.",
+      "options": [
+        "accélérer",
+        "précipiter",
+        "avancer"
+      ],
+      "reponse": "précipiter",
+      "explication": "Précipiter une décision, c'est la prendre trop vite, sans réflexion suffisante.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-074",
+      "nature": "quasi-synonyme",
+      "phrase": "La réunion a permis de ___ les malentendus.",
+      "options": [
+        "dissiper",
+        "disperser",
+        "dissoudre"
+      ],
+      "reponse": "dissiper",
+      "explication": "Dissiper un malentendu, c'est le faire disparaître. Disperser, c'est éparpiller ; dissoudre, faire cesser une assemblée ou délayer.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-075",
+      "nature": "quasi-synonyme",
+      "phrase": "Le gouvernement a décidé de ___ l'assemblée.",
+      "options": [
+        "dissiper",
+        "dissoudre",
+        "disperser"
+      ],
+      "reponse": "dissoudre",
+      "explication": "Dissoudre une assemblée, c'est mettre fin à son mandat.",
+      "difficulte": 3
+    },
+    {
+      "id": "dis-s01-076",
+      "nature": "quasi-synonyme",
+      "phrase": "Son intervention a été ___ par l'ensemble des participants.",
+      "options": [
+        "saluée",
+        "félicitée",
+        "louée"
+      ],
+      "reponse": "saluée",
+      "explication": "Saluer une intervention, c'est en reconnaître publiquement la qualité ; on félicite une personne, pas une intervention.",
+      "difficulte": 4
+    }
+  ]
+}

@@ -34,6 +34,8 @@ export interface Reglages {
   domainePrioritaire: Domaine;
   ponderations: Record<Domaine, number>;
   ignorerAccents: boolean;
+  /** Mode oral : le mot est dit à voix haute puis autoévalué, au lieu d'être tapé. */
+  modeOral: boolean;
   derniereSauvegarde: string | null;
 }
 

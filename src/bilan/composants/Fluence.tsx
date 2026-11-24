@@ -13,19 +13,24 @@ export interface ResultatFluence {
 }
 
 /** Fluence chronométrée de 60 s, puis arbitrage des mots absents des listes de référence. */
-export function Fluence({ consigne, item, onTerminer }: { consigne: string; item: ItemFluenceBilan; onTerminer: (r: ResultatFluence) => void }) {
+export function Fluence({ consigne, item, onTerminer, dureeMs = DUREE, sansArbitragePhonemique = false }: {
+  consigne: string; item: ItemFluenceBilan; onTerminer: (r: ResultatFluence) => void; dureeMs?: number;
+  /** Entraînement : en fluence phonémique, les mots commençant par la bonne lettre sont acceptés sans arbitrage. */
+  sansArbitragePhonemique?: boolean;
+}) {
   const [phase, setPhase] = useState<'production' | 'arbitrage'>('production');
   const [saisies, setSaisies] = useState<SaisieHorodatee[]>([]);
   const debut = useRef(performance.now());
-  const reste = useCompteARebours(DUREE, phase === 'production', () => setPhase('arbitrage'));
+  const reste = useCompteARebours(dureeMs, phase === 'production', () => setPhase('arbitrage'));
   const classes = useMemo(() => classerMotsFluence(saisies, item), [saisies, item]);
-  const aArbitrer = classes.filter((c) => c.statut === 'a-arbitrer');
+  const accepterTout = sansArbitragePhonemique && item.modalite === 'phonemique';
+  const aArbitrer = accepterTout ? [] : classes.filter((c) => c.statut === 'a-arbitrer');
   const [acceptes, setAcceptes] = useState<Set<string>>(new Set());
 
   if (phase === 'production') {
     return (
       <div className="mx-auto flex max-w-xl flex-col gap-5 px-4 py-8">
-        <BarreTemps resteMs={reste} totalMs={DUREE} />
+        <BarreTemps resteMs={reste} totalMs={dureeMs} />
         <h2 className="text-[1.5rem] font-semibold">{consigne}</h2>
         <SaisieMots onMot={(mot, t) => setSaisies((s) => [...s, { mot, tMs: t - debut.current }])} />
         <ListeSaisie mots={saisies.map((s) => s.mot)} />
@@ -33,7 +38,8 @@ export function Fluence({ consigne, item, onTerminer }: { consigne: string; item
     );
   }
 
-  const terminer = () => onTerminer({ saisies, acceptes: [...acceptes], score: scoreFluence(classes, acceptes) });
+  const acceptesFinal = accepterTout ? new Set(classes.filter((c) => c.statut === 'a-arbitrer').map((c) => c.mot)) : acceptes;
+  const terminer = () => onTerminer({ saisies, acceptes: [...acceptesFinal], score: scoreFluence(classes, acceptesFinal, dureeMs) });
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-5 px-4 py-8">
       <h2 className="text-[1.375rem] font-semibold">Temps écoulé</h2>

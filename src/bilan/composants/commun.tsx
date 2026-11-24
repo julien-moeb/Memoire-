@@ -4,14 +4,14 @@ import { Bouton } from '../../ui/composants';
 export const attendre = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
 /** Écran de consigne avant chaque épreuve. */
-export function Consigne({ titre, numero, total, children, onCommencer }: {
-  titre: string; numero: number; total: number; children: ReactNode; onCommencer: () => void;
+export function Consigne({ titre, numero, total, children, onCommencer, libelle = 'Épreuve' }: {
+  titre: string; numero: number; total: number; children: ReactNode; onCommencer: () => void; libelle?: string;
 }) {
   const ref = useRef<HTMLHeadingElement>(null);
   useEffect(() => ref.current?.focus(), []);
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-xl flex-col justify-center gap-6 px-4">
-      <p className="text-[0.8125rem] font-semibold tracking-wide text-texte-2 uppercase">Épreuve {numero} sur {total}</p>
+      <p className="text-[0.8125rem] font-semibold tracking-wide text-texte-2 uppercase">{libelle} {numero} sur {total}</p>
       <h2 ref={ref} tabIndex={-1} className="text-[1.75rem] font-bold outline-none">{titre}</h2>
       <div className="text-[1.0625rem] leading-relaxed">{children}</div>
       <Bouton onClick={onCommencer} className="w-full">Commencer</Bouton>
@@ -47,7 +47,9 @@ export function BarreTemps({ resteMs, totalMs }: { resteMs: number; totalMs: num
       <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-2">
         <div className="h-full rounded-full bg-accent transition-[width] duration-200" style={{ width: `${(resteMs / totalMs) * 100}%` }} />
       </div>
-      <span className="w-10 text-right text-[0.9375rem] text-texte-2 tabular-nums" aria-label={`${s} secondes restantes`}>{s} s</span>
+      <span className="shrink-0 text-right text-[0.9375rem] whitespace-nowrap text-texte-2 tabular-nums" aria-label={`${s} secondes restantes`}>
+        {s >= 60 ? `${Math.floor(s / 60)} min ${String(s % 60).padStart(2, '0')}` : `${s} s`}
+      </span>
     </div>
   );
 }
@@ -85,9 +87,9 @@ export function SaisieMots({ onMot, desactive, placeholder = 'Écrivez un mot pu
         enterKeyHint="next"
         placeholder={placeholder}
         aria-label="Mot"
-        className="min-h-[50px] flex-1 rounded-[14px] bg-surface px-4 text-[1.125rem] shadow-sm outline-none focus:ring-2 focus:ring-accent"
+        className="min-h-[50px] min-w-0 flex-1 rounded-[14px] bg-surface px-4 text-[1.125rem] shadow-sm outline-none focus:ring-2 focus:ring-accent"
       />
-      <button type="submit" disabled={desactive} className="min-h-[50px] rounded-[14px] bg-accent-doux px-4 font-semibold text-accent">Ajouter</button>
+      <button type="submit" disabled={desactive} className="min-h-[50px] shrink-0 rounded-[14px] bg-accent-doux px-4 font-semibold text-accent">Ajouter</button>
     </form>
   );
 }

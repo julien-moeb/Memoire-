@@ -1,0 +1,374 @@
+{
+  "$schema": "../schemas/definition-mot.schema.json",
+  "id": "def-s03",
+  "type": "definition-mot",
+  "titre": "Notions courantes et professionnelles",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "description": "Termes abstraits fréquents à l'oral comme à l'écrit professionnel.",
+  "items": [
+    {
+      "id": "def-s03-001",
+      "definition": "Sentiment de reconnaissance envers quelqu'un pour un bienfait reçu.",
+      "reponse": "gratitude",
+      "variantes": [],
+      "indices": {
+        "trait": "Sentiment positif tourné vers autrui.",
+        "syllabe": "grati"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-002",
+      "definition": "Tendance à remettre au lendemain ce que l'on pourrait faire tout de suite.",
+      "reponse": "procrastination",
+      "variantes": [],
+      "indices": {
+        "trait": "Défaut d'organisation bien connu des étudiants.",
+        "syllabe": "procras"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-003",
+      "definition": "Méprise qui fait prendre une personne ou une chose pour une autre.",
+      "reponse": "quiproquo",
+      "variantes": [],
+      "indices": {
+        "trait": "Ressort comique fréquent au théâtre.",
+        "syllabe": "qui"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-004",
+      "definition": "Manière d'être indolente, sans empressement ni souci.",
+      "reponse": "nonchalance",
+      "variantes": [],
+      "indices": {
+        "trait": "Contraire de l'empressement.",
+        "syllabe": "non"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-005",
+      "definition": "Coexistence de deux sentiments opposés à l'égard d'une même chose.",
+      "reponse": "ambivalence",
+      "variantes": [],
+      "indices": {
+        "trait": "État d'esprit partagé.",
+        "syllabe": "ambi"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-006",
+      "definition": "Introduction qui précède un texte officiel et en expose les motifs.",
+      "reponse": "préambule",
+      "variantes": [],
+      "indices": {
+        "trait": "Partie initiale d'une constitution ou d'un traité.",
+        "syllabe": "pré"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-007",
+      "definition": "Accord du plus grand nombre, obtenu sans vote formel.",
+      "reponse": "consensus",
+      "variantes": [],
+      "indices": {
+        "trait": "Résultat recherché dans une négociation.",
+        "syllabe": "consen"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-008",
+      "definition": "Date à laquelle une obligation doit être exécutée ou un paiement effectué.",
+      "reponse": "échéance",
+      "variantes": [],
+      "indices": {
+        "trait": "Notion de calendrier, en finance ou en gestion de projet.",
+        "syllabe": "éché"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-009",
+      "definition": "Événement imprévisible qui peut perturber un projet.",
+      "reponse": "aléa",
+      "variantes": [],
+      "indices": {
+        "trait": "Synonyme savant de hasard ou d'incertitude.",
+        "syllabe": "alé"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-010",
+      "definition": "Droit ou privilège attaché à une fonction ou à une dignité.",
+      "reponse": "prérogative",
+      "variantes": [],
+      "indices": {
+        "trait": "Avantage réservé à une autorité.",
+        "syllabe": "préro"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-011",
+      "definition": "Disposition à pardonner avec indulgence.",
+      "reponse": "mansuétude",
+      "variantes": [],
+      "indices": {
+        "trait": "Qualité morale, proche de la clémence.",
+        "syllabe": "man"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s03-012",
+      "definition": "Qui dure longtemps, qui est fait pour durer.",
+      "reponse": "pérenne",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif, souvent appliqué à un financement ou un dispositif.",
+        "syllabe": "pé"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-013",
+      "definition": "Qui traite un sujet dans sa totalité, sans rien omettre.",
+      "reponse": "exhaustif",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qui qualifie une liste complète.",
+        "syllabe": "ex"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-014",
+      "definition": "Décision qui tranche entre plusieurs options ou intérêts concurrents.",
+      "reponse": "arbitrage",
+      "variantes": [],
+      "indices": {
+        "trait": "Terme fréquent dans les réunions budgétaires.",
+        "syllabe": "arbi"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-015",
+      "definition": "Soin attentif et rapide apporté à l'exécution d'une tâche.",
+      "reponse": "diligence",
+      "variantes": [],
+      "indices": {
+        "trait": "Qualité attendue d'un agent ; aussi une ancienne voiture à chevaux.",
+        "syllabe": "dili"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-016",
+      "definition": "Qui privilégie l'action efficace et les résultats concrets plutôt que la théorie.",
+      "reponse": "pragmatique",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qualifiant un esprit réaliste.",
+        "syllabe": "prag"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-017",
+      "definition": "Hésitation à dire, à faire ou à accepter quelque chose.",
+      "reponse": "réticence",
+      "variantes": [],
+      "indices": {
+        "trait": "Attitude de réserve.",
+        "syllabe": "réti"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-018",
+      "definition": "Situation embrouillée, confuse, difficile à démêler.",
+      "reponse": "imbroglio",
+      "variantes": [],
+      "indices": {
+        "trait": "Mot d'origine italienne.",
+        "syllabe": "im"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s03-019",
+      "definition": "Moyen provisoire qui atténue un problème sans le résoudre.",
+      "reponse": "palliatif",
+      "variantes": [],
+      "indices": {
+        "trait": "Se dit aussi d'un soin qui soulage sans guérir.",
+        "syllabe": "pal"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-020",
+      "definition": "Entente secrète ou tacite entre des personnes.",
+      "reponse": "connivence",
+      "variantes": [],
+      "indices": {
+        "trait": "Complicité silencieuse.",
+        "syllabe": "conni"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-021",
+      "definition": "Qui n'est plus en usage, qui a un charme d'autrefois.",
+      "reponse": "désuet",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif, synonyme de suranné.",
+        "syllabe": "dé"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-022",
+      "definition": "Exposé qui réunit et ordonne les éléments essentiels d'un ensemble.",
+      "reponse": "synthèse",
+      "variantes": [],
+      "indices": {
+        "trait": "Exercice rédactionnel classique des concours.",
+        "syllabe": "syn"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-023",
+      "definition": "Recommandation formulée à l'issue d'une analyse.",
+      "reponse": "préconisation",
+      "variantes": [],
+      "indices": {
+        "trait": "Terme fréquent dans un rapport d'audit.",
+        "syllabe": "préco"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-024",
+      "definition": "Exception autorisée à l'application d'une règle.",
+      "reponse": "dérogation",
+      "variantes": [],
+      "indices": {
+        "trait": "Terme juridique et administratif.",
+        "syllabe": "déro"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-025",
+      "definition": "Faculté d'être présent en plusieurs lieux à la fois.",
+      "reponse": "ubiquité",
+      "variantes": [],
+      "indices": {
+        "trait": "Don que l'on souhaiterait parfois avoir.",
+        "syllabe": "ubi"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s03-026",
+      "definition": "Qui s'exprime avec force et passion.",
+      "reponse": "véhément",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qualifiant un discours ou une protestation.",
+        "syllabe": "véhé"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s03-027",
+      "definition": "Qui s'exprime en peu de mots.",
+      "reponse": "laconique",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qui qualifie une réponse brève.",
+        "syllabe": "laco"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "def-s03-028",
+      "definition": "Facilité à pardonner les fautes ou à excuser les défauts.",
+      "reponse": "indulgence",
+      "variantes": [],
+      "indices": {
+        "trait": "Qualité opposée à la sévérité.",
+        "syllabe": "indul"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-029",
+      "definition": "Surveillance attentive et soutenue.",
+      "reponse": "vigilance",
+      "variantes": [],
+      "indices": {
+        "trait": "Attitude face à un risque.",
+        "syllabe": "vigi"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-030",
+      "definition": "Qui est fait pour être vu, par vanité.",
+      "reponse": "ostentatoire",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif qui qualifie un luxe tapageur.",
+        "syllabe": "osten"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s03-031",
+      "definition": "Qui ne peut être évité.",
+      "reponse": "inéluctable",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif synonyme d'inévitable.",
+        "syllabe": "iné"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "def-s03-032",
+      "definition": "Qui concerne plusieurs domaines ou services à la fois.",
+      "reponse": "transversal",
+      "variantes": [],
+      "indices": {
+        "trait": "Adjectif fréquent dans l'organisation d'une administration.",
+        "syllabe": "trans"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s03-033",
+      "definition": "Aptitude reconnue à accomplir une tâche, ou attribution légale d'une autorité.",
+      "reponse": "compétence",
+      "variantes": [],
+      "indices": {
+        "trait": "Mot au double sens, professionnel et juridique.",
+        "syllabe": "compé"
+      },
+      "difficulte": 1
+    }
+  ]
+}

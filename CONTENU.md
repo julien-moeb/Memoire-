@@ -34,9 +34,27 @@ corriger un item, changez son texte et augmentez la `version` de la série.
 
 ## Types disponibles
 
-Les types `definition-mot`, `fluence`, `carte-lexique` et `forme-bilan` sont disponibles. Les autres
-(`discrimination`, `intrus`, `registre`, `liste-memoire`, `paragraphe`, `strategie`) seront ajoutés avec les
-incréments suivants et documentés ici.
+| Type | Dossier | Exercice | Volume livré |
+| --- | --- | --- | --- |
+| `definition-mot` | `definitions/` | 6. Le mot juste | 103 définitions |
+| `discrimination` | `discrimination/` | 8. Quasi-synonymes et paronymes | 76 phrases |
+| `intrus` | `intrus/` | 9. L'intrus | 50 séries |
+| `traits` | `traits/` | 7. Traits sémantiques | 34 mots |
+| `registre` | `registre/` | 10. Changer de registre | 34 phrases |
+| `fluence` | `fluence/` | 4 et 5. Échauffement | 30 consignes |
+| `carte-lexique` | `lexique-pro/` | 11. Révisions espacées | 82 cartes, 7 thèmes |
+| `liste-memoire` | `listes/` | 19 et 21. Listes, méthode des lieux | 14 listes |
+| `paragraphe` | `paragraphes/` | 20. Retenir une note | 8 notes |
+| `decision-lexicale` | `decision-lexicale/` | 2. Mot ou pas mot | 136 mots, 136 pseudo-mots |
+| `forme-bilan` | `bilan/` | Bilan | 4 formes |
+
+Les exercices de vitesse, de mémoire de travail et de fonctions exécutives (double décision, appariement, n-back,
+chiffres à rebours, dernières lettres, Stroop, alternance, go/no-go) n'ont pas besoin de contenu : leurs essais sont
+générés par le programme.
+
+**Mots réservés au bilan.** Les mots des listes, des définitions et de la décision lexicale du bilan ne peuvent pas
+être réutilisés dans les traits, les listes, la décision lexicale ou les cartes d'entraînement : le validateur le
+signale. Sans cette règle, le bilan suivant mesurerait en partie un apprentissage des items.
 
 ### `definition-mot` : de la définition au mot, avec indices
 
@@ -125,6 +143,73 @@ d'épreuve pour arbitrage.
 }
 ```
 
+### `discrimination` : quasi-synonymes et paronymes
+
+```jsonc
+{
+  "id": "dis-s01-001",
+  "nature": "paronyme",                 // ou "quasi-synonyme"
+  "phrase": "Le préfet a ___ les mesures jusqu'à la fin du mois.",   // « ___ » obligatoire
+  "options": ["prolongé", "prorogé"],  // 2 à 4 mots, dont la réponse
+  "reponse": "prorogé",
+  "explication": "Proroger, c'est reporter l'échéance d'un acte juridique…",  // affichée après une erreur
+  "difficulte": 3
+}
+```
+
+Les confusions commises (mot attendu, mot choisi) sont enregistrées pour être reprogrammées.
+
+### `intrus` : le mot qui ne va pas avec les autres
+
+```jsonc
+{ "id": "int-s01-001", "mots": ["pomme", "poire", "abricot", "carotte"], "intrus": "carotte",
+  "explication": "La carotte est un légume racine ; les autres sont des fruits.", "difficulte": 1 }
+```
+
+Veillez à ce qu'un seul critère, non ambigu, distingue l'intrus.
+
+### `traits` : analyse des traits sémantiques
+
+```jsonc
+{ "id": "tra-s01-001", "mot": "parapheur", "difficulte": 3,
+  "traits": { "categorie": "fourniture de bureau", "usage": "faire circuler des documents à signer",
+              "description": "chemise cartonnée à soufflets", "lieu": "secrétariat", "association": "signature" } }
+```
+
+Les traits sont des modèles affichés après votre propre description : il n'y a pas de bonne réponse unique.
+
+### `registre` : reformulation professionnelle
+
+```jsonc
+{ "id": "reg-s01-001", "contexte": "Courriel à un directeur",
+  "phrase": "On n'a pas eu le temps de finir le dossier.",
+  "reformulations": ["Le dossier n'a pu être finalisé dans les délais…"], "difficulte": 2 }
+```
+
+### `liste-memoire` : listes à apprendre
+
+Chaque item compte exactement 15 mots et un thème qui leur donne sens (« courses pour un dîner »). Selon votre niveau,
+l'exercice en utilise les 8 à 15 premiers ; la méthode des lieux y puise aussi ses éléments.
+
+### `paragraphe` : note à retenir
+
+```jsonc
+{ "id": "par-s01-001", "titre": "Rénovation de la médiathèque", "difficulte": 2,
+  "texte": "La commune engagera en mars…",              // 200 caractères au moins
+  "unites": ["mars", "quatorze mois|14 mois", "région"], // idées clés ; formes acceptées séparées par « | »
+  "questions": [ { "question": "Combien de temps durera le chantier ?", "reponse": "quatorze mois", "variantes": ["14 mois"] } ] }
+```
+
+Une idée clé est comptée retrouvée si l'une de ses formes apparaît au début d'un mot du rappel, sans tenir compte des
+accents ni de la casse.
+
+### `decision-lexicale` : mots et pseudo-mots
+
+Une série contient deux tableaux, `mots` et `pseudoMots` (20 au moins chacun). Les pseudo-mots livrés ont été construits
+par recombinaison de syllabes françaises, puis vérifiés contre un dictionnaire de plus de 330 000 formes fléchies
+(paquet libre `an-array-of-french-words`, utilisé seulement lors de la rédaction). Si vous en ajoutez, évitez les
+homophones de mots réels (« vilage ») et les noms de marque.
+
 ### `forme-bilan` : une forme parallèle du bilan
 
 Le dossier `contenu/bilan/` contient quatre formes (A, B, C, D), utilisées à tour de rôle d'un bilan à l'autre pour
@@ -158,8 +243,8 @@ Le validateur vérifie en outre que :
   bilan suivant serait facilité ;
 - les catégories et lettres de fluence du bilan ne sont pas employées dans les séries d'entraînement.
 
-Les pseudo-mots ont été rédigés à la main, sans contrôle automatique contre un lexique de référence : relisez-les
-si vous en ajoutez, afin qu'aucun ne soit un mot rare mais réel.
+Les pseudo-mots du bilan ont été rédigés à la main, puis contrôlés contre un dictionnaire de formes fléchies ; un seul
+mot réel a été trouvé et remplacé (forme B, version 2).
 
 ## Après une modification des schémas
 
