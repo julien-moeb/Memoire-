@@ -142,6 +142,26 @@ le lendemain, avec l'indice que vous avez noté ; le même mot consigné deux fo
 réinitialise pas. Les deux mots du journal les moins récemment travaillés ouvrent aussi l'exercice des traits
 sémantiques. Ces choix répondent au constat que les gains lexicaux portent surtout sur les mots entraînés.
 
+## Export
+
+**Archive CSV.** Un fichier par type de données (séances, essais, résultats, bilans, journal, cartes…), deux fichiers
+calculés (séries lissées et écarts par exercice, scores de domaine), un dictionnaire des variables et une notice.
+Chaque colonne est déclarée une seule fois dans le code, avec son type, son unité et sa description ; le dictionnaire
+est produit à partir de ces déclarations et ne peut donc pas diverger des fichiers. Le format suit la norme RFC 4180
+(virgule, point décimal), lisible sans réglage par R, Python ou les logiciels de statistiques ; la notice indique comment
+l'ouvrir dans un tableur réglé en français. L'archive ZIP est écrite sans compression ni bibliothèque : les fichiers
+pèsent quelques centaines de kilo-octets, et une dépendance alourdirait l'application pour un gain négligeable.
+
+**Synthèse de deux pages.** Page 1 : période, séances, minutes, assiduité, profil aux bilans, écart actuel et tendance
+par domaine, exercices pratiqués. Page 2 : courbes lissées par domaine avec annotations et changements d'appareil,
+synthèse du journal (situations, moments de la journée, issues, stratégies). Elle est produite par une page
+d'impression au format A4 que le navigateur enregistre en PDF : texte et graphiques restent vectoriels, hors ligne.
+La ligne de base est toujours calculée sur l'ensemble des données, même lorsque la période affichée est limitée aux
+90 derniers jours. Les deux pages rappellent que l'outil n'est pas un dispositif médical.
+
+**Sauvegarde.** Fichier JSON complet, réimportable sur un autre appareil. Avant de remplacer les données, l'application
+vérifie le format et la version du schéma, puis affiche la date de la sauvegarde et son contenu.
+
 ## Choix techniques justifiés
 
 - **Escalier adaptatif 3 réussites / 1 échec.** Il converge vers 79,4 % de réussite (Levitt 1971). La règle

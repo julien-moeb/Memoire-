@@ -98,6 +98,10 @@ export function Progression() {
       <Bilans bilans={calcul.complets} />
       <Contexte n={calcul.terminees.length} contexte={calcul.contexte} />
       <Annotations annotations={d.annotations} onChange={charger} />
+      <ListeGroupee titre="Partager">
+        <Ligne libelle="Synthèse imprimable" detail="Deux pages A4, à enregistrer en PDF" href={lien('/synthese')} />
+        <Ligne libelle="Archive CSV et sauvegarde" href={lien('/export')} />
+      </ListeGroupee>
       {serie.jours > 0 && (
         <p className="mt-6 px-4 text-[0.8125rem] text-texte-2">Série en cours : {serie.jours} jour{serie.jours > 1 ? 's' : ''} d'entraînement.</p>
       )}

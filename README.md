@@ -66,6 +66,7 @@ src/comportemental/ fiches de stratégies, respiration guidée, volet comporteme
 src/chrono/       chronométrage synchronisé sur les images d'écran, profil d'appareil
 src/contenu/      schémas Zod et chargement du contenu
 src/stockage/     base IndexedDB, réglages, sauvegarde et import
+src/export/       archive CSV (tables déclarées une fois, dictionnaire généré), écriture ZIP sans dépendance
 src/ui/           composants d'interface (inspirés des Human Interface Guidelines d'Apple)
 src/pages/        écrans
 tests/            tests unitaires (Vitest)
@@ -82,4 +83,4 @@ résultats, elle est donc isolée et testée.
 | 2. Bilan initial | Treize épreuves en deux parties, quatre formes parallèles, questionnaire de gêne ressentie, profil radar, domaine prioritaire | Livré |
 | 3. Moteur d'exercices | Séance quotidienne composée automatiquement, 19 exercices (dont 14 à difficulté adaptative), révisions espacées, contenu des 30 premiers jours | Livré |
 | 4. Suivi | Courbes par domaine, bilans successifs, annotations, journal complet, volet comportemental (exercices 22 à 24), cartes issues du journal | Livré |
-| 5. Export | Archive CSV, synthèse PDF de deux pages | À venir |
+| 5. Export | Archive CSV avec dictionnaire des variables, synthèse imprimable de deux pages (PDF), sauvegarde contrôlée avant import | Livré |

@@ -100,6 +100,7 @@ export function Accueil() {
 
       <ListeGroupee titre="Comprendre">
         <Ligne libelle="Méthode et limites" detail="Références, niveau de preuve, avertissement" href={lien('/methode')} />
+        <Ligne libelle="Exporter mes données" detail="Archive CSV, synthèse imprimable, sauvegarde" href={lien('/export')} />
       </ListeGroupee>
     </Page>
   );

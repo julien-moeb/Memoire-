@@ -2,10 +2,10 @@
 import { useEffect, useState } from 'react';
 
 export type Route =
-  | '/' | '/bilan' | '/seance' | '/progression' | '/journal' | '/fiches' | '/respiration' | '/reglages' | '/reglages/affichage' | '/methode';
+  | '/' | '/bilan' | '/seance' | '/progression' | '/journal' | '/fiches' | '/respiration' | '/export' | '/synthese' | '/reglages' | '/reglages/affichage' | '/methode';
 
 const ROUTES: readonly Route[] = [
-  '/', '/bilan', '/seance', '/progression', '/journal', '/fiches', '/respiration', '/reglages', '/reglages/affichage', '/methode',
+  '/', '/bilan', '/seance', '/progression', '/journal', '/fiches', '/respiration', '/export', '/synthese', '/reglages', '/reglages/affichage', '/methode',
 ];
 
 function lire(): Route {

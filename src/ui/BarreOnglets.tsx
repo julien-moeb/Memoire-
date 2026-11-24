@@ -32,7 +32,8 @@ const ONGLETS: { route: Route; texte: string; icone: ReactNode }[] = [
 
 export function BarreOnglets({ route }: { route: Route }) {
   const actif = (r: Route) =>
-    r === '/' ? route === '/' : r === '/journal' ? ['/journal', '/fiches', '/respiration'].includes(route) : route.startsWith(r);
+    r === '/' ? route === '/' : r === '/journal' ? ['/journal', '/fiches', '/respiration'].includes(route)
+    : r === '/reglages' ? ['/reglages', '/reglages/affichage', '/export'].includes(route) : route.startsWith(r);
   return (
     <nav aria-label="Navigation principale" className="barre-translucide fixed inset-x-0 bottom-0 z-40 border-t border-separateur pb-[env(safe-area-inset-bottom)]">
       <ul className="mx-auto flex max-w-2xl">
