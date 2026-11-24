@@ -1,0 +1,363 @@
+{
+  "$schema": "../schemas/registre.schema.json",
+  "id": "reg-s01",
+  "type": "registre",
+  "titre": "Reformulation en registre professionnel",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "description": "Passer d'une formulation familière à un registre écrit ou oral soutenu.",
+  "items": [
+    {
+      "id": "reg-s01-001",
+      "contexte": "Courriel à un directeur",
+      "phrase": "On n'a pas eu le temps de finir le dossier, ça sera pour la semaine prochaine.",
+      "reformulations": [
+        "Le dossier n'a pu être finalisé dans les délais ",
+        " il vous sera transmis la semaine prochaine.",
+        "Faute de temps, nous n'avons pu achever ce dossier, dont la finalisation interviendra la semaine prochaine."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-002",
+      "contexte": "Réunion avec des partenaires",
+      "phrase": "Votre truc, ça ne va pas marcher, c'est trop compliqué.",
+      "reformulations": [
+        "Votre proposition me paraît difficile à mettre en œuvre en raison de sa complexité.",
+        "Je crains que la complexité de ce dispositif n'en compromette l'efficacité."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-003",
+      "contexte": "Note à un élu",
+      "phrase": "Les gens en ont marre des travaux qui n'en finissent pas.",
+      "reformulations": [
+        "Les riverains expriment une lassitude croissante face à la durée des travaux.",
+        "La prolongation du chantier suscite un mécontentement manifeste chez les habitants."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-004",
+      "contexte": "Compte rendu de réunion",
+      "phrase": "Tout le monde était d'accord sauf Martin qui a râlé.",
+      "reformulations": [
+        "Les participants ont approuvé la proposition, à l'exception de M. Martin, qui a émis des réserves.",
+        "La proposition a recueilli l'adhésion de tous, M. Martin ayant toutefois exprimé son désaccord."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-005",
+      "contexte": "Courrier à un usager",
+      "phrase": "On a bien reçu votre papier mais il manque des trucs.",
+      "reformulations": [
+        "Nous accusons réception de votre dossier ",
+        " certaines pièces justificatives font toutefois défaut.",
+        "Votre demande nous est bien parvenue ",
+        " elle ne pourra cependant être instruite qu'après réception des pièces manquantes."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-006",
+      "contexte": "Réunion de service",
+      "phrase": "Il faut qu'on se bouge sur ce dossier, ça traîne depuis des mois.",
+      "reformulations": [
+        "Ce dossier, en souffrance depuis plusieurs mois, appelle désormais une mobilisation de chacun.",
+        "Il convient d'accélérer le traitement de ce dossier, resté trop longtemps en attente."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-007",
+      "contexte": "Entretien avec un supérieur",
+      "phrase": "J'en peux plus, j'ai beaucoup trop de boulot en ce moment.",
+      "reformulations": [
+        "Ma charge de travail est actuellement très importante et je souhaiterais que nous examinions ensemble les priorités.",
+        "Je traverse une période de forte charge et j'aurais besoin d'arbitrages sur certains dossiers."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-008",
+      "contexte": "Courriel à un collègue d'un autre service",
+      "phrase": "Tu peux me filer les chiffres de l'an dernier ?",
+      "reformulations": [
+        "Pourrais-tu me transmettre les données de l'an dernier ?",
+        "Serait-il possible de me communiquer les chiffres de l'exercice précédent ?"
+      ],
+      "difficulte": 1
+    },
+    {
+      "id": "reg-s01-009",
+      "contexte": "Présentation devant un comité",
+      "phrase": "En gros, le projet a coûté plus cher que prévu.",
+      "reformulations": [
+        "En synthèse, le projet a fait l'objet d'un dépassement budgétaire.",
+        "Pour résumer, le coût final du projet excède sensiblement l'enveloppe initiale."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-010",
+      "contexte": "Réponse à un journaliste",
+      "phrase": "On ne sait pas encore, on verra bien.",
+      "reformulations": [
+        "Il est prématuré de se prononcer ",
+        " nous communiquerons dès que nous disposerons d'éléments fiables.",
+        "À ce stade, aucune conclusion ne peut être tirée ",
+        " une analyse est en cours."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-011",
+      "contexte": "Note de synthèse",
+      "phrase": "Le nouveau système est nul, personne n'arrive à s'en servir.",
+      "reformulations": [
+        "Le nouveau dispositif rencontre d'importantes difficultés d'appropriation chez les utilisateurs.",
+        "L'ergonomie du nouvel outil apparaît insuffisante, comme en témoignent les difficultés rencontrées par les agents."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-012",
+      "contexte": "Courriel de relance",
+      "phrase": "Je vous ai déjà écrit trois fois, vous pourriez répondre quand même !",
+      "reformulations": [
+        "Sauf erreur de ma part, mes précédents messages sont restés sans réponse ",
+        " je me permets donc de revenir vers vous.",
+        "Je me permets de vous relancer, n'ayant pas reçu de retour à mes courriels précédents."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-013",
+      "contexte": "Réunion avec des élus",
+      "phrase": "Ça va coûter une fortune, on n'a pas les sous.",
+      "reformulations": [
+        "Le coût de cette opération excède largement les crédits disponibles.",
+        "En l'état de nos finances, cette dépense ne paraît pas soutenable."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-014",
+      "contexte": "Entretien professionnel avec un agent",
+      "phrase": "Tu as vraiment assuré sur ce dossier.",
+      "reformulations": [
+        "Votre travail sur ce dossier a été remarquable.",
+        "Je tiens à saluer la qualité de votre contribution à ce dossier."
+      ],
+      "difficulte": 1
+    },
+    {
+      "id": "reg-s01-015",
+      "contexte": "Courrier de refus",
+      "phrase": "On ne peut pas vous donner la subvention, il n'y a plus d'argent.",
+      "reformulations": [
+        "J'ai le regret de vous informer que votre demande de subvention ne peut être satisfaite, l'enveloppe disponible étant épuisée.",
+        "Les crédits ouverts à ce titre étant intégralement consommés, il ne m'est pas possible de donner une suite favorable à votre demande."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-016",
+      "contexte": "Réunion de crise",
+      "phrase": "C'est le bazar complet, personne ne sait qui fait quoi.",
+      "reformulations": [
+        "La répartition des rôles manque de clarté, ce qui nuit à la coordination.",
+        "Il est urgent de clarifier l'organisation et les responsabilités de chacun."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-017",
+      "contexte": "Note à la hiérarchie",
+      "phrase": "Le prestataire nous a plantés, il a disparu sans finir.",
+      "reformulations": [
+        "Le prestataire a cessé d'exécuter le marché sans achever les prestations prévues.",
+        "Nous constatons une défaillance du titulaire du marché, qui a interrompu ses prestations."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-018",
+      "contexte": "Discours d'accueil",
+      "phrase": "Merci d'être venus, c'est sympa de vous voir aussi nombreux.",
+      "reformulations": [
+        "Je vous remercie de votre présence, aussi nombreuse que fidèle.",
+        "Permettez-moi de vous remercier chaleureusement d'avoir répondu si nombreux à notre invitation."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-019",
+      "contexte": "Courriel à une équipe",
+      "phrase": "N'oubliez pas de remplir le tableau avant vendredi, sinon ça bloque tout.",
+      "reformulations": [
+        "Je vous remercie de bien vouloir compléter le tableau avant vendredi ",
+        " à défaut, la suite du processus serait retardée.",
+        "Merci de renseigner le tableau d'ici vendredi, ce délai conditionnant la suite des opérations."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-020",
+      "contexte": "Réunion budgétaire",
+      "phrase": "On a dépensé trop vite au début de l'année.",
+      "reformulations": [
+        "Le rythme de consommation des crédits a été trop soutenu en début d'exercice.",
+        "Les dépenses du premier semestre ont excédé le rythme prévu."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-021",
+      "contexte": "Échange avec un partenaire mécontent",
+      "phrase": "Calmez-vous, on va trouver une solution.",
+      "reformulations": [
+        "Je comprends votre préoccupation et je vous propose que nous recherchions ensemble une solution.",
+        "Votre mécontentement est légitime ",
+        " examinons ensemble les options possibles."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-022",
+      "contexte": "Compte rendu d'inspection",
+      "phrase": "Les locaux sont dans un état lamentable.",
+      "reformulations": [
+        "Les locaux présentent un état de vétusté préoccupant.",
+        "L'état des locaux appelle des travaux de remise en état urgents."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-023",
+      "contexte": "Note de cadrage",
+      "phrase": "Il faudrait arrêter de faire chacun son truc dans son coin.",
+      "reformulations": [
+        "Il conviendrait de renforcer la coordination entre les services, aujourd'hui trop cloisonnés.",
+        "Une approche plus transversale permettrait de dépasser le cloisonnement actuel."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-024",
+      "contexte": "Courrier à un maire",
+      "phrase": "Votre demande, on ne va pas pouvoir y répondre tout de suite.",
+      "reformulations": [
+        "Votre demande requiert une instruction approfondie ",
+        " je ne manquerai pas de vous tenir informé de sa suite.",
+        "L'examen de votre demande nécessite quelques délais ",
+        " une réponse vous sera apportée prochainement."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-025",
+      "contexte": "Présentation de résultats",
+      "phrase": "Les chiffres sont pas terribles cette année.",
+      "reformulations": [
+        "Les résultats de l'exercice sont en retrait par rapport aux objectifs.",
+        "Les indicateurs de l'année s'avèrent décevants au regard des prévisions."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-026",
+      "contexte": "Courriel à un supérieur",
+      "phrase": "Je ne serai pas là demain, j'ai un truc perso.",
+      "reformulations": [
+        "Je vous informe que je serai absent demain pour des raisons personnelles.",
+        "Je ne pourrai être présent demain, une obligation personnelle me retenant."
+      ],
+      "difficulte": 1
+    },
+    {
+      "id": "reg-s01-027",
+      "contexte": "Réunion interservices",
+      "phrase": "Votre service ne nous donne jamais les infos à temps.",
+      "reformulations": [
+        "Les informations de votre service nous parviennent souvent tardivement, ce qui complique notre travail.",
+        "Pourrions-nous convenir ensemble de délais de transmission compatibles avec nos contraintes ?"
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-028",
+      "contexte": "Note juridique",
+      "phrase": "Ce qu'ils ont fait, c'est pas légal.",
+      "reformulations": [
+        "Cette décision paraît entachée d'illégalité.",
+        "Les agissements décrits semblent contrevenir aux dispositions en vigueur."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-029",
+      "contexte": "Message de remerciement",
+      "phrase": "Merci pour le coup de main, ça m'a bien aidé.",
+      "reformulations": [
+        "Je vous remercie pour votre aide, qui m'a été précieuse.",
+        "Votre concours m'a été d'une grande utilité ",
+        " je vous en remercie vivement."
+      ],
+      "difficulte": 1
+    },
+    {
+      "id": "reg-s01-030",
+      "contexte": "Point d'étape d'un projet",
+      "phrase": "On est super en retard.",
+      "reformulations": [
+        "Le projet accuse un retard significatif sur le calendrier prévisionnel.",
+        "Le calendrier initial ne pourra être tenu ",
+        " un recalage s'impose."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-031",
+      "contexte": "Courrier de convocation",
+      "phrase": "Venez lundi à 10 heures, il faut qu'on parle de votre dossier.",
+      "reformulations": [
+        "Je vous prie de bien vouloir vous présenter lundi à 10 heures afin que nous examinions votre dossier.",
+        "Vous êtes invité à un entretien lundi à 10 heures, portant sur l'examen de votre dossier."
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "reg-s01-032",
+      "contexte": "Exposé devant un conseil",
+      "phrase": "Le problème, c'est qu'on ne sait pas combien ça va coûter au final.",
+      "reformulations": [
+        "La principale difficulté tient à l'incertitude sur le coût final de l'opération.",
+        "À ce stade, le coût définitif de l'opération ne peut être déterminé avec précision."
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "reg-s01-033",
+      "contexte": "Réponse écrite à une réclamation",
+      "phrase": "Désolé, on s'est planté.",
+      "reformulations": [
+        "Nous vous prions de bien vouloir nous excuser pour cette erreur.",
+        "Nous reconnaissons une erreur de nos services et vous présentons nos excuses."
+      ],
+      "difficulte": 1
+    },
+    {
+      "id": "reg-s01-034",
+      "contexte": "Note à un cabinet",
+      "phrase": "Les syndicats risquent de faire grève si on fait ça.",
+      "reformulations": [
+        "Cette mesure est susceptible de provoquer un mouvement social.",
+        "Les organisations syndicales pourraient engager une action collective en réaction à cette décision."
+      ],
+      "difficulte": 3
+    }
+  ]
+}

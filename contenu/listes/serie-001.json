@@ -1,0 +1,305 @@
+{
+  "$schema": "../schemas/liste-memoire.schema.json",
+  "id": "lis-s01",
+  "type": "liste-memoire",
+  "titre": "Listes thématiques",
+  "domaine": "memoire-episodique",
+  "version": 1,
+  "description": "Listes de 15 mots, à apprendre avec une stratégie d'encodage ; on en utilise les premiers selon le niveau.",
+  "items": [
+    {
+      "id": "lis-s01-001",
+      "theme": "Courses pour un dîner",
+      "mots": [
+        "baguette",
+        "confiture",
+        "tomate",
+        "fromage",
+        "salade",
+        "poulet",
+        "carafe",
+        "oignon",
+        "lentille",
+        "yaourt",
+        "moutarde",
+        "citronnade",
+        "poivron",
+        "farine",
+        "chocolat"
+      ]
+    },
+    {
+      "id": "lis-s01-002",
+      "theme": "Valise pour un séminaire",
+      "mots": [
+        "chargeur",
+        "costume",
+        "dossier",
+        "brosse",
+        "parapluie",
+        "ordinateur",
+        "cravate",
+        "carnet",
+        "stylo",
+        "pyjama",
+        "rasoir",
+        "écouteurs",
+        "passeport",
+        "écharpe",
+        "agenda"
+      ]
+    },
+    {
+      "id": "lis-s01-003",
+      "theme": "Préparation d'une réunion",
+      "mots": [
+        "ordre",
+        "salle",
+        "vidéoprojecteur",
+        "badge",
+        "café",
+        "casier",
+        "convocation",
+        "tableau",
+        "feutre",
+        "micro",
+        "compte",
+        "eau",
+        "rapport",
+        "sondage",
+        "pupitre"
+      ]
+    },
+    {
+      "id": "lis-s01-004",
+      "theme": "Promenade en forêt",
+      "mots": [
+        "champignon",
+        "fougère",
+        "ruisselet",
+        "sentier",
+        "écureuil",
+        "gland",
+        "mousse",
+        "rocher",
+        "cabane",
+        "chevreuil",
+        "sapinette",
+        "noisette",
+        "ronce",
+        "chêne",
+        "gourde"
+      ]
+    },
+    {
+      "id": "lis-s01-005",
+      "theme": "Rangement du bureau",
+      "mots": [
+        "agrafeuse",
+        "classeur",
+        "ciseaux",
+        "règle",
+        "trombone",
+        "gomme",
+        "enveloppe",
+        "calculatrice",
+        "post-it",
+        "surligneur",
+        "sous-main",
+        "tampon",
+        "pochette",
+        "loupe",
+        "intercalaire"
+      ]
+    },
+    {
+      "id": "lis-s01-006",
+      "theme": "Vacances au bord de la mer",
+      "mots": [
+        "dune",
+        "transat",
+        "bouée",
+        "crème",
+        "coquillage",
+        "serviette",
+        "mouette",
+        "jetée",
+        "voilier",
+        "épuisette",
+        "ancre",
+        "palmes",
+        "chapeau",
+        "galet",
+        "maillot"
+      ]
+    },
+    {
+      "id": "lis-s01-007",
+      "theme": "Bricolage du week-end",
+      "mots": [
+        "perceuse",
+        "cheville",
+        "vis",
+        "peinture",
+        "rabot",
+        "ruban",
+        "colle",
+        "mastic",
+        "rouleau",
+        "gants",
+        "enduit",
+        "équerre",
+        "ponceuse",
+        "niveau",
+        "bâche"
+      ]
+    },
+    {
+      "id": "lis-s01-008",
+      "theme": "Pique-nique au parc",
+      "mots": [
+        "tartine",
+        "sandwich",
+        "thermos",
+        "clémentine",
+        "corbeille",
+        "frisbee",
+        "bocal",
+        "brioche",
+        "limonade",
+        "couverture",
+        "chips",
+        "melon",
+        "jus",
+        "pelouse",
+        "raisin"
+      ]
+    },
+    {
+      "id": "lis-s01-009",
+      "theme": "Visite d'un musée",
+      "mots": [
+        "tableau",
+        "sculpture",
+        "guide",
+        "audioguide",
+        "vitrine",
+        "statue",
+        "fresque",
+        "billet",
+        "catalogue",
+        "gardien",
+        "momie",
+        "toile",
+        "cadre",
+        "vase",
+        "boutique"
+      ]
+    },
+    {
+      "id": "lis-s01-010",
+      "theme": "Matinée au marché",
+      "mots": [
+        "étal",
+        "poissonnier",
+        "melon",
+        "fleuriste",
+        "radis",
+        "carotte",
+        "balance",
+        "cabas",
+        "poulet",
+        "olive",
+        "amande",
+        "fromager",
+        "pêche",
+        "courgette",
+        "crêpe"
+      ]
+    },
+    {
+      "id": "lis-s01-011",
+      "theme": "Déménagement",
+      "mots": [
+        "carton",
+        "scotch",
+        "camion",
+        "matelas",
+        "lampion",
+        "vaisselle",
+        "étiquette",
+        "sangle",
+        "diable",
+        "clés",
+        "frigo",
+        "jardinière",
+        "rideaux",
+        "tabouret",
+        "bibliothèque"
+      ]
+    },
+    {
+      "id": "lis-s01-012",
+      "theme": "Fête d'anniversaire",
+      "mots": [
+        "serpentin",
+        "cotillon",
+        "raquette",
+        "cadeau",
+        "guirlande",
+        "musique",
+        "invitation",
+        "confettis",
+        "chapeau",
+        "photo",
+        "jeu",
+        "jus",
+        "surprise",
+        "tablette",
+        "dessert"
+      ]
+    },
+    {
+      "id": "lis-s01-013",
+      "theme": "Journée au jardin",
+      "mots": [
+        "râteau",
+        "tulipe",
+        "arrosoir",
+        "haie",
+        "bêche",
+        "tuyau",
+        "semis",
+        "potager",
+        "compost",
+        "sécateur",
+        "nichoir",
+        "pelouse",
+        "rosier",
+        "tondeuse",
+        "graine"
+      ]
+    },
+    {
+      "id": "lis-s01-014",
+      "theme": "Voyage en train",
+      "mots": [
+        "billet",
+        "quai",
+        "sacoche",
+        "contrôleur",
+        "wagon",
+        "hublot",
+        "sandwich",
+        "aiguillage",
+        "horaire",
+        "siège",
+        "tunnel",
+        "paysage",
+        "banquette",
+        "couchette",
+        "sifflet"
+      ]
+    }
+  ]
+}

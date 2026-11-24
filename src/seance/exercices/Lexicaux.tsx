@@ -218,6 +218,7 @@ export function Echauffement({ dureeMs, alea, vus, onTerminer }: PropsExercice) 
       consigne={item.consigne}
       item={item}
       dureeMs={dureeMs}
+      sansArbitragePhonemique
       onTerminer={(r) =>
         onTerminer({
           ...resultatVide('fluence'),

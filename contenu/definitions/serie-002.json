@@ -1,0 +1,369 @@
+{
+  "$schema": "../schemas/definition-mot.schema.json",
+  "id": "def-s02",
+  "type": "definition-mot",
+  "titre": "Objets du quotidien",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "description": "Définitions d'objets concrets, de difficulté 1 et 2.",
+  "items": [
+    {
+      "id": "def-s02-001",
+      "definition": "Petit appareil de bureau qui réunit des feuilles en y enfonçant une attache métallique.",
+      "reponse": "agrafeuse",
+      "variantes": [],
+      "indices": {
+        "trait": "Fourniture de bureau que l'on actionne d'un coup de paume.",
+        "syllabe": "agra"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-002",
+      "definition": "Tableau qui présente les jours, les semaines et les mois d'une année.",
+      "reponse": "calendrier",
+      "variantes": [],
+      "indices": {
+        "trait": "On l'accroche souvent au mur ou on le consulte sur son téléphone.",
+        "syllabe": "calen"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-003",
+      "definition": "Objet pliant fait d'une toile tendue sur des baleines, qui protège de l'averse.",
+      "reponse": "parapluie",
+      "variantes": [],
+      "indices": {
+        "trait": "Accessoire que l'on ouvre quand le temps se gâte.",
+        "syllabe": "para"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-004",
+      "definition": "Cabine qui transporte des personnes d'un étage à l'autre d'un immeuble.",
+      "reponse": "ascenseur",
+      "variantes": [],
+      "indices": {
+        "trait": "Appareil que l'on appelle en appuyant sur un bouton dans un hall.",
+        "syllabe": "as"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-005",
+      "definition": "Petit récipient fermé, muni d'une fente, où l'on glisse des pièces pour épargner.",
+      "reponse": "tirelire",
+      "variantes": [],
+      "indices": {
+        "trait": "Objet d'enfance, parfois en forme de cochon.",
+        "syllabe": "tire"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-006",
+      "definition": "Petite attache en fil d'acier recourbé qui maintient des feuilles ensemble.",
+      "reponse": "trombone",
+      "variantes": [],
+      "indices": {
+        "trait": "Fourniture de bureau qui porte aussi le nom d'un instrument à vent.",
+        "syllabe": "trom"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-007",
+      "definition": "Ustensile hérissé de petites lames, servant à réduire le fromage ou les carottes en filaments.",
+      "reponse": "râpe",
+      "variantes": [],
+      "indices": {
+        "trait": "Ustensile de cuisine que l'on frotte.",
+        "syllabe": "râ"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-008",
+      "definition": "Petite fenêtre ronde et étanche, sur un navire ou un avion.",
+      "reponse": "hublot",
+      "variantes": [],
+      "indices": {
+        "trait": "On regarde dehors par là pendant un vol.",
+        "syllabe": "hu"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-009",
+      "definition": "Canal fixé au bord d'un toit pour recueillir et évacuer l'eau de pluie.",
+      "reponse": "gouttière",
+      "variantes": [],
+      "indices": {
+        "trait": "Élément de la maison, souvent en zinc.",
+        "syllabe": "gout"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-010",
+      "definition": "Petite horloge qui sonne à l'heure choisie pour tirer quelqu'un du sommeil.",
+      "reponse": "réveil",
+      "variantes": [
+        "réveille-matin"
+      ],
+      "indices": {
+        "trait": "Objet posé sur la table de chevet.",
+        "syllabe": "ré"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-011",
+      "definition": "Dispositif que l'on bascule pour allumer ou éteindre la lumière.",
+      "reponse": "interrupteur",
+      "variantes": [],
+      "indices": {
+        "trait": "On le trouve au mur, près de la porte.",
+        "syllabe": "inter"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-012",
+      "definition": "Petit miroir qui permet au conducteur de voir derrière son véhicule.",
+      "reponse": "rétroviseur",
+      "variantes": [],
+      "indices": {
+        "trait": "Accessoire de voiture.",
+        "syllabe": "rétro"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-013",
+      "definition": "Accessoire que l'on agite devant son visage pour se rafraîchir.",
+      "reponse": "éventail",
+      "variantes": [],
+      "indices": {
+        "trait": "Objet souvent pliant, en papier ou en tissu.",
+        "syllabe": "éven"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-014",
+      "definition": "Toile épaisse servant à laver le sol à grande eau.",
+      "reponse": "serpillière",
+      "variantes": [
+        "serpillère"
+      ],
+      "indices": {
+        "trait": "Objet de ménage que l'on essore dans un seau.",
+        "syllabe": "serpi"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-015",
+      "definition": "Tapis épais posé devant une porte pour s'essuyer les pieds.",
+      "reponse": "paillasson",
+      "variantes": [],
+      "indices": {
+        "trait": "On le trouve sur le palier.",
+        "syllabe": "pail"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-016",
+      "definition": "Grand récipient de métal muni d'une anse, que l'on suspendait au-dessus du feu.",
+      "reponse": "chaudron",
+      "variantes": [],
+      "indices": {
+        "trait": "Ustensile des contes, associé aux sorcières.",
+        "syllabe": "chau"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-017",
+      "definition": "Support en forme d'épaules sur lequel on suspend un vêtement.",
+      "reponse": "cintre",
+      "variantes": [],
+      "indices": {
+        "trait": "On le trouve dans l'armoire ou la penderie.",
+        "syllabe": "cin"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-018",
+      "definition": "Récipient électrique qui sert à chauffer rapidement de l'eau.",
+      "reponse": "bouilloire",
+      "variantes": [],
+      "indices": {
+        "trait": "Appareil utile pour le thé.",
+        "syllabe": "bouil"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-019",
+      "definition": "Siège sans bras ni dossier.",
+      "reponse": "tabouret",
+      "variantes": [],
+      "indices": {
+        "trait": "Meuble que l'on trouve souvent devant un comptoir.",
+        "syllabe": "tabou"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-020",
+      "definition": "Large cuillère plate et percée qui sert à retirer la mousse d'un bouillon.",
+      "reponse": "écumoire",
+      "variantes": [],
+      "indices": {
+        "trait": "Ustensile de cuisine.",
+        "syllabe": "écu"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-021",
+      "definition": "Gros ciseaux à ressort utilisés pour tailler les branches et les rosiers.",
+      "reponse": "sécateur",
+      "variantes": [],
+      "indices": {
+        "trait": "Outil de jardinage.",
+        "syllabe": "séca"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-022",
+      "definition": "Petit carré de tissu ou de papier servant à se moucher.",
+      "reponse": "mouchoir",
+      "variantes": [],
+      "indices": {
+        "trait": "On le garde dans sa poche ou son sac.",
+        "syllabe": "mou"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-023",
+      "definition": "Lentille qui grossit l'image des petits objets.",
+      "reponse": "loupe",
+      "variantes": [],
+      "indices": {
+        "trait": "Accessoire associé aux détectives.",
+        "syllabe": "lou"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-024",
+      "definition": "Papier très absorbant qui sert à sécher l'encre fraîche.",
+      "reponse": "buvard",
+      "variantes": [],
+      "indices": {
+        "trait": "Objet d'écolier d'autrefois.",
+        "syllabe": "bu"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-025",
+      "definition": "Petit étui de métal qui protège le doigt qui pousse l'aiguille.",
+      "reponse": "dé à coudre",
+      "variantes": [],
+      "indices": {
+        "trait": "Accessoire de couture.",
+        "syllabe": "dé"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-026",
+      "definition": "Petit support dans lequel on pose un œuf à la coque pour le manger.",
+      "reponse": "coquetier",
+      "variantes": [],
+      "indices": {
+        "trait": "Ustensile du petit-déjeuner.",
+        "syllabe": "coque"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-027",
+      "definition": "Récipient muni d'une anse et d'un long bec, pour donner de l'eau aux plantes.",
+      "reponse": "arrosoir",
+      "variantes": [],
+      "indices": {
+        "trait": "Accessoire de jardinage.",
+        "syllabe": "arro"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "def-s02-028",
+      "definition": "Grand luminaire monté sur un pied ou un poteau.",
+      "reponse": "lampadaire",
+      "variantes": [],
+      "indices": {
+        "trait": "On en trouve au salon comme dans la rue.",
+        "syllabe": "lampa"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-029",
+      "definition": "Arme faite d'une poche et de deux cordes, pour lancer des pierres.",
+      "reponse": "fronde",
+      "variantes": [
+        "lance-pierre"
+      ],
+      "indices": {
+        "trait": "Arme de David contre Goliath.",
+        "syllabe": "fron"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-030",
+      "definition": "Treillis de fil métallique servant de clôture.",
+      "reponse": "grillage",
+      "variantes": [],
+      "indices": {
+        "trait": "On en entoure un jardin ou un poulailler.",
+        "syllabe": "gril"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-031",
+      "definition": "Rideau qui s'enroule ou se replie pour protéger une fenêtre du soleil.",
+      "reponse": "store",
+      "variantes": [],
+      "indices": {
+        "trait": "Il peut être vénitien.",
+        "syllabe": "sto"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "def-s02-032",
+      "definition": "Support en bois sur lequel le peintre pose sa toile.",
+      "reponse": "chevalet",
+      "variantes": [],
+      "indices": {
+        "trait": "Matériel d'artiste.",
+        "syllabe": "che"
+      },
+      "difficulte": 2
+    }
+  ]
+}

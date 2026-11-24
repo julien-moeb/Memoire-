@@ -1,0 +1,134 @@
+{
+  "$schema": "../schemas/carte-lexique.schema.json",
+  "id": "pro-in",
+  "type": "carte-lexique",
+  "titre": "Institutions et collectivités",
+  "domaine": "acces-lexical",
+  "theme": "Institutions",
+  "version": 1,
+  "items": [
+    {
+      "id": "pro-in-001",
+      "question": "Collectivité territoriale de base, administrée par un conseil municipal et un maire.",
+      "reponse": "commune",
+      "variantes": [
+        "communes"
+      ],
+      "difficulte": 1,
+      "explication": "La France compte environ 35 000 communes."
+    },
+    {
+      "id": "pro-in-002",
+      "question": "Établissement public regroupant des communes pour exercer en commun certaines compétences.",
+      "reponse": "intercommunalité",
+      "variantes": [
+        "établissement public de coopération intercommunale",
+        "EPCI"
+      ],
+      "difficulte": 2,
+      "explication": "Communautés de communes, d'agglomération, urbaines et métropoles."
+    },
+    {
+      "id": "pro-in-003",
+      "question": "Représentant de l'État dans le département.",
+      "reponse": "préfet",
+      "variantes": [
+        "préfète"
+      ],
+      "difficulte": 1,
+      "explication": "Il dirige les services déconcentrés et exerce le contrôle de légalité."
+    },
+    {
+      "id": "pro-in-004",
+      "question": "Juridiction suprême de l'ordre administratif.",
+      "reponse": "Conseil d'État",
+      "variantes": [],
+      "difficulte": 2,
+      "explication": "Il est aussi conseiller du gouvernement."
+    },
+    {
+      "id": "pro-in-005",
+      "question": "Juridiction chargée de juger les comptes des comptables publics et d'évaluer les politiques publiques.",
+      "reponse": "Cour des comptes",
+      "variantes": [],
+      "difficulte": 2,
+      "explication": "Elle assiste le Parlement et le gouvernement."
+    },
+    {
+      "id": "pro-in-006",
+      "question": "Organe qui contrôle la conformité des lois à la Constitution.",
+      "reponse": "Conseil constitutionnel",
+      "variantes": [],
+      "difficulte": 2,
+      "explication": "Il peut être saisi par la question prioritaire de constitutionnalité."
+    },
+    {
+      "id": "pro-in-007",
+      "question": "Procédure permettant à un justiciable de contester la constitutionnalité d'une loi au cours d'un procès.",
+      "reponse": "question prioritaire de constitutionnalité",
+      "variantes": [
+        "QPC"
+      ],
+      "difficulte": 3,
+      "explication": "Créée par la révision constitutionnelle de 2008."
+    },
+    {
+      "id": "pro-in-008",
+      "question": "Principe selon lequel les collectivités s'administrent par des conseils élus.",
+      "reponse": "libre administration",
+      "variantes": [
+        "libre administration des collectivités territoriales"
+      ],
+      "difficulte": 3,
+      "explication": "Consacré à l'article 72 de la Constitution."
+    },
+    {
+      "id": "pro-in-009",
+      "question": "Transfert de compétences de l'État vers des collectivités dotées d'organes élus.",
+      "reponse": "décentralisation",
+      "variantes": [],
+      "difficulte": 1,
+      "explication": "Grandes étapes : 1982, 2003, 2015."
+    },
+    {
+      "id": "pro-in-010",
+      "question": "Document par lequel une assemblée locale exprime sa décision.",
+      "reponse": "délibération",
+      "variantes": [
+        "délibérations"
+      ],
+      "difficulte": 2,
+      "explication": "Elle devient exécutoire après publication et transmission au préfet."
+    },
+    {
+      "id": "pro-in-011",
+      "question": "Acte réglementaire ou individuel pris par une autorité exécutive (maire, préfet, ministre).",
+      "reponse": "arrêté",
+      "variantes": [
+        "arrêtés"
+      ],
+      "difficulte": 2,
+      "explication": "À distinguer du décret, pris par le Premier ministre ou le Président."
+    },
+    {
+      "id": "pro-in-012",
+      "question": "Instruction adressée par une autorité à ses services pour interpréter ou appliquer un texte.",
+      "reponse": "circulaire",
+      "variantes": [
+        "circulaires"
+      ],
+      "difficulte": 2,
+      "explication": "Elle est en principe dépourvue de valeur réglementaire."
+    },
+    {
+      "id": "pro-in-013",
+      "question": "Acte réglementaire signé par le Président de la République ou le Premier ministre.",
+      "reponse": "décret",
+      "variantes": [
+        "décrets"
+      ],
+      "difficulte": 2,
+      "explication": "On distingue décrets simples et décrets en Conseil d'État."
+    }
+  ]
+}

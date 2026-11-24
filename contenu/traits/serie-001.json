@@ -1,0 +1,419 @@
+{
+  "$schema": "../schemas/traits.schema.json",
+  "id": "tra-s01",
+  "type": "traits",
+  "titre": "Traits sémantiques : objets et institutions",
+  "domaine": "acces-lexical",
+  "version": 1,
+  "description": "Analyse des traits sémantiques sur des mots concrets du quotidien et de la vie professionnelle.",
+  "items": [
+    {
+      "id": "tra-s01-001",
+      "mot": "parapheur",
+      "traits": {
+        "categorie": "fourniture de bureau",
+        "usage": "faire circuler des documents à signer",
+        "description": "chemise cartonnée à soufflets et intercalaires",
+        "lieu": "bureau d'un directeur, secrétariat",
+        "association": "signature, circuit de validation"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-002",
+      "mot": "écharpe tricolore",
+      "traits": {
+        "categorie": "insigne officiel",
+        "usage": "signaler la qualité d'un élu lors des cérémonies",
+        "description": "bande de tissu bleu, blanc, rouge portée en bandoulière ou à la ceinture",
+        "lieu": "mairie, cérémonie, mariage",
+        "association": "maire, République"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-003",
+      "mot": "rapporteur",
+      "traits": {
+        "categorie": "instrument de géométrie, ou fonction dans une commission",
+        "usage": "mesurer des angles ; présenter les conclusions d'un travail",
+        "description": "demi-cercle gradué en plastique ; personne désignée",
+        "lieu": "trousse d'écolier ; assemblée, commission",
+        "association": "angle, rapport, compte rendu"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "tra-s01-004",
+      "mot": "agenda",
+      "traits": {
+        "categorie": "outil d'organisation",
+        "usage": "noter ses rendez-vous et échéances",
+        "description": "carnet ou application découpés en jours",
+        "lieu": "sac, bureau, téléphone",
+        "association": "rendez-vous, planning"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-005",
+      "mot": "tribune",
+      "traits": {
+        "categorie": "construction ou espace de parole",
+        "usage": "permettre à un orateur de s'adresser à une assemblée",
+        "description": "estrade surélevée, souvent avec pupitre",
+        "lieu": "hémicycle, stade, journal (tribune libre)",
+        "association": "discours, orateur"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-006",
+      "mot": "archive",
+      "traits": {
+        "categorie": "document ou lieu de conservation",
+        "usage": "conserver la mémoire des actes et décisions",
+        "description": "cartons, registres, fichiers numériques",
+        "lieu": "sous-sol, service d'archives départementales",
+        "association": "histoire, poussière, mémoire"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "tra-s01-007",
+      "mot": "trousse",
+      "traits": {
+        "categorie": "petit étui",
+        "usage": "ranger stylos, crayons et petites fournitures",
+        "description": "pochette fermée par une fermeture éclair",
+        "lieu": "cartable, tiroir de bureau",
+        "association": "école, rentrée"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-008",
+      "mot": "horodateur",
+      "traits": {
+        "categorie": "appareil de mesure du temps",
+        "usage": "imprimer la date et l'heure sur un ticket ou un document",
+        "description": "borne ou machine avec un afficheur",
+        "lieu": "trottoir, accueil d'un service",
+        "association": "stationnement, preuve"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-009",
+      "mot": "procès-verbal",
+      "traits": {
+        "categorie": "document officiel",
+        "usage": "consigner fidèlement des faits ou les débats d'une réunion",
+        "description": "texte daté et signé",
+        "lieu": "secrétariat de séance, gendarmerie",
+        "association": "compte rendu, constat"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-010",
+      "mot": "cachet",
+      "traits": {
+        "categorie": "marque officielle",
+        "usage": "authentifier un document",
+        "description": "tampon encreur portant un nom ou un sceau",
+        "lieu": "bureau, guichet",
+        "association": "tampon, validation, médicament"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "tra-s01-011",
+      "mot": "pupitre",
+      "traits": {
+        "categorie": "meuble",
+        "usage": "poser un texte ou une partition pour lire debout",
+        "description": "petit plan incliné sur un pied",
+        "lieu": "tribune, salle de concert",
+        "association": "discours, chef d'orchestre"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "tra-s01-012",
+      "mot": "badge",
+      "traits": {
+        "categorie": "objet d'identification",
+        "usage": "donner accès à un bâtiment et identifier une personne",
+        "description": "carte plastique avec photo ou puce",
+        "lieu": "entrée d'un bâtiment, cordon autour du cou",
+        "association": "accès, sécurité"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-013",
+      "mot": "classeur",
+      "traits": {
+        "categorie": "fourniture de bureau",
+        "usage": "ranger des feuilles perforées",
+        "description": "reliure cartonnée à anneaux",
+        "lieu": "étagère, armoire",
+        "association": "archivage, rangement"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-014",
+      "mot": "sceau",
+      "traits": {
+        "categorie": "objet ou marque d'authentification",
+        "usage": "garantir l'authenticité d'un acte",
+        "description": "cachet gravé, empreinte dans la cire",
+        "lieu": "chancellerie, ministère de la Justice",
+        "association": "garde des Sceaux, secret"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "tra-s01-015",
+      "mot": "urne",
+      "traits": {
+        "categorie": "récipient",
+        "usage": "recueillir les bulletins de vote",
+        "description": "boîte transparente fermée, munie d'une fente",
+        "lieu": "bureau de vote",
+        "association": "élection, dépouillement"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "tra-s01-016",
+      "mot": "cadran solaire",
+      "traits": {
+        "categorie": "instrument de mesure du temps",
+        "usage": "indiquer l'heure par l'ombre d'une tige",
+        "description": "plaque graduée et style projetant une ombre",
+        "lieu": "façade, jardin, place",
+        "association": "soleil, heure, passé"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-017",
+      "mot": "rotative",
+      "traits": {
+        "categorie": "machine d'imprimerie",
+        "usage": "imprimer en continu de grands tirages",
+        "description": "grands cylindres tournant à grande vitesse",
+        "lieu": "imprimerie de presse",
+        "association": "journal, encre, nuit"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "tra-s01-018",
+      "mot": "hémicycle",
+      "traits": {
+        "categorie": "salle",
+        "usage": "accueillir une assemblée délibérante",
+        "description": "gradins en demi-cercle face à une tribune",
+        "lieu": "Assemblée nationale, conseil régional",
+        "association": "débat, vote, députés"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-019",
+      "mot": "massicot",
+      "traits": {
+        "categorie": "machine",
+        "usage": "couper droit des piles de papier",
+        "description": "lame lourde actionnée par un levier",
+        "lieu": "reprographie, imprimerie",
+        "association": "découpe, précision"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "tra-s01-020",
+      "mot": "vestiaire",
+      "traits": {
+        "categorie": "lieu ou meuble",
+        "usage": "déposer ses vêtements et affaires",
+        "description": "casiers, patères",
+        "lieu": "salle de sport, théâtre, entrée d'un bâtiment",
+        "association": "manteau, ticket"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-021",
+      "mot": "lanterne",
+      "traits": {
+        "categorie": "luminaire",
+        "usage": "éclairer en se déplaçant ou en extérieur",
+        "description": "boîte vitrée contenant une source de lumière",
+        "lieu": "rue ancienne, jardin, campagne",
+        "association": "nuit, veillée"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "tra-s01-022",
+      "mot": "gouvernail",
+      "traits": {
+        "categorie": "pièce de navigation",
+        "usage": "diriger un bateau",
+        "description": "plaque mobile à l'arrière, actionnée par une barre ou une roue",
+        "lieu": "poupe d'un navire",
+        "association": "cap, pilote, direction"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-023",
+      "mot": "écluse",
+      "traits": {
+        "categorie": "ouvrage d'art",
+        "usage": "faire franchir une dénivellation à un bateau",
+        "description": "bassin fermé par des portes",
+        "lieu": "canal, rivière",
+        "association": "péniche, niveau d'eau"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-024",
+      "mot": "photocopieuse",
+      "traits": {
+        "categorie": "appareil de bureau",
+        "usage": "reproduire des documents sur papier",
+        "description": "grosse machine avec une vitre et des bacs à papier",
+        "lieu": "couloir, local de reprographie",
+        "association": "bourrage, toner, copie"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-025",
+      "mot": "chronomètre",
+      "traits": {
+        "categorie": "instrument de mesure du temps",
+        "usage": "mesurer précisément une durée",
+        "description": "montre à boutons de départ et d'arrêt",
+        "lieu": "stade, poignet d'un entraîneur",
+        "association": "course, record, seconde"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-026",
+      "mot": "éprouvette",
+      "traits": {
+        "categorie": "récipient de laboratoire",
+        "usage": "mesurer ou contenir des liquides pour une expérience",
+        "description": "tube de verre gradué",
+        "lieu": "laboratoire, salle de chimie",
+        "association": "expérience, science"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "tra-s01-027",
+      "mot": "gazette",
+      "traits": {
+        "categorie": "publication",
+        "usage": "informer des nouvelles",
+        "description": "feuille imprimée périodique",
+        "lieu": "kiosque, salle d'attente",
+        "association": "journal, rumeur"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-028",
+      "mot": "blason",
+      "traits": {
+        "categorie": "emblème",
+        "usage": "identifier une famille, une ville ou une institution",
+        "description": "écu orné de figures et de couleurs codifiées",
+        "lieu": "fronton, drapeau, armoiries d'une ville",
+        "association": "héraldique, Moyen Âge"
+      },
+      "difficulte": 4
+    },
+    {
+      "id": "tra-s01-029",
+      "mot": "mappemonde",
+      "traits": {
+        "categorie": "représentation géographique",
+        "usage": "montrer l'ensemble de la Terre",
+        "description": "carte plane ou globe",
+        "lieu": "salle de classe, bureau",
+        "association": "voyage, continents"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "tra-s01-030",
+      "mot": "vitrail",
+      "traits": {
+        "categorie": "élément d'architecture",
+        "usage": "laisser passer une lumière colorée et raconter une histoire",
+        "description": "verres colorés assemblés par du plomb",
+        "lieu": "église, cathédrale",
+        "association": "lumière, religion"
+      },
+      "difficulte": 2
+    },
+    {
+      "id": "tra-s01-031",
+      "mot": "balance",
+      "traits": {
+        "categorie": "instrument de mesure",
+        "usage": "peser des objets ou des personnes",
+        "description": "plateaux ou plateforme avec afficheur",
+        "lieu": "cuisine, salle de bains, marché",
+        "association": "poids, justice"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-032",
+      "mot": "jumelles",
+      "traits": {
+        "categorie": "instrument d'optique",
+        "usage": "voir de loin avec les deux yeux",
+        "description": "deux lunettes accolées",
+        "lieu": "sac de randonnée, stade, bateau",
+        "association": "observation, oiseaux"
+      },
+      "difficulte": 1
+    },
+    {
+      "id": "tra-s01-033",
+      "mot": "tampon dateur",
+      "traits": {
+        "categorie": "fourniture de bureau",
+        "usage": "apposer la date sur un courrier reçu",
+        "description": "tampon à molettes réglables",
+        "lieu": "service courrier",
+        "association": "réception, enregistrement"
+      },
+      "difficulte": 3
+    },
+    {
+      "id": "tra-s01-034",
+      "mot": "calepin",
+      "traits": {
+        "categorie": "carnet",
+        "usage": "prendre des notes rapidement",
+        "description": "petit carnet de poche",
+        "lieu": "poche de veste, sac",
+        "association": "notes, journaliste"
+      },
+      "difficulte": 3
+    }
+  ]
+}

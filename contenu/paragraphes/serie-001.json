@@ -1,0 +1,441 @@
+{
+  "$schema": "../schemas/paragraphe.schema.json",
+  "id": "par-s01",
+  "type": "paragraphe",
+  "titre": "Notes administratives à retenir",
+  "domaine": "memoire-episodique",
+  "version": 1,
+  "description": "Textes courts et fictifs, proches d'une note de service ; rappel libre puis questions.",
+  "items": [
+    {
+      "id": "par-s01-001",
+      "titre": "Rénovation de la médiathèque",
+      "texte": "La commune de Saint-Aubin engagera en mars la rénovation de sa médiathèque, fermée depuis l'automne pour des raisons de sécurité. Le coût des travaux est estimé à 1,2 million d'euros, financé à 40 % par la région et à 30 % par l'État. Le chantier durera quatorze mois. Pendant cette période, un service de prêt provisoire sera installé dans l'ancienne école Jules-Ferry, ouvert le mercredi et le samedi. La réouverture est prévue au printemps de l'année suivante, avec un espace numérique et une salle d'animation pour les associations.",
+      "unites": [
+        "médiathèque",
+        "mars",
+        "1,2 million|1.2 million|million",
+        "région",
+        "État|etat",
+        "quatorze mois|14 mois",
+        "école|Jules-Ferry",
+        "mercredi",
+        "samedi",
+        "numérique"
+      ],
+      "questions": [
+        {
+          "question": "En quel mois les travaux commenceront-ils ?",
+          "reponse": "mars",
+          "variantes": []
+        },
+        {
+          "question": "Quel est le coût estimé des travaux ?",
+          "reponse": "1,2 million d'euros",
+          "variantes": [
+            "1,2 million",
+            "1.2 million",
+            "1,2 million d'euros"
+          ]
+        },
+        {
+          "question": "Combien de temps durera le chantier ?",
+          "reponse": "quatorze mois",
+          "variantes": [
+            "14 mois",
+            "quatorze"
+          ]
+        },
+        {
+          "question": "Où sera installé le service de prêt provisoire ?",
+          "reponse": "ancienne école Jules-Ferry",
+          "variantes": [
+            "l'ancienne école",
+            "école Jules-Ferry",
+            "l'école Jules-Ferry"
+          ]
+        }
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "par-s01-002",
+      "titre": "Plan de mobilité des agents",
+      "texte": "Le comité de direction a adopté le 12 juin un plan de mobilité destiné aux 450 agents de l'administration. Trois mesures principales sont retenues. D'abord, la prise en charge des abonnements de transport en commun passera de 50 % à 75 %. Ensuite, un forfait annuel de 300 euros sera versé aux agents qui viennent à vélo au moins cent jours par an. Enfin, le télétravail pourra être étendu à deux jours par semaine pour les postes compatibles. Un premier bilan sera présenté au comité technique en décembre, sur la base d'une enquête auprès des agents.",
+      "unites": [
+        "12 juin|juin",
+        "450",
+        "abonnement|transport",
+        "75",
+        "vélo",
+        "300",
+        "cent jours|100 jours",
+        "télétravail",
+        "deux jours|2 jours",
+        "décembre"
+      ],
+      "questions": [
+        {
+          "question": "Combien d'agents sont concernés ?",
+          "reponse": "450",
+          "variantes": [
+            "450 agents"
+          ]
+        },
+        {
+          "question": "À quel taux les abonnements seront-ils pris en charge ?",
+          "reponse": "75 %",
+          "variantes": [
+            "75",
+            "75%",
+            "75 pour cent"
+          ]
+        },
+        {
+          "question": "Quel est le montant du forfait vélo ?",
+          "reponse": "300 euros",
+          "variantes": [
+            "300",
+            "300 €"
+          ]
+        },
+        {
+          "question": "Quand le premier bilan sera-t-il présenté ?",
+          "reponse": "en décembre",
+          "variantes": [
+            "décembre"
+          ]
+        }
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "par-s01-003",
+      "titre": "Épisode de canicule",
+      "texte": "En raison d'un épisode de fortes chaleurs, le préfet a déclenché le niveau orange du plan canicule à compter de jeudi. Les températures devraient atteindre 38 degrés l'après-midi et ne pas descendre sous 22 degrés la nuit. Les mairies sont invitées à contacter les personnes âgées inscrites sur le registre communal. Trois salles rafraîchies seront ouvertes au public au centre-ville, de 11 heures à 19 heures. Les manifestations sportives en plein air sont reportées. Un point de situation sera fait chaque matin avec les maires du département.",
+      "unites": [
+        "orange",
+        "jeudi",
+        "38",
+        "22",
+        "personnes âgées|âgées",
+        "registre",
+        "trois salles|3 salles|salles",
+        "11 heures|11h",
+        "19 heures|19h",
+        "sportives|sport",
+        "chaque matin|matin"
+      ],
+      "questions": [
+        {
+          "question": "Quel niveau du plan canicule a été déclenché ?",
+          "reponse": "orange",
+          "variantes": [
+            "niveau orange",
+            "le niveau orange"
+          ]
+        },
+        {
+          "question": "Quelle température maximale est attendue ?",
+          "reponse": "38 degrés",
+          "variantes": [
+            "38",
+            "38°"
+          ]
+        },
+        {
+          "question": "Qui les mairies doivent-elles contacter ?",
+          "reponse": "les personnes âgées inscrites",
+          "variantes": [
+            "personnes âgées",
+            "les personnes âgées",
+            "personnes âgées inscrites sur le registre"
+          ]
+        },
+        {
+          "question": "Quelles manifestations sont reportées ?",
+          "reponse": "les manifestations sportives en plein air",
+          "variantes": [
+            "sportives",
+            "manifestations sportives",
+            "les manifestations sportives"
+          ]
+        }
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "par-s01-004",
+      "titre": "Dématérialisation des demandes de subvention",
+      "texte": "À partir du 1er septembre, les associations devront déposer leurs demandes de subvention exclusivement sur la plateforme en ligne du département. Le formulaire papier sera supprimé. Les dossiers devront comporter les statuts, le dernier bilan financier et un projet détaillé. La date limite de dépôt est fixée au 15 octobre pour l'année suivante. Pour accompagner ce changement, quatre réunions d'information seront organisées dans les maisons de services publics, et une permanence téléphonique sera assurée le mardi. Les associations de moins de dix adhérents pourront bénéficier d'une aide personnalisée à la saisie.",
+      "unites": [
+        "1er septembre|septembre",
+        "plateforme|en ligne",
+        "papier",
+        "statuts",
+        "bilan financier|bilan",
+        "15 octobre|octobre",
+        "quatre réunions|4 réunions|réunions",
+        "permanence|téléphonique",
+        "mardi",
+        "dix adhérents|10 adhérents"
+      ],
+      "questions": [
+        {
+          "question": "À partir de quelle date la plateforme devient-elle obligatoire ?",
+          "reponse": "1er septembre",
+          "variantes": [
+            "le 1er septembre",
+            "septembre",
+            "1 septembre"
+          ]
+        },
+        {
+          "question": "Quelle est la date limite de dépôt ?",
+          "reponse": "15 octobre",
+          "variantes": [
+            "le 15 octobre",
+            "octobre"
+          ]
+        },
+        {
+          "question": "Quel jour la permanence téléphonique a-t-elle lieu ?",
+          "reponse": "mardi",
+          "variantes": [
+            "le mardi"
+          ]
+        },
+        {
+          "question": "Quelles associations peuvent bénéficier d'une aide à la saisie ?",
+          "reponse": "celles de moins de dix adhérents",
+          "variantes": [
+            "moins de dix adhérents",
+            "moins de 10 adhérents",
+            "de moins de dix adhérents"
+          ]
+        }
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "par-s01-005",
+      "titre": "Réorganisation de l'accueil du public",
+      "texte": "Afin de réduire les temps d'attente, constatés en moyenne à quarante minutes, l'accueil de la sous-préfecture sera réorganisé à compter du 3 février. L'accueil se fera désormais uniquement sur rendez-vous pour les titres de séjour et les permis de conduire. Un agent d'orientation sera présent dans le hall pour renseigner et diriger les usagers. Deux bornes numériques permettront d'effectuer les démarches simples avec l'aide d'un médiateur. Les horaires seront élargis le jeudi jusqu'à 18 heures. Une enquête de satisfaction sera conduite au bout de six mois afin d'ajuster le dispositif.",
+      "unites": [
+        "quarante minutes|40 minutes",
+        "3 février|février",
+        "rendez-vous",
+        "titres de séjour|séjour",
+        "permis",
+        "agent d'orientation|orientation",
+        "deux bornes|2 bornes|bornes",
+        "médiateur",
+        "jeudi",
+        "18 heures|18h",
+        "six mois|6 mois",
+        "satisfaction"
+      ],
+      "questions": [
+        {
+          "question": "Quel est le temps d'attente moyen actuel ?",
+          "reponse": "quarante minutes",
+          "variantes": [
+            "40 minutes",
+            "quarante",
+            "40"
+          ]
+        },
+        {
+          "question": "Pour quelles démarches le rendez-vous devient-il obligatoire ?",
+          "reponse": "titres de séjour et permis de conduire",
+          "variantes": [
+            "les titres de séjour et les permis de conduire",
+            "titres de séjour et permis"
+          ]
+        },
+        {
+          "question": "Quel jour les horaires sont-ils élargis ?",
+          "reponse": "jeudi",
+          "variantes": [
+            "le jeudi"
+          ]
+        },
+        {
+          "question": "Au bout de combien de temps l'enquête de satisfaction aura-t-elle lieu ?",
+          "reponse": "six mois",
+          "variantes": [
+            "6 mois"
+          ]
+        }
+      ],
+      "difficulte": 3
+    },
+    {
+      "id": "par-s01-006",
+      "titre": "Programme de plantation d'arbres",
+      "texte": "La métropole lance un programme de plantation de 10 000 arbres sur cinq ans, afin de lutter contre les îlots de chaleur urbains. Les premières plantations auront lieu en novembre dans les cours d'école et le long des boulevards. Les essences ont été choisies pour leur résistance à la sécheresse, notamment le micocoulier et le chêne vert. Le budget total s'élève à 8 millions d'euros. Les habitants pourront proposer des emplacements sur un site participatif jusqu'à la fin de l'été. Un arbre sera également offert à chaque famille ayant eu un enfant dans l'année.",
+      "unites": [
+        "10 000|dix mille",
+        "cinq ans|5 ans",
+        "îlots de chaleur|chaleur",
+        "novembre",
+        "cours d'école|école",
+        "boulevards",
+        "sécheresse",
+        "micocoulier",
+        "chêne vert",
+        "8 millions|huit millions",
+        "participatif",
+        "enfant|naissance"
+      ],
+      "questions": [
+        {
+          "question": "Combien d'arbres seront plantés ?",
+          "reponse": "10 000",
+          "variantes": [
+            "dix mille",
+            "10000",
+            "10 000 arbres"
+          ]
+        },
+        {
+          "question": "Sur combien d'années ?",
+          "reponse": "cinq ans",
+          "variantes": [
+            "5 ans",
+            "cinq"
+          ]
+        },
+        {
+          "question": "Quel est le budget total ?",
+          "reponse": "8 millions d'euros",
+          "variantes": [
+            "8 millions",
+            "huit millions"
+          ]
+        },
+        {
+          "question": "À qui un arbre sera-t-il offert ?",
+          "reponse": "aux familles ayant eu un enfant dans l'année",
+          "variantes": [
+            "familles ayant eu un enfant",
+            "chaque famille ayant eu un enfant",
+            "aux familles d'un nouveau-né"
+          ]
+        }
+      ],
+      "difficulte": 2
+    },
+    {
+      "id": "par-s01-007",
+      "titre": "Exercice de sécurité civile",
+      "texte": "Un exercice de sécurité civile simulant un accident industriel se déroulera le mardi 14 mai sur le site de la zone portuaire. Il mobilisera les sapeurs-pompiers, la gendarmerie, le service d'aide médicale urgente et les services de la ville. Le scénario prévoit une fuite de gaz toxique nécessitant le confinement de deux quartiers. Les sirènes retentiront à 10 heures ; la population est invitée à ne pas s'inquiéter et à ne pas appeler les numéros d'urgence. Un centre opérationnel sera activé en préfecture. Le retour d'expérience fera l'objet d'une réunion trois semaines plus tard.",
+      "unites": [
+        "14 mai|mai",
+        "mardi",
+        "portuaire|port",
+        "pompiers",
+        "gendarmerie",
+        "aide médicale urgente|SAMU",
+        "gaz",
+        "confinement",
+        "deux quartiers|2 quartiers",
+        "10 heures|10h",
+        "centre opérationnel",
+        "trois semaines|3 semaines"
+      ],
+      "questions": [
+        {
+          "question": "Quel type d'accident l'exercice simule-t-il ?",
+          "reponse": "un accident industriel",
+          "variantes": [
+            "accident industriel",
+            "une fuite de gaz toxique",
+            "fuite de gaz"
+          ]
+        },
+        {
+          "question": "À quelle heure les sirènes retentiront-elles ?",
+          "reponse": "10 heures",
+          "variantes": [
+            "10h",
+            "10 h",
+            "à 10 heures"
+          ]
+        },
+        {
+          "question": "Combien de quartiers seront confinés ?",
+          "reponse": "deux",
+          "variantes": [
+            "2",
+            "deux quartiers"
+          ]
+        },
+        {
+          "question": "Quand aura lieu la réunion de retour d'expérience ?",
+          "reponse": "trois semaines plus tard",
+          "variantes": [
+            "trois semaines après",
+            "3 semaines plus tard",
+            "trois semaines"
+          ]
+        }
+      ],
+      "difficulte": 4
+    },
+    {
+      "id": "par-s01-008",
+      "titre": "Recrutement d'apprentis",
+      "texte": "Le conseil départemental prévoit d'accueillir trente-cinq apprentis à la rentrée, contre vingt l'an dernier. Les postes concernent principalement les métiers de l'informatique, de l'entretien des routes et de l'animation auprès des collèges. Chaque apprenti sera suivi par un maître d'apprentissage volontaire, qui bénéficiera d'une formation de deux jours et d'une prime annuelle de 600 euros. Les candidatures sont ouvertes jusqu'au 30 avril. Les entretiens de sélection se tiendront en mai, en présence d'un représentant du centre de formation. L'objectif est de pérenniser au moins un tiers de ces postes.",
+      "unites": [
+        "trente-cinq|35",
+        "vingt|20",
+        "informatique",
+        "routes",
+        "collèges",
+        "maître d'apprentissage",
+        "deux jours|2 jours",
+        "600",
+        "30 avril|avril",
+        "mai",
+        "un tiers|tiers"
+      ],
+      "questions": [
+        {
+          "question": "Combien d'apprentis seront accueillis à la rentrée ?",
+          "reponse": "trente-cinq",
+          "variantes": [
+            "35",
+            "trente cinq"
+          ]
+        },
+        {
+          "question": "Quel est le montant de la prime du maître d'apprentissage ?",
+          "reponse": "600 euros",
+          "variantes": [
+            "600",
+            "600 €"
+          ]
+        },
+        {
+          "question": "Jusqu'à quelle date les candidatures sont-elles ouvertes ?",
+          "reponse": "30 avril",
+          "variantes": [
+            "le 30 avril",
+            "avril"
+          ]
+        },
+        {
+          "question": "Quelle part des postes l'administration souhaite-t-elle pérenniser ?",
+          "reponse": "un tiers",
+          "variantes": [
+            "au moins un tiers",
+            "1/3",
+            "le tiers"
+          ]
+        }
+      ],
+      "difficulte": 3
+    }
+  ]
+}

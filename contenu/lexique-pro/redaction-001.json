@@ -1,0 +1,90 @@
+{
+  "$schema": "../schemas/carte-lexique.schema.json",
+  "id": "pro-rd",
+  "type": "carte-lexique",
+  "titre": "Rédaction administrative",
+  "domaine": "acces-lexical",
+  "theme": "Rédaction administrative",
+  "version": 1,
+  "items": [
+    {
+      "id": "pro-rd-001",
+      "question": "Formule de courrier par laquelle on indique avoir bien reçu un document.",
+      "reponse": "accuser réception",
+      "variantes": [
+        "accusé de réception"
+      ],
+      "difficulte": 1,
+      "explication": "« J'accuse réception de votre courrier du… »"
+    },
+    {
+      "id": "pro-rd-002",
+      "question": "Mention placée en tête d'un courrier pour en indiquer l'objet.",
+      "reponse": "objet",
+      "variantes": [],
+      "difficulte": 1,
+      "explication": "Elle résume le sujet en quelques mots."
+    },
+    {
+      "id": "pro-rd-003",
+      "question": "Mention qui renvoie aux échanges ou textes antérieurs auxquels se rattache un courrier.",
+      "reponse": "référence",
+      "variantes": [
+        "références",
+        "réf."
+      ],
+      "difficulte": 2,
+      "explication": "Placée sous l'objet."
+    },
+    {
+      "id": "pro-rd-004",
+      "question": "Courrier transmis par la voie hiérarchique, d'une autorité à une autorité supérieure.",
+      "reponse": "sous couvert",
+      "variantes": [
+        "par la voie hiérarchique"
+      ],
+      "difficulte": 4,
+      "explication": "La mention « s/c » indique la transmission via le supérieur."
+    },
+    {
+      "id": "pro-rd-005",
+      "question": "Document court qui présente l'essentiel d'un sujet pour éclairer une décision.",
+      "reponse": "note de synthèse",
+      "variantes": [
+        "note d'aide à la décision"
+      ],
+      "difficulte": 2,
+      "explication": "Exercice classique des concours administratifs."
+    },
+    {
+      "id": "pro-rd-006",
+      "question": "Document qui accompagne l'envoi de pièces et en dresse la liste.",
+      "reponse": "bordereau d'envoi",
+      "variantes": [
+        "bordereau"
+      ],
+      "difficulte": 3,
+      "explication": "Il remplace un courrier pour une simple transmission."
+    },
+    {
+      "id": "pro-rd-007",
+      "question": "Partie d'un document qui précède le texte et en annonce le plan.",
+      "reponse": "introduction",
+      "variantes": [
+        "chapeau"
+      ],
+      "difficulte": 1,
+      "explication": "Le chapeau est l'introduction courte d'un article ou d'une note."
+    },
+    {
+      "id": "pro-rd-008",
+      "question": "Formule finale d'un courrier administratif exprimant la considération.",
+      "reponse": "formule de politesse",
+      "variantes": [
+        "formule de courtoisie"
+      ],
+      "difficulte": 1,
+      "explication": "Elle varie selon la hiérarchie entre l'auteur et le destinataire."
+    }
+  ]
+}

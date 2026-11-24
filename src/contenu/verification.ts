@@ -152,6 +152,24 @@ export function verifierContenu(fichiers: readonly Fichier[]): { series: Serie[]
       else vusListe.set(k, f.id);
     }
   }
+  // Les mots du bilan ne doivent pas être entraînés ailleurs : traits, listes, décision lexicale, cartes.
+  const reserves = new Map<string, string>();
+  for (const f of listes) {
+    for (const m of [...f.liste, ...f.definitions.map((d) => d.reponse), ...f.decisionLexicale.mots, ...f.decisionLexicale.pseudoMots]) {
+      reserves.set(sansAccents(normaliser(m)), f.id);
+    }
+  }
+  const signalerReserve = (chemin: string, mot: string) => {
+    const f = reserves.get(sansAccents(normaliser(mot)));
+    if (f) anomalies.push({ chemin, message: `« ${mot} » est réservé au bilan (${f}).` });
+  };
+  for (const s of series) {
+    if (s.type === 'traits') for (const it of s.items) signalerReserve(it.id, it.mot);
+    if (s.type === 'liste-memoire') for (const it of s.items) for (const m of it.mots) signalerReserve(it.id, m);
+    if (s.type === 'decision-lexicale') for (const m of [...s.mots, ...s.pseudoMots]) signalerReserve(s.id, m);
+    if (s.type === 'carte-lexique') for (const it of s.items) signalerReserve(it.id, it.reponse);
+  }
+
   // Les catégories et lettres de fluence du bilan restent réservées au bilan.
   const clesBilan = new Map<string, string>();
   for (const f of listes) {
