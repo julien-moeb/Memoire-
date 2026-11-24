@@ -72,7 +72,7 @@ export function Accueil() {
             : jourDeRepos ? 'Jour de repos'
             : seanceDuJour === 'faite' ? 'Faite aujourd’hui'
             : seanceDuJour === 'en-cours' ? 'Commencée : reprendre'
-            : 'Environ 18 minutes'
+            : 'À faire aujourd’hui'
           }
           href={bilanFait ? lien('/seance') : undefined}
           desactive={!bilanFait}

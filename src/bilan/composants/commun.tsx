@@ -87,9 +87,9 @@ export function SaisieMots({ onMot, desactive, placeholder = 'Écrivez un mot pu
         enterKeyHint="next"
         placeholder={placeholder}
         aria-label="Mot"
-        className="min-h-[50px] flex-1 rounded-[14px] bg-surface px-4 text-[1.125rem] shadow-sm outline-none focus:ring-2 focus:ring-accent"
+        className="min-h-[50px] min-w-0 flex-1 rounded-[14px] bg-surface px-4 text-[1.125rem] shadow-sm outline-none focus:ring-2 focus:ring-accent"
       />
-      <button type="submit" disabled={desactive} className="min-h-[50px] rounded-[14px] bg-accent-doux px-4 font-semibold text-accent">Ajouter</button>
+      <button type="submit" disabled={desactive} className="min-h-[50px] shrink-0 rounded-[14px] bg-accent-doux px-4 font-semibold text-accent">Ajouter</button>
     </form>
   );
 }
