@@ -46,6 +46,7 @@ corriger un item, changez son texte et augmentez la `version` de la série.
 | `liste-memoire` | `listes/` | 19 et 21. Listes, méthode des lieux | 14 listes |
 | `paragraphe` | `paragraphes/` | 20. Retenir une note | 8 notes |
 | `decision-lexicale` | `decision-lexicale/` | 2. Mot ou pas mot | 136 mots, 136 pseudo-mots |
+| `strategie` | `strategies/` | 23. Fiches de stratégies | 15 fiches |
 | `forme-bilan` | `bilan/` | Bilan | 4 formes |
 
 Les exercices de vitesse, de mémoire de travail et de fonctions exécutives (double décision, appariement, n-back,
@@ -209,6 +210,27 @@ Une série contient deux tableaux, `mots` et `pseudoMots` (20 au moins chacun). 
 par recombinaison de syllabes françaises, puis vérifiés contre un dictionnaire de plus de 330 000 formes fléchies
 (paquet libre `an-array-of-french-words`, utilisé seulement lors de la rédaction). Si vous en ajoutez, évitez les
 homophones de mots réels (« vilage ») et les noms de marque.
+
+### `strategie` : fiches de stratégies de compensation
+
+Chaque fiche comporte un titre, une catégorie (`pendant`, `preparation`, `regulation`, `organisation`), un résumé d'une
+phrase (140 caractères au plus), les situations où elle sert (`quand`), son principe, deux à six étapes, un exemple
+et, au besoin, ce qu'il faut éviter (`aEviter`). Le champ facultatif `outil: "respiration"` ajoute un lien vers la
+respiration guidée. L'enveloppe n'exige pas de domaine : ces fiches ne relèvent d'aucun domaine cognitif. Une fiche
+par semaine est proposée dans le volet comportemental, dans l'ordre du fichier.
+
+```json
+{
+  "id": "str-decrire",
+  "titre": "Décrire le mot",
+  "categorie": "pendant",
+  "resume": "Dire ce que désigne le mot plutôt que de s'arrêter pour le chercher.",
+  "quand": "En réunion ou au téléphone, quand un terme précis ne vient pas.",
+  "principe": "Décrire la catégorie ou la fonction active les mots reliés en mémoire.",
+  "etapes": ["Dites la catégorie.", "Ajoutez la fonction ou le contexte."],
+  "exemple": "« Le document qui fixe les engagements de chaque service… la convention. »"
+}
+```
 
 ### `forme-bilan` : une forme parallèle du bilan
 

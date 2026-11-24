@@ -124,6 +124,18 @@ export interface Carte {
   paquet: string;
   itemId: string;
   etat: EtatCarte;
+  /** Carte personnelle issue du journal : le mot cherché et ce qui permettra de le retrouver. */
+  perso?: MotPersonnel;
+}
+
+/** Mot cherché consigné dans le journal, devenu carte de révision. */
+export interface MotPersonnel {
+  mot: string;
+  /** Définition ou contexte que vous avez noté pour vous le faire retrouver. */
+  indice: string | null;
+  /** Mot employé à la place, le cas échéant. */
+  motProduit: string | null;
+  episodeId: string;
 }
 
 export interface Confusion {

@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Identifiant unique dans tout le dossier contenu/"
+    },
+    "titre": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Titre affiché de la série"
+    },
+    "domaine": {
+      "type": "string",
+      "enum": [
+        "acces-lexical",
+        "vitesse",
+        "memoire-travail",
+        "memoire-episodique",
+        "attention",
+        "flexibilite"
+      ],
+      "description": "Domaine cognitif principal sollicité"
+    },
+    "version": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991,
+      "description": "Incrémentez-la quand vous modifiez une série existante"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "strategie"
+    },
+    "items": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "description": "Identifiant unique dans tout le dossier contenu/"
+          },
+          "titre": {
+            "type": "string",
+            "minLength": 3
+          },
+          "categorie": {
+            "type": "string",
+            "enum": [
+              "pendant",
+              "preparation",
+              "regulation",
+              "organisation"
+            ],
+            "description": "pendant l'échange, préparation, régulation de l'activation, organisation"
+          },
+          "resume": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 140,
+            "description": "Une phrase, affichée dans la liste des fiches"
+          },
+          "quand": {
+            "type": "string",
+            "minLength": 10,
+            "description": "Situations où la stratégie est utile"
+          },
+          "principe": {
+            "type": "string",
+            "minLength": 20,
+            "description": "Pourquoi elle aide, en quelques phrases"
+          },
+          "etapes": {
+            "minItems": 2,
+            "maxItems": 6,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 5
+            }
+          },
+          "exemple": {
+            "type": "string",
+            "minLength": 10
+          },
+          "aEviter": {
+            "type": "string",
+            "minLength": 5
+          },
+          "outil": {
+            "description": "Exercice guidé associé dans l'application",
+            "type": "string",
+            "enum": [
+              "respiration"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "titre",
+          "categorie",
+          "resume",
+          "quand",
+          "principe",
+          "etapes",
+          "exemple"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "titre",
+    "version",
+    "type",
+    "items"
+  ]
+}

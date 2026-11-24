@@ -5,10 +5,14 @@ import { Accueil } from './pages/Accueil';
 import { Methode } from './pages/Methode';
 import { Reglages } from './pages/Reglages';
 import { Affichage } from './pages/Affichage';
-import { Bientot } from './pages/Bientot';
+import { Journal } from './pages/Journal';
+import { Fiches } from './pages/Fiches';
+import { PageRespiration } from './pages/PageRespiration';
 import { lazy, Suspense } from 'react';
 
 const PageSeance = lazy(() => import('./pages/Seance').then((m) => ({ default: m.PageSeance })));
+// Recharts n'est chargé qu'à l'ouverture de la progression ou du bilan.
+const PageProgression = lazy(() => import('./pages/Progression').then((m) => ({ default: m.Progression })));
 const PageBilan = lazy(() => import('./pages/Bilan').then((m) => ({ default: m.PageBilan })));
 
 function Ecran() {
@@ -37,9 +41,17 @@ function Ecran() {
           </Suspense>
         );
       case '/progression':
-        return <Bientot titre="Progression" texte="Vos courbes par domaine, lissées sur 7 jours, et la comparaison de vos bilans successifs apparaîtront ici." />;
+        return (
+          <Suspense fallback={<p className="p-8 text-center text-texte-2" role="status">Chargement…</p>}>
+            <PageProgression />
+          </Suspense>
+        );
       case '/journal':
-        return <Bientot titre="Journal" texte="Vous pourrez consigner ici les épisodes de manque du mot, afin d'identifier vos situations à risque et d'entraîner les mots concernés." />;
+        return <Journal />;
+      case '/fiches':
+        return <Fiches />;
+      case '/respiration':
+        return <PageRespiration />;
       default:
         return <Accueil />;
     }
