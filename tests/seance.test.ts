@@ -17,7 +17,11 @@ function simuler(n: number, depart = '2026-11-24') {
   while (historique.length < n) {
     const c = composerSeance({ ...base, date, historique });
     if (c.disponible) {
-      historique.push({ date, exercices: c.blocs.flatMap((b) => (b.type === 'exercice' ? [b.exercice] : [])) });
+      historique.push({
+        date,
+        exercices: c.blocs.flatMap((b) => (b.type === 'exercice' ? [b.exercice] : [])),
+        comportemental: c.blocs.some((b) => b.type === 'comportemental'),
+      });
     }
     date = ajouterJours(date, 1);
   }

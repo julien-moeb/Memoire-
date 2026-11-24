@@ -74,6 +74,11 @@ Une séance par jour au plus, environ 18 minutes, jamais le jour de repos choisi
    le lendemain.
 7. **Clôture** : un épisode de manque du mot depuis la veille, en trois touches si vous le souhaitez.
 
+**Volet comportemental hebdomadaire** (environ 10 min). Une fois par semaine, à partir de la cinquième séance, il
+remplace les deux exercices ciblés : relecture des épisodes des sept derniers jours, une fiche de stratégie à essayer
+dans une situation que vous choisissez, puis trois minutes de respiration lente. La double décision et les révisions
+sont maintenues ce jour-là.
+
 Une séance interrompue peut être reprise le jour même : les blocs terminés sont conservés.
 
 ### Adaptation de la difficulté
@@ -106,6 +111,56 @@ Les traits sémantiques, la reformulation de registre et la note à retenir se f
 reformulation, une grille de trois critères (sens conservé, vocabulaire précis, phrase fluide) sert d'autoévaluation.
 Dans les exercices de mots, le **mode oral** (Réglages) remplace la saisie : vous dites le mot à voix haute, puis
 indiquez si vous l'aviez trouvé. Aucune reconnaissance vocale n'est utilisée, faute de solution entièrement locale.
+
+## Suivi
+
+**Écart à la ligne de base.** Pour chaque exercice, la ligne de base réunit les sept premières séances et, quand
+l'épreuve mesure exactement la même grandeur, la valeur du bilan (seuil de double décision, temps de décision
+lexicale, empan inverse). L'écart vaut (moyenne lissée − moyenne de référence) ÷ écart-type de référence, orienté
+pour que « plus haut » signifie toujours « mieux » (un temps qui baisse donne un écart positif). Un plancher sur
+l'écart-type (20 ms, 5 points de pourcentage, un demi-niveau) évite des valeurs démesurées quand les premières séances
+sont très régulières. Aucun écart n'est calculé sur moins de trois valeurs de référence.
+
+**Lissage et score de domaine.** Les valeurs sont lissées sur sept jours calendaires. Le score d'un domaine est la
+moyenne des écarts de ses exercices, chacun pris à sa dernière valeur lissée de moins de sept jours : les exercices
+tournant d'une séance à l'autre, ce report évite que la courbe ne saute d'un exercice à l'autre. Les volumes de travail
+(mots travaillés en traits sémantiques) et les autoévaluations (reformulation) sont affichés mais n'entrent pas dans le
+score, car ils ne mesurent pas une performance.
+
+**Ton.** La tendance compare la dernière valeur à celle d'environ deux semaines plus tôt. Une baisse est accompagnée
+d'un rappel de la variabilité normale d'un jour à l'autre et n'est jamais présentée en rouge. Une série interrompue
+produit seulement « Reprise à votre rythme. » ; les jours de repos ne l'interrompent pas.
+
+**Contexte.** Les médianes par moment de la journée, fatigue et sommeil n'apparaissent qu'après 30 séances, avec trois
+séances au moins par tranche, et sont formulées comme des associations.
+
+**Annotations et appareils.** Un événement daté que vous saisissez et chaque changement d'appareil sont portés sur
+l'axe du temps des courbes, sans interprétation.
+
+**Journal et cartes personnelles.** Chaque mot cherché consigné dans le journal devient une carte de révision, revue dès
+le lendemain, avec l'indice que vous avez noté ; le même mot consigné deux fois ne crée qu'une carte et ne la
+réinitialise pas. Les deux mots du journal les moins récemment travaillés ouvrent aussi l'exercice des traits
+sémantiques. Ces choix répondent au constat que les gains lexicaux portent surtout sur les mots entraînés.
+
+## Export
+
+**Archive CSV.** Un fichier par type de données (séances, essais, résultats, bilans, journal, cartes…), deux fichiers
+calculés (séries lissées et écarts par exercice, scores de domaine), un dictionnaire des variables et une notice.
+Chaque colonne est déclarée une seule fois dans le code, avec son type, son unité et sa description ; le dictionnaire
+est produit à partir de ces déclarations et ne peut donc pas diverger des fichiers. Le format suit la norme RFC 4180
+(virgule, point décimal), lisible sans réglage par R, Python ou les logiciels de statistiques ; la notice indique comment
+l'ouvrir dans un tableur réglé en français. L'archive ZIP est écrite sans compression ni bibliothèque : les fichiers
+pèsent quelques centaines de kilo-octets, et une dépendance alourdirait l'application pour un gain négligeable.
+
+**Synthèse de deux pages.** Page 1 : période, séances, minutes, assiduité, profil aux bilans, écart actuel et tendance
+par domaine, exercices pratiqués. Page 2 : courbes lissées par domaine avec annotations et changements d'appareil,
+synthèse du journal (situations, moments de la journée, issues, stratégies). Elle est produite par une page
+d'impression au format A4 que le navigateur enregistre en PDF : texte et graphiques restent vectoriels, hors ligne.
+La ligne de base est toujours calculée sur l'ensemble des données, même lorsque la période affichée est limitée aux
+90 derniers jours. Les deux pages rappellent que l'outil n'est pas un dispositif médical.
+
+**Sauvegarde.** Fichier JSON complet, réimportable sur un autre appareil. Avant de remplacer les données, l'application
+vérifie le format et la version du schéma, puis affiche la date de la sauvegarde et son contenu.
 
 ## Choix techniques justifiés
 

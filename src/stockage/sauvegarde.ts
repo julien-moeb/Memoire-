@@ -58,3 +58,23 @@ export function nomFichierSauvegarde(d = new Date()): string {
   const p = (n: number) => String(n).padStart(2, '0');
   return `lexique-sauvegarde-${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}.json`;
 }
+
+export interface ResumeSauvegarde {
+  exporteeLe: string;
+  versionSchema: number;
+  seances: number;
+  bilans: number;
+  episodes: number;
+  cartes: number;
+  essais: number;
+}
+
+/** Résumé affiché avant un import, pour vérifier qu'il s'agit bien de la sauvegarde attendue. */
+export function resumeSauvegarde(donnees: unknown): ResumeSauvegarde {
+  const s = verifierSauvegarde(donnees);
+  const n = (nom: NomMagasin) => s.magasins[nom]?.length ?? 0;
+  return {
+    exporteeLe: s.exporteeLe, versionSchema: s.versionSchema,
+    seances: n('seances'), bilans: n('bilans'), episodes: n('episodes'), cartes: n('cartes'), essais: n('essais'),
+  };
+}

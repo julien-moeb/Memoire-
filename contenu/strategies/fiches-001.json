@@ -1,0 +1,229 @@
+{
+  "$schema": "../schemas/strategie.schema.json",
+  "id": "str-fiches-001",
+  "type": "strategie",
+  "titre": "Fiches de stratégies de compensation",
+  "version": 1,
+  "description": "Stratégies de compensation et de régulation inspirées du programme MAAT (Memory and Attention Adaptation Training). Elles s'en inspirent sans le reproduire.",
+  "items": [
+    {
+      "id": "str-decrire",
+      "titre": "Décrire le mot",
+      "categorie": "pendant",
+      "resume": "Dire ce que désigne le mot plutôt que de s'arrêter pour le chercher.",
+      "quand": "En réunion ou au téléphone, quand un terme précis ne vient pas et que la phrase est déjà lancée.",
+      "principe": "Décrire la catégorie, la fonction ou le contexte du mot active les mots qui lui sont reliés en mémoire : le terme exact revient souvent au cours de la description. Votre interlocuteur suit le sens sans attendre, et la conversation ne s'interrompt pas.",
+      "etapes": [
+        "Dites la catégorie : « c'est un document qui… », « c'est la procédure par laquelle… ».",
+        "Ajoutez la fonction ou le contexte : à quoi il sert, qui l'emploie, où on le trouve.",
+        "Poursuivez votre phrase avec cette description, sans revenir en arrière.",
+        "Si le mot revient, glissez-le simplement : « …autrement dit, la convention »."
+      ],
+      "exemple": "« Il faudra signer le document qui fixe les engagements de chaque service, avec les objectifs et les moyens… la convention de partenariat. »",
+      "aEviter": "Rester silencieux en cherchant le terme exact : la pression augmente et le mot devient plus difficile à retrouver."
+    },
+    {
+      "id": "str-generique",
+      "titre": "Prendre un mot plus général",
+      "categorie": "pendant",
+      "resume": "Remplacer le terme précis par un mot plus large ou un synonyme approché.",
+      "quand": "Quand le sens compte davantage que la précision du terme, notamment à l'oral.",
+      "principe": "Un mot plus général (« le dispositif », « la mesure », « l'outil ») est presque toujours disponible. Il permet de garder le fil ; la précision peut être apportée ensuite, par un complément ou par écrit.",
+      "etapes": [
+        "Choisissez le mot de la catégorie au-dessus : « la mesure » plutôt que « l'ordonnance de placement provisoire ».",
+        "Précisez si besoin par un complément : « la mesure prise en urgence par le juge ».",
+        "Notez le terme exact pour le retrouver plus tard si la précision importe."
+      ],
+      "exemple": "« La mesure décidée en urgence par le juge sera réexaminée dans quinze jours. »"
+    },
+    {
+      "id": "str-son",
+      "titre": "Chercher par le son",
+      "categorie": "pendant",
+      "resume": "Retrouver le début du mot, sa longueur ou un mot qui lui ressemble.",
+      "quand": "Quand vous avez le mot « sur le bout de la langue » et disposez de quelques secondes, par exemple en rédigeant.",
+      "principe": "Dans le manque du mot, le sens est souvent disponible alors que la forme sonore résiste. Retrouver la première lettre, le nombre de syllabes ou un mot proche par le son donne un point d'entrée vers cette forme.",
+      "etapes": [
+        "Demandez-vous par quelle lettre ou quel son le mot commence.",
+        "Essayez sa longueur : court, long, combien de syllabes.",
+        "Pensez à un mot qui lui ressemble, ou à une expression où il apparaît souvent.",
+        "Si rien ne vient après une dizaine de secondes, passez à une autre stratégie."
+      ],
+      "exemple": "« Ça commence par “sub”… trois syllabes… on la verse chaque année… la subvention. »",
+      "aEviter": "Insister au-delà de quelques secondes en pleine conversation : décrivez plutôt le mot."
+    },
+    {
+      "id": "str-temps",
+      "titre": "Se donner du temps",
+      "categorie": "pendant",
+      "resume": "Utiliser des formules d'attente naturelles et ralentir le débit.",
+      "quand": "Dans un échange rapide, quand vous sentez le mot se dérober ou avant une phrase importante.",
+      "principe": "Quelques secondes suffisent souvent pour que le mot revienne. Une formule d'attente occupe ce temps sans rompre l'échange, et un débit plus lent réduit la charge sur la récupération des mots.",
+      "etapes": [
+        "Ayez deux ou trois formules prêtes : « comment dirais-je », « je cherche le terme juste », « disons… ».",
+        "Ralentissez volontairement votre débit avant les passages techniques.",
+        "Marquez une brève pause en regardant vos notes : elle paraît réfléchie, non hésitante."
+      ],
+      "exemple": "« Le point qui reste à régler, comment dirais-je… c'est le calendrier de mise en œuvre. »"
+    },
+    {
+      "id": "str-nommer",
+      "titre": "Dire simplement que le mot échappe",
+      "categorie": "pendant",
+      "resume": "Le signaler en une phrase, sans s'excuser longuement.",
+      "quand": "Quand les autres stratégies n'ont pas suffi, ou avec des interlocuteurs de confiance.",
+      "principe": "Le dire ouvertement fait baisser la pression, qui gêne elle-même la récupération. Les interlocuteurs proposent souvent le mot, et l'échange reprend aussitôt. Une phrase brève et neutre suffit.",
+      "etapes": [
+        "Dites une phrase courte et neutre : « le mot m'échappe, je le retrouverai ».",
+        "Poursuivez avec une description ou un mot plus général.",
+        "Acceptez sans commentaire le mot qu'un interlocuteur propose."
+      ],
+      "exemple": "« Le terme m'échappe, ce qui compte c'est que le dossier soit transmis avant vendredi. »",
+      "aEviter": "Multiplier les excuses ou commenter sa mémoire : l'attention se déplace vers la difficulté au lieu du propos."
+    },
+    {
+      "id": "str-reformuler",
+      "titre": "Reformuler la phrase",
+      "categorie": "pendant",
+      "resume": "Changer de construction pour contourner le mot qui manque.",
+      "quand": "Quand un nom précis résiste, surtout un nom abstrait ou technique.",
+      "principe": "Une même idée peut se dire avec un verbe plutôt qu'un nom, ou avec une phrase active plutôt qu'un terme technique. Changer de construction évite d'avoir à récupérer précisément le mot bloqué.",
+      "etapes": [
+        "Passez du nom au verbe : « nous avons décidé » plutôt que « la décision ».",
+        "Exprimez l'action plutôt que son nom : « ceux qui contrôlent les comptes » plutôt que l'intitulé exact.",
+        "Reprenez la phrase depuis le début si nécessaire : c'est courant à l'oral."
+      ],
+      "exemple": "Au lieu de « la mutualisation des moyens », « nous allons partager les moyens entre les deux services »."
+    },
+    {
+      "id": "str-noter",
+      "titre": "Noter et revenir plus tard",
+      "categorie": "pendant",
+      "resume": "Garder une trace du mot manqué pour le retrouver et le travailler.",
+      "quand": "Après tout épisode, même résolu : c'est la base de vos cartes personnelles.",
+      "principe": "Les gains de l'entraînement lexical portent surtout sur les mots travaillés. Un mot consigné dans le journal devient une carte de révision : vous entraînez ainsi précisément les mots qui vous manquent dans la vie réelle.",
+      "etapes": [
+        "Notez sur le moment un mot-clé ou l'idée, sur papier ou téléphone.",
+        "Consignez l'épisode dans le journal le jour même, avec le mot s'il est revenu.",
+        "Ajoutez un indice : une définition courte ou le contexte de la phrase."
+      ],
+      "exemple": "Note rapide en réunion : « terme pour la reprise du dossier par un autre service ? » ; le soir, dans le journal : « dessaisissement »."
+    },
+    {
+      "id": "str-mots-cles",
+      "titre": "Préparer ses mots-clés",
+      "categorie": "preparation",
+      "resume": "Lister et relire à voix haute les termes dont vous aurez besoin.",
+      "quand": "Avant une réunion, une présentation ou un appel important.",
+      "principe": "Activer les mots peu de temps avant de les employer les rend plus disponibles. Les noms propres, chiffres et termes techniques, qui sont les plus difficiles à récupérer, gagnent le plus à être préparés.",
+      "etapes": [
+        "Listez cinq à dix termes : noms de dispositifs, sigles, noms propres, chiffres.",
+        "Relisez-les à voix haute, chacun dans une phrase que vous pourriez dire.",
+        "Gardez la liste sous les yeux pendant l'échange."
+      ],
+      "exemple": "Avant un comité : « contrat local, cofinancement, 14 mois, appel à projets, convention, évaluation à mi-parcours »."
+    },
+    {
+      "id": "str-support",
+      "titre": "S'appuyer sur un support écrit",
+      "categorie": "preparation",
+      "resume": "Un plan, des notes ou des diapositives portant les termes clés.",
+      "quand": "Pour toute intervention préparée : présentation, point en réunion, entretien.",
+      "principe": "Le support décharge la mémoire de travail et la récupération des mots : vous n'avez plus à garder en tête le plan et les termes, seulement à les relire. C'est une aide externe, au même titre qu'un agenda.",
+      "etapes": [
+        "Rédigez un plan en trois à cinq points, avec les termes clés en gras.",
+        "Placez les chiffres et les noms propres sur le support plutôt que de les mémoriser.",
+        "Autorisez-vous à lire : un regard sur ses notes est normal en réunion."
+      ],
+      "exemple": "Une fiche cartonnée par intervention : plan, trois chiffres, deux noms propres, la conclusion en une phrase."
+    },
+    {
+      "id": "str-repetition",
+      "titre": "Répéter à voix haute",
+      "categorie": "preparation",
+      "resume": "Dire son intervention une ou deux fois avant le moment réel.",
+      "quand": "Avant une prise de parole importante ou un appel délicat.",
+      "principe": "La répétition verbale rend les formulations plus automatiques. Le jour venu, les phrases et les mots ont déjà été produits, et la récupération sollicite moins l'effort.",
+      "etapes": [
+        "Dites votre intervention à voix haute, en entier, sans viser la perfection.",
+        "Repérez les mots qui ont résisté et préparez une formulation de rechange.",
+        "Refaites un passage court juste avant l'échange, sur les deux premières phrases."
+      ],
+      "exemple": "La veille d'un comité, deux passages à voix haute de l'introduction ; le matin, un passage des deux premières phrases."
+    },
+    {
+      "id": "str-moments",
+      "titre": "Placer les échanges exigeants au bon moment",
+      "categorie": "organisation",
+      "resume": "Choisir, quand c'est possible, les moments où vous êtes le plus en forme.",
+      "quand": "En organisant votre semaine : réunions importantes, appels difficiles, rédaction.",
+      "principe": "La disponibilité des mots varie avec la fatigue et le moment de la journée. Placer les situations exigeantes dans vos meilleures plages, et prévoir des pauses entre elles, réduit le nombre d'épisodes. Après une trentaine de séances, votre page Progression indiquera les moments associés à vos meilleurs résultats.",
+      "etapes": [
+        "Repérez dans votre journal les moments où les épisodes sont les plus fréquents.",
+        "Placez autant que possible les échanges importants en dehors de ces moments.",
+        "Prévoyez une courte pause entre deux réunions exigeantes."
+      ],
+      "exemple": "Proposer le point budgétaire à 10 h plutôt qu'en fin de journée, et garder un quart d'heure libre avant."
+    },
+    {
+      "id": "str-distractions",
+      "titre": "Réduire les distractions",
+      "categorie": "organisation",
+      "resume": "Faire une chose à la fois, dans un environnement calme.",
+      "quand": "Pour rédiger, préparer un dossier, ou lors d'un appel important.",
+      "principe": "L'attention partagée entre plusieurs sources (notifications, conversations voisines, tâches en parallèle) réduit les ressources disponibles pour trouver les mots. Supprimer ces sollicitations est une compensation simple et efficace.",
+      "etapes": [
+        "Coupez les notifications pendant les tâches exigeantes.",
+        "Pour un appel important, choisissez un lieu calme et fermez les autres fenêtres.",
+        "Terminez une tâche, ou notez où vous en êtes, avant d'en commencer une autre."
+      ],
+      "exemple": "Avant un appel avec un partenaire : porte fermée, messagerie fermée, dossier ouvert à la bonne page."
+    },
+    {
+      "id": "str-respiration",
+      "titre": "Respiration lente",
+      "categorie": "regulation",
+      "resume": "Ralentir la respiration autour de six cycles par minute pour faire baisser l'activation.",
+      "quand": "Avant une situation exigeante, ou quand vous sentez la tension monter pendant un échange.",
+      "principe": "Une expiration plus longue que l'inspiration favorise l'apaisement physiologique. Pratiquée régulièrement au calme, la respiration lente devient plus facile à mobiliser en situation, où une ou deux expirations lentes suffisent déjà.",
+      "etapes": [
+        "Inspirez par le nez pendant environ quatre secondes.",
+        "Expirez lentement pendant environ six secondes, épaules relâchées.",
+        "Continuez deux à cinq minutes au calme ; en situation, une ou deux expirations lentes."
+      ],
+      "exemple": "Dans le couloir avant la réunion : trois cycles lents, épaules basses, puis entrée dans la salle.",
+      "aEviter": "Forcer l'inspiration ou retenir son souffle : le rythme doit rester confortable.",
+      "outil": "respiration"
+    },
+    {
+      "id": "str-relaxation",
+      "titre": "Relaxation appliquée",
+      "categorie": "regulation",
+      "resume": "Associer un mot-signal à la détente, puis l'utiliser en situation.",
+      "quand": "Pour les personnes que la tension gêne en situation, après quelques jours d'entraînement au calme.",
+      "principe": "La relaxation appliquée s'apprend par étapes : détente musculaire au calme, puis association d'un mot-signal à l'expiration, puis usage rapide en situation réelle. Elle vise une détente en quelques secondes, au moment où elle est utile.",
+      "etapes": [
+        "Au calme, contractez puis relâchez successivement mains, épaules, visage, en portant attention au relâchement.",
+        "Associez à chaque expiration un mot-signal choisi, par exemple « calme ».",
+        "Après quelques jours, entraînez-vous à vous détendre en trois expirations avec le mot-signal.",
+        "En situation : une expiration lente, le mot-signal, les épaules qui descendent."
+      ],
+      "exemple": "Avant de prendre la parole : une expiration lente, « calme », épaules relâchées, puis la première phrase préparée.",
+      "outil": "respiration"
+    },
+    {
+      "id": "str-auto-instructions",
+      "titre": "Se parler à soi-même",
+      "categorie": "regulation",
+      "resume": "Préparer deux ou trois phrases qui guident votre réaction quand le mot manque.",
+      "quand": "Quand un épisode déclenche des pensées qui aggravent la gêne (« ça recommence »).",
+      "principe": "Des consignes brèves, préparées à l'avance, remplacent les pensées d'inquiétude par une marche à suivre. Elles rappellent la stratégie à employer et ramènent l'attention sur le propos.",
+      "etapes": [
+        "Choisissez deux ou trois phrases courtes : « je ralentis », « je décris », « le mot reviendra ».",
+        "Relisez-les avant les situations exigeantes.",
+        "En situation, dites-les intérieurement, puis appliquez la stratégie qu'elles désignent."
+      ],
+      "exemple": "Intérieurement : « Je ralentis. Je décris. » puis : « le document qui fixe les engagements de chacun… »"
+    }
+  ]
+}

@@ -133,3 +133,40 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Impression de la synthèse : A4 portrait, couleurs claires quel que soit le thème choisi. */
+@page {
+  size: A4 portrait;
+  margin: 10mm;
+}
+@media print {
+  /* Spécificité supérieure à celle du thème sombre, quel que soit le réglage. */
+  html:root:not([data-theme='__']) {
+    --c-fond: #ffffff;
+    --c-surface: #f4f4f7;
+    --c-surface-2: #e9e9ee;
+    --c-texte: #1c1c1e;
+    --c-texte-2: #4a4a50;
+    --c-separateur: rgb(60 60 67 / 0.25);
+    --c-accent: #0a5fcf;
+    color-scheme: light;
+  }
+  html,
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .non-imprime,
+  .lien-evitement,
+  nav {
+    display: none !important;
+  }
+  .page-a4 {
+    break-after: page;
+    break-inside: avoid;
+  }
+  .page-a4:last-child {
+    break-after: auto;
+  }
+}

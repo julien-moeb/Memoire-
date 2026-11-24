@@ -26,6 +26,18 @@ export function indexFiches(): Map<string, Fiche> {
   return m;
 }
 
+/** Fiche d'une carte personnelle issue du journal : l'indice noté, à défaut le mot employé à la place. */
+export function ficheDeCartePerso(c: Carte): Fiche | null {
+  if (!c.perso) return null;
+  const { mot, indice, motProduit } = c.perso;
+  const question = indice
+    ? indice
+    : motProduit
+      ? `Mot de votre journal. Vous aviez dit « ${motProduit} » à la place.`
+      : 'Mot de votre journal. Retrouvez-le à partir de son début.';
+  return { id: c.id, question, reponse: mot, variantes: [], explication: indice || motProduit ? undefined : 'Pensez à ajouter un indice dans le journal pour faciliter les prochaines révisions.' };
+}
+
 /** Cartes du lexique professionnel encore jamais introduites, dans l'ordre des fichiers. */
 export function nouvellesCartes(existantes: ReadonlySet<string>, n: number, aujourdhui: DateLocale): Carte[] {
   return C.cartesLexique()
@@ -41,7 +53,14 @@ export function Revisions({ cartes, aujourdhui, ignorerAccents, modeOral, onTerm
   modeOral: boolean;
   onTerminer: (r: ResultatExercice, cartesRevisees: Carte[]) => void;
 }) {
-  const fiches = useMemo(() => indexFiches(), []);
+  const fiches = useMemo(() => {
+    const m = indexFiches();
+    for (const c of cartes) {
+      const f = ficheDeCartePerso(c);
+      if (f) m.set(c.itemId, f);
+    }
+    return m;
+  }, [cartes]);
   const file = useMemo(() => cartes.filter((c) => fiches.has(c.itemId)), [cartes, fiches]);
   const [k, setK] = useState(0);
   const revisees = useRef<Carte[]>([]);
@@ -71,7 +90,7 @@ export function Revisions({ cartes, aujourdhui, ignorerAccents, modeOral, onTerm
         fiche={fiches.get(carte.itemId)!}
         modeOral={modeOral}
         ignorerAccents={ignorerAccents}
-        entete={`Révision ${k + 1} sur ${file.length}${carte.etat.repetitions === 0 && carte.etat.derniereRevision === null ? ' · nouvelle carte' : ''}`}
+        entete={`Révision ${k + 1} sur ${file.length}${carte.perso ? ' · mot de votre journal' : carte.etat.repetitions === 0 && carte.etat.derniereRevision === null ? ' · nouvelle carte' : ''}`}
         onIssue={(r) => {
           const q: Qualite = qualiteDepuisIssue({ correcte: r.correcte, indice: r.indice, tempsMs: r.tempsMs, reponseDonnee: r.reponseDonnee });
           revisees.current.push({ ...carte, etat: reviser(carte.etat, q, aujourdhui) });
